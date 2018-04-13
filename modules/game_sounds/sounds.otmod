@@ -1,0 +1,13 @@
+Module
+  name: game_sounds
+  description: Sistema de Som ao entrar na Area.
+  author: Modificado por Frenesy 
+  website: www.havokx.com
+  
+  autoload: true
+  autoload-priority: 1000
+  sandbox: true
+  
+  scripts: [ sounds ]
+  @onLoad: init()
+  @onUnload: terminate()

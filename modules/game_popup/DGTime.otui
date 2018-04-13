@@ -1,0 +1,51 @@
+MainWindow
+  image-source: img/placar
+  size: 300 33
+  draggable: false
+  focusable: false
+  
+  Label
+    id: textKina
+    !text: ('KNIGHTMARE')
+    text-align: center
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    margin-bottom: -5
+    margin-left: 10
+  
+  Label
+    id: textBrood
+    !text: ('BROTHERHOOD')
+    text-align: center
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    margin-bottom: -5
+    margin-right: 5
+  
+  Label
+    id: textKinaPlacar
+    !text: ('0')
+    text-align: center
+    anchors.bottom: parent.bottom
+    anchors.left: textKina.right
+    margin-bottom: -8
+    margin-left: 29
+  
+  Label
+    id: textBroodPlacar
+    !text: ('0')
+    text-align: center
+    anchors.bottom: parent.bottom
+    anchors.right: textBrood.right
+    margin-bottom: -8
+    margin-right: 112
+  
+  Label
+    id: textTime
+    !text: ('00:00')
+    text-align: center
+    color: yellow
+    anchors.bottom: parent.bottom
+    anchors.right: textBrood.right
+    margin-bottom: 8
+    margin-right: 115

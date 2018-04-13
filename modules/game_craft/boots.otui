@@ -1,0 +1,206 @@
+MarketButton < ShopButton
+  text-offset: 50 -20
+MarketButtonSale < ShopButtonSale
+  text-offset: 50 -20
+MarketPrize < ShopPrize
+  margin-left: 30
+
+Panel
+  VerticalScrollBar
+    id: scrollBar
+    step: 50
+    pixels-scroll: true
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+
+  ScrollablePanel
+    vertical-scrollbar: scrollBar
+    anchors.fill: parent
+    margin-right: 15
+
+    MarketButton
+      id: Rookie Boots
+      text: Rookie Boots
+      icon: /images/game/craft/Rookie Boots
+      anchors.top: parent.top
+      margin-top: 0
+      @onClick: RookieBoots()
+      MarketPrize
+        text: Usado por players de Lv. 01 ou maior.
+
+    MarketButton
+      id: Reinforced Boots
+      text: Reinforced Boots
+      icon: /images/game/craft/Reinforced Boots
+      @onClick: ReinforcedBoots()
+      MarketPrize
+        text: Usado por players de Lv. 01 ou maior.
+
+    MarketButton
+      id: Noobie Knee
+      text: Noobie Knee
+      icon: /images/game/craft/Noobie Knee
+      @onClick: NoobieKnee()
+      MarketPrize
+        text: Usado por players de Lv. 10 ou maior.
+
+    MarketButton
+      id: Leather Boots
+      text: Leather Boots
+      icon: /images/game/craft/Leather Boots
+      @onClick: LeatherBoots()
+      MarketPrize
+        text: Usado por players de Lv. 10 ou maior.
+
+    MarketButton
+      id: Noble Dragon Boots
+      text: Noble Dragon Boots
+      icon: /images/game/craft/Noble Dragon Boots
+      @onClick: NobleDragonBoots()
+      MarketPrize
+        text: Usado por players de Lv. 15 ou maior.
+
+    MarketButton
+      id: Moon Shoes
+      text: Moon Shoes
+      icon: /images/game/craft/Moon Shoes
+      @onClick: MoonShoes()
+      MarketPrize
+        text: Usado por players de Lv. 15 ou maior.
+
+    MarketButton
+      id: Soldier Boots
+      text: Soldier Boots
+      icon: /images/game/craft/Soldier Boots
+      @onClick: SoldierBoots()
+      MarketPrize
+        text: Usado por players de Lv. 20 ou maior.
+
+    MarketButton
+      id: Skull Boots
+      text: Skull Boots
+      icon: /images/game/craft/Skull Boots
+      @onClick: SkullBoots()
+      MarketPrize
+        text: Usado por players de Lv. 20 ou maior.
+
+    MarketButton
+      id: Tiger Boots
+      text: Tiger Boots
+      icon: /images/game/craft/Tiger Boots
+      @onClick: TigerBoots()
+      MarketPrize
+        text: Usado por players de Lv. 25 ou maior.
+
+    MarketButton
+      id: Brass Boots
+      text: Brass Boots
+      icon: /images/game/craft/Brass Boots
+      @onClick: BrassBoots()
+      MarketPrize
+        text: Usado por players de Lv. 25 ou maior.
+
+    MarketButton
+      id: Silver Boots
+      text: Silver Boots
+      icon: /images/game/craft/Silver Boots
+      @onClick: SilverBoots()
+      MarketPrize
+        text: Usado por players de Lv. 25 ou maior.
+
+    MarketButton
+      id: Mystic Boots
+      text: Mystic Boots
+      icon: /images/game/craft/Mystic Boots
+      @onClick: MysticBoots()
+      MarketPrize
+        text: Usado por players de Lv. 30 ou maior.
+
+    MarketButton
+      id: Remains Boots
+      text: Remains Boots
+      icon: /images/game/craft/Remains Boots
+      @onClick: RemainsBoots()
+      MarketPrize
+        text: Usado por players de Lv. 35 ou maior.
+
+    MarketButton
+      id: Titan Boots
+      text: Titan Boots
+      icon: /images/game/craft/Titan Boots
+      @onClick: TitanBoots()
+      MarketPrize
+        text: Usado por players de Lv. 35 ou maior.
+
+    MarketButton
+      id: Glorious Boots
+      text: Glorious Boots
+      icon: /images/game/craft/Glorious Boots
+      @onClick: GloriousBoots()
+      MarketPrize
+        text: Usado por players de Lv. 35 ou maior.
+
+    MarketButton
+      id: Ancient Boots
+      text: Ancient Boots
+      icon: /images/game/craft/Ancient Boots
+      @onClick: AncientBoots()
+      MarketPrize
+        text: Usado por players de Lv. 50 ou maior.
+
+    MarketButton
+      id: Crystal Boots
+      text: Crystal Boots
+      icon: /images/game/craft/Crystal Boots
+      @onClick: CrystalBoots()
+      MarketPrize
+        text: Usado por players de Lv. 50 ou maior.
+
+    MarketButton
+      id: Lava Boots
+      text: Lava Boots
+      icon: /images/game/craft/Lava Boots
+      @onClick: LavaBoots()
+      MarketPrize
+        text: Usado por players de Lv. 50 ou maior.
+
+    MarketButton
+      id: Haze Boots
+      text: Haze Boots
+      icon: /images/game/craft/Haze Boots
+      @onClick: HazeBoots()
+      MarketPrize
+        text: Usado por players de Lv. 50 ou maior.
+
+    MarketButton
+      id: Royalty Boots
+      text: Royalty Boots
+      icon: /images/game/craft/Royalty Boots
+      @onClick: RoyaltyBoots()
+      MarketPrize
+        text: Usado por players de Lv. 75 ou maior.
+
+    MarketButton
+      id: Eyed Boots
+      text: Eyed Boots
+      icon: /images/game/craft/Eyed Boots
+      @onClick: EyedBoots()
+      MarketPrize
+        text: Usado por players de Lv. 75 ou maior.
+
+    MarketButton
+      id: Reaper Boots
+      text: Reaper Boots
+      icon: /images/game/craft/Reaper Boots
+      @onClick: ReaperBoots()
+      MarketPrize
+        text: Usado por players de Lv. 99 ou maior.
+
+    MarketButton
+      id: Templar Boots
+      text: Templar Boots
+      icon: /images/game/craft/Templar Boots
+      @onClick: TemplarBoots()
+      MarketPrize
+        text: Usado por players de Lv. 99 ou maior.

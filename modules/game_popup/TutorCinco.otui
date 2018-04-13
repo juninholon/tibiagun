@@ -1,0 +1,27 @@
+MainWindow
+  id: tutorialwindow
+  !text: ('    Atributos')
+  color: yellow
+  size: 380 90
+  image-source: /images/game/other/task_window
+  draggable: false
+  focusable: false
+  @onClick: hide()
+  
+  UIButton
+    id: textTutor
+    !text: ('Aumente os atributos de seu personagem. Deixe o mouse em cima para infomações.')
+    text-align: left
+    text-wrap: true
+    size: 240 60
+    anchors.left: iconTutor.right
+    anchors.bottom: parent.bottom
+    margin-left: 10
+  
+  Button
+    id: iconTutor
+    icon-source: /images/game/other/tutor4
+    icon-size: 100 60
+    size: 100 60
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom

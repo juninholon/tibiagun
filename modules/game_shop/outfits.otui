@@ -1,0 +1,164 @@
+ClansButton < UIButton
+  size: 160 298
+  color: alpha
+  icon-color: #888888
+  border-width: 1
+  border-color: black
+  anchors.top: parent.top
+  anchors.left: parent.left
+  @onClick: clanWindow(doCorrectString(self:getText()))
+
+  $!first:
+    anchors.left: prev.right
+    margin-left: 4
+
+  $hover:
+    icon-color: #ffffff
+
+  $pressed:
+    icon-color: #cccccc
+
+Panel
+  HorizontalScrollBar
+    id: scrollBar
+    step: 86
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+
+  ScrollablePanel
+    horizontal-scrollbar: scrollBar
+    anchors.fill: parent
+    margin-bottom: 15
+
+    ClansButton
+      id: Assassin
+      icon: img/Assassin
+      @onClick: Assassin()
+      icon-size: 160 275
+
+    ClansButton
+      id: Barbarian
+      icon: img/Barbarian
+      @onClick: Barbarian()
+      icon-size: 160 275
+
+    ClansButton
+      id: Beggar
+      icon: img/Beggar
+      @onClick: Beggar()
+      icon-size: 160 275
+
+    ClansButton
+      id: Brotherhood
+      icon: img/Brotherhood
+      @onClick: Brotherhood()
+      icon-size: 160 275
+
+    ClansButton
+      id: Citizen
+      icon: img/Citizen
+      @onClick: Citizen()
+      icon-size: 160 275
+
+    ClansButton
+      id: Demonhunter
+      icon: img/Demonhunter
+      @onClick: Demonhunter()
+      icon-size: 160 275
+
+    ClansButton
+      id: Druid
+      icon: img/Druid
+      @onClick: Druid()
+      icon-size: 160 275
+
+    ClansButton
+      id: Hunter
+      icon: img/Hunter
+      @onClick: Hunter()
+      icon-size: 160 275
+
+    ClansButton
+      id: Jester
+      icon: img/Jester
+      @onClick: Jester()
+      icon-size: 160 275
+
+    ClansButton
+      id: Knight
+      icon: img/Knight
+      @onClick: Knight()
+      icon-size: 160 275
+
+    ClansButton
+      id: Knightmare
+      icon: img/Knightmare
+      @onClick: Knightmare()
+      icon-size: 160 275
+
+    ClansButton
+      id: Mage
+      icon: img/Mage
+      @onClick: Mage()
+      icon-size: 160 275
+
+    ClansButton
+      id: Nobleman
+      icon: img/Nobleman
+      @onClick: Nobleman()
+      icon-size: 160 275
+
+    ClansButton
+      id: Norseman
+      icon: img/Norseman
+      @onClick: Norseman()
+      icon-size: 160 275
+
+    ClansButton
+      id: Oriental
+      icon: img/Oriental
+      @onClick: Oriental()
+      icon-size: 160 275
+
+    ClansButton
+      id: Pirate
+      icon: img/Pirate
+      @onClick: Pirate()
+      icon-size: 160 275
+
+    ClansButton
+      id: Shaman
+      icon: img/Shaman
+      @onClick: Shaman()
+      icon-size: 160 275
+
+    ClansButton
+      id: Summoner
+      icon: img/Summoner
+      @onClick: Summoner()
+      icon-size: 160 275
+
+    ClansButton
+      id: Warmaster
+      icon: img/Warmaster
+      @onClick: Warmaster()
+      icon-size: 160 275
+
+    ClansButton
+      id: Warrior
+      icon: img/Warrior
+      @onClick: Warrior()
+      icon-size: 160 275
+
+    ClansButton
+      id: Wayfarer
+      icon: img/Wayfarer
+      @onClick: Wayfarer()
+      icon-size: 160 275
+
+    ClansButton
+      id: Wizard
+      icon: img/Wizard
+      @onClick: Wizard()
+      icon-size: 160 275

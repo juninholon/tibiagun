@@ -1,0 +1,196 @@
+MarketButton < ShopButton
+  text-offset: 50 -20
+MarketButtonSale < ShopButtonSale
+  text-offset: 50 -20
+MarketPrize < ShopPrize
+  margin-left: 30
+
+Panel
+  VerticalScrollBar
+    id: scrollBar
+    step: 50
+    pixels-scroll: true
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+
+  ScrollablePanel
+    vertical-scrollbar: scrollBar
+    anchors.fill: parent
+    margin-right: 15
+
+    MarketButton
+      id: Ancient_Rune
+      text: Ancient Rune
+      icon: img/Ancient_Rune
+      !tooltip: tr('Item de entrada para a DG: Templo Obscuro.')
+      anchors.top: parent.top
+      margin-top: 0
+      @onClick: Ancient_Rune()
+      MarketPrize
+        text: 05
+
+    MarketButton
+      id: Spyreport
+      text: Spyreport
+      icon: img/Spyreport
+      !tooltip: tr('Item de entrada para a DG: Ruinas Sombrias.')
+      @onClick: Spyreport()
+      MarketPrize
+        text: 04
+
+    MarketButton
+      id: Blue_Note
+      text: Blue Note
+      icon: img/Blue_Note
+      !tooltip: tr('Item de entrada para a DG: Caverna da Morte.')
+      @onClick: Blue_Note()
+      MarketPrize
+        text: 03
+
+    MarketButton
+      id: Nucleo
+      text: Núcleo de Aprimoramento
+      icon: img/Nucleo
+      !tooltip: tr('Aumenta a defesa de seus equipamentos.\nPossui chance de falhar.')
+      @onClick: Nucleo()
+      MarketPrize
+        text: 01
+
+    MarketButton
+      id: Great_Health_Potion
+      text: Great Health Potion
+      icon: img/Great_Health_Potion
+      !tooltip: tr('Utilizado por tankers de lv. 80+')
+      @onClick: Great_Health_Potion()
+      MarketPrize
+        text: 04
+
+    MarketButton
+      id: Great_Mana_Potion
+      text: Great Mana Potion
+      icon: img/Great_Mana_Potion
+      !tooltip: tr('Utilizado por curandeiros de lv. 80+')
+      @onClick: Great_Mana_Potion()
+      MarketPrize
+        text: 04
+
+    MarketButton
+      id: Great_Spirit_Potion
+      text: Great Spirit Potion
+      icon: img/Great_Spirit_Potion
+      !tooltip: tr('Utilizado por especialistas de lv. 80+')
+      @onClick: Great_Spirit_Potion()
+      MarketPrize
+        text: 04
+
+    MarketButton
+      id: Health_Potion
+      text: Health Potion
+      icon: img/Health_Potion
+      @onClick: Health_Potion()
+      MarketPrize
+        text: 02
+
+    MarketButton
+      id: Mana_Potion
+      text: Mana Potion
+      icon: img/Mana_Potion
+      @onClick: Mana_Potion()
+      MarketPrize
+        text: 02
+
+    MarketButton
+      id: Strong_Health_Potion
+      text: Strong Health Potion
+      icon: img/Strong_Health_Potion
+      !tooltip: tr('Utilizado por tankers e especialistas de lv. 50+')
+      @onClick: Strong_Health_Potion()
+      MarketPrize
+        text: 03
+
+    MarketButton
+      id: Strong_Mana_Potion
+      text: Strong Mana Potion
+      icon: img/Strong_Mana_Potion
+      !tooltip: tr('Utilizado por curandeiro e especialistas de lv. 50+')
+      @onClick: Strong_Mana_Potion()
+      MarketPrize
+        text: 03
+
+    MarketButton
+      id: Ultimate_Health_Potion
+      text: Ultimate Health Potion
+      icon: img/Ultimate_Health_Potion
+      !tooltip: tr('Utilizado por tankers de lv. 130+')
+      @onClick: Ultimate_Health_Potion()
+      MarketPrize
+        text: 05
+
+    MarketButton
+      id: Granada_de_Gelo
+      text: Granada de Gelo
+      icon: img/Granada_de_Gelo
+      !tooltip: tr('[Lv. 20+] O dano varia de acordo com sua potencia e level.')
+      @onClick: Granada_de_Gelo()
+      MarketPrize
+        text: 02
+
+    MarketButton
+      id: Granadas
+      text: Granadas
+      icon: img/Granadas
+      !tooltip: tr('[Lv. 20+] O dano varia de acordo com sua potencia e level.')
+      @onClick: Granadas()
+      MarketPrize
+        text: 02
+
+    MarketButton
+      id: Granada_de_Eletrochoque
+      text: Granada de Eletrochoque
+      icon: img/Granada_de_Eletrochoque
+      !tooltip: tr('[Lv. 20+] O dano varia de acordo com sua potencia e level.')
+      @onClick: Granada_de_Eletrochoque()
+      MarketPrize
+        text: 02
+
+    MarketButton
+      id: Cartucho_de_Balas_Pistola
+      text: Cartucho de Balas [Pistola]
+      icon: img/Cartucho_de_Balas_Pistola
+      @onClick: Cartucho_de_Balas_Pistola()
+      MarketPrize
+        text: 10
+
+    MarketButton
+      id: Cartucho_de_Balas_Metralhadora
+      text: Cartucho de Balas [Metralhadora]
+      icon: img/Cartucho_de_Balas_Metralhadora
+      @onClick: Cartucho_de_Balas_Metralhadora()
+      MarketPrize
+        text: 10
+
+    MarketButton
+      id: Cartucho_de_Balas_Rifle
+      text: Cartucho de Balas [Rifle]
+      icon: img/Cartucho_de_Balas_Rifle
+      @onClick: Cartucho_de_Balas_Rifle()
+      MarketPrize
+        text: 10
+
+    MarketButton
+      id: Cartucho_de_Balas_Espingarda
+      text: Cartucho de Balas [Espingarda]
+      icon: img/Cartucho_de_Balas_Espingarda
+      @onClick: Cartucho_de_Balas_Espingarda()
+      MarketPrize
+        text: 10
+
+    MarketButton
+      id: Foguetes
+      text: Foguetes
+      !tooltip: tr('Munição para RPG-7.')
+      icon: img/Foguetes
+      @onClick: Foguetes()
+      MarketPrize
+        text: 10

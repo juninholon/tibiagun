@@ -1,0 +1,140 @@
+MarketButton < ShopButton
+  text-offset: 30 0
+MarketButtonSale < ShopButtonSale
+  text-offset: 30 0
+MarketPrize < ShopPrize
+  margin-left: 30
+
+Panel
+  VerticalScrollBar
+    id: scrollBar
+    step: 50
+    pixels-scroll: true
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+
+  ScrollablePanel
+    vertical-scrollbar: scrollBar
+    anchors.fill: parent
+    margin-right: 15
+
+    MarketButton
+      id: Deveres Imperiais
+      text: [001] Deveres Imperiais
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      anchors.top: parent.top
+      @onClick: DeveresImperiais()
+
+    MarketButton
+      id: O Domador de Feras
+      text: [001] O Domador de Feras
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: ODomadordeFeras()
+
+    MarketButton
+      id: O Caca Troll
+      text: [003] O Caça Troll
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: OCacaTroll()
+
+    MarketButton
+      id: A Arte do Craft
+      text: [005] A Arte do Craft
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: AArtedoCraft()
+
+    MarketButton
+      id: Raridade
+      text: [005] Raridade
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: Raridade()
+
+    MarketButton
+      id: O Viciado em Kard
+      text: [005] O Viciado em Kard
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: OViciadoEmKard()
+
+    MarketButton
+      id: Lista Negra
+      text: [005] Lista Negra
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: ListaNegra()
+
+    MarketButton
+      id: Upgrade
+      text: [007] Upgrade
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: Upgrade()
+
+    MarketButton
+      id: Torre Sentinela
+      text: [010] Torre Sentinela
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: TorreSentinela()
+
+    MarketButton
+      id: Portal Dimensional
+      text: [010] Portal Dimensional
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: PortalDimensional()
+
+    MarketButton
+      id: O Explorador
+      text: [010] O Explorador
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: OExplorador()
+
+    MarketButton
+      id: O Resgate
+      text: [010] O Resgate
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: OResgate()
+
+    MarketButton
+      id: Deposito de Peles
+      text: [013] Depósito de Peles
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: DepositoDePeles()
+
+    MarketButton
+      id: O Mestre das Pocoes
+      text: [025] O Mestre das Poções
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: OMestreDasPocoes()
+
+    MarketButton
+      id: A Fortaleza
+      text: [030] A Fortaleza
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: AFortaleza()
+
+    MarketButton
+      id: Dangerous
+      text: [030] Dangerous
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: Dangerous()
+
+    MarketButton
+      id: Quest Vocacional
+      text: [035] Quest Vocacional
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: QuestVocacional()

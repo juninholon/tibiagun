@@ -1,0 +1,12 @@
+Module
+  name: game_shop
+  description: Shop System
+  author: Frenesy
+  website: havokx.com.br
+  sandboxed: true
+  scripts: [ shop ]
+
+  autoload: true
+  autoload-priority: 1000
+  @onLoad: init()
+  @onUnload: terminate()

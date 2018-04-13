@@ -1,0 +1,11 @@
+Module
+  name: game_namechange
+  description: Name Changer
+  author: edubart
+  website: www.otclient.info
+  scripts: [ name ]
+
+  autoload: true
+  autoload-priority: 1000
+  @onLoad: init()
+  @onUnload: terminate()

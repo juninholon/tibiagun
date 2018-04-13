@@ -1,0 +1,156 @@
+ShopButton < UIButton
+  id: shopButton
+  text-align: left
+  text-offset: 55 -20
+  color: white
+  icon-align: left
+  icon-offset: 5 0
+  height: 20
+  background-color: #000000AA
+  border-width: 1
+  border-color: black
+  anchors.top: prev.bottom
+  anchors.right: parent.right
+  anchors.left: parent.left
+  margin-top: 3
+  @onClick: onClickInItem(tonumber(self:getChildById('shopPrize'):getText()), self)
+
+  $hover:
+    background-color: #666666AA
+    border-color: #666666
+
+  $pressed:
+    background-color: #333333AA
+    border-color: #333333
+
+  $disabled:
+    background-color: #330000AA
+    border-color: #330000
+    color: red
+
+ShopButtonSale < ShopButton
+  id: shopButtonSale
+  image-source: /images/game/shop/sale
+  image-rect: 370 3 45 42
+
+ShopPrize < UIWidget
+  id: shopPrize
+  text-align: left
+  text-offset: 23 4
+  image-rect: 0 0 19 18
+  color: #BAE5A5
+  anchors.left: parent.left
+  anchors.right: parent.right
+  anchors.bottom: parent.bottom
+  margin-left: 55
+  margin-bottom: 5
+  phantom: true
+
+ClanWindow < MainWindow
+  size: 163 93
+  @onEscape: self:destroy()
+
+  Label
+    text: Rank:
+    width: 38
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 2
+
+  SpinBox
+    id: spinBox
+    step: 1
+    width: 50
+    anchors.top: parent.top
+    anchors.left: prev.right
+    minimum: 1
+    maximum: 5
+    @onValueChange: |
+      if self:getValue() == 1 then
+        prize = 10
+      elseif self:getValue() == 2 then
+        prize = 18
+      elseif self:getValue() == 3 then
+        prize = 26
+      elseif self:getValue() == 4 then
+        prize = 34
+      elseif self:getValue() == 5 then
+        prize = 40
+      end
+      self:getParent():getChildById('prize'):setText(prize)
+
+  UIWidget
+    id: prize
+    text-align: left
+    text-offset: 23 4
+    font: verdana-11px-rounded
+    image-rect: 0 0 19 18
+    color: #9BD3F0
+    anchors.verticalCenter: spinBox.verticalCenter
+    anchors.left: spinBox.right
+    anchors.right: parent.right
+    margin-left: 3
+
+  Button
+    id: okButton
+    text: Ok
+    width: 64
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+
+  Button
+    !text: tr('Cancel')
+    width: 64
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    @onClick: self:getParent():destroy()
+
+MainWindow
+  id: shopWindow
+  !text: tr('Lista de Missões')
+  size: 650 386
+  padding: 10
+  @onEscape: hide()
+
+  TabBarVertical
+    id: shopTabBar
+    margin-top: 50
+    anchors.top: parent.top
+    anchors.left: parent.left
+
+  Panel
+    id: shopTabContent
+    size: 400 270
+    anchors.top: parent.top
+    anchors.left: parent.left
+    image-source: /images/game/other/task_window
+    margin-left: 15
+    margin-top: 50
+
+  Button
+    id: rasMission
+    !text: ('Rastrear Missão')
+    !tooltip: tr('Um circulo amarelo aparecerá\nem seu minimapa indicando o\nlocal onde deve ir.')
+    size: 120 22
+    anchors.left: parent.left
+    anchors.top: shopTabContent.bottom
+    margin-top: 5
+    margin-left: 150
+
+  UIWidget
+    id: infoMission
+    size: 198 343
+    anchors.top: parent.top
+    anchors.right: parent.right
+    image-source: /images/game/other/task_window
+    phantom: true
+    text-wrap: true
+    text-align: top-left
+    margin-top: 20
+    margin-right: 2
+  
+  EnterGameButton
+    !text: ('Fechar')
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom
+    @onClick: hide()

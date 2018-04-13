@@ -1,0 +1,165 @@
+ShopButton < UIButton
+  id: shopButton
+  text-align: left
+  text-offset: 55 -20
+  color: white
+  icon-align: left
+  icon-offset: 5 0
+  height: 40
+  background-color: #000000AA
+  border-width: 1
+  border-color: black
+  anchors.top: prev.bottom
+  anchors.right: parent.right
+  anchors.left: parent.left
+  margin-top: 3
+  @onClick: onClickInItem(tonumber(self:getChildById('shopPrize'):getText()), self)
+
+  $hover:
+    background-color: #666666AA
+    border-color: #666666
+
+  $pressed:
+    background-color: #333333AA
+    border-color: #333333
+
+  $disabled:
+    background-color: #330000AA
+    border-color: #330000
+    color: red
+
+ShopButtonSale < ShopButton
+  id: shopButtonSale
+  image-source: /images/game/shop/sale
+  image-rect: 370 3 45 42
+
+ShopPrize < UIWidget
+  id: shopPrize
+  text-align: left
+  text-offset: 50 6
+  font: verdana-11px-italic
+  image-source: img/prize
+  image-rect: 0 0 19 18
+  image-offset: 23 4
+  color: yellow
+  anchors.left: parent.left
+  anchors.right: parent.right
+  anchors.bottom: parent.bottom
+  margin-left: 70
+  margin-bottom: 5
+  phantom: true
+
+CraftBar < ProgressBar
+  id: craftBar
+  phantom: true
+  background-color: white
+  size: 600 14
+
+ClanWindow < MainWindow
+  size: 163 93
+  @onEscape: self:destroy()
+
+  Label
+    text: Rank:
+    width: 38
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 2
+
+  SpinBox
+    id: spinBox
+    step: 1
+    width: 50
+    anchors.top: parent.top
+    anchors.left: prev.right
+    minimum: 1
+    maximum: 5
+    @onValueChange: |
+      if self:getValue() == 1 then
+        prize = 10
+      elseif self:getValue() == 2 then
+        prize = 18
+      elseif self:getValue() == 3 then
+        prize = 26
+      elseif self:getValue() == 4 then
+        prize = 34
+      elseif self:getValue() == 5 then
+        prize = 40
+      end
+      self:getParent():getChildById('prize'):setText(prize)
+
+  UIWidget
+    id: prize
+    text-align: left
+    text-offset: 23 4
+    font: verdana-11px-rounded
+    image-rect: 0 0 19 18
+    color: #9BD3F0
+    anchors.verticalCenter: spinBox.verticalCenter
+    anchors.left: spinBox.right
+    anchors.right: parent.right
+    margin-left: 3
+
+  Button
+    id: okButton
+    text: Ok
+    width: 64
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+
+  Button
+    !text: tr('Cancel')
+    width: 64
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    @onClick: self:getParent():destroy()
+
+MainWindow
+  id: shopWindow
+  !text: tr('Shop')
+  size: 550 376
+  padding: 10
+  @onEscape: hide()
+
+  TabBarVertical
+    id: shopTabBar
+    size: 115 290
+    margin-top: 30
+    anchors.top: parent.top
+    anchors.left: parent.left
+
+  Panel
+    id: shopTabContent
+    size: 390 290
+    anchors.top: shopTabBar.top
+    anchors.left: shopTabBar.right
+    image-source: /images/game/other/task_window
+    margin-left: 10
+  
+  EnterGameButton
+    id: Fechar
+    !text: ('Fechar')
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom
+    @onClick: hide()
+  
+  UIButton
+    id: Coins
+    image-source: img/prize
+    image-rect: 0 0 19 18
+    image-offset: 23 -2
+    anchors.left: Fechar.right
+    anchors.bottom: parent.bottom
+    margin-left: 30
+    phantom: true
+  
+  UIButton
+    id: textCoins
+    text-align: left
+    color: yellow
+    size: 100 14
+    anchors.left: Coins.right
+    anchors.bottom: parent.bottom
+    margin-left: 35
+    margin-bottom: 5
+    phantom: true

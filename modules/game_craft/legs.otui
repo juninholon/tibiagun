@@ -1,0 +1,246 @@
+MarketButton < ShopButton
+  text-offset: 50 -20
+MarketButtonSale < ShopButtonSale
+  text-offset: 50 -20
+MarketPrize < ShopPrize
+  margin-left: 30
+
+Panel
+  VerticalScrollBar
+    id: scrollBar
+    step: 50
+    pixels-scroll: true
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+
+  ScrollablePanel
+    vertical-scrollbar: scrollBar
+    anchors.fill: parent
+    margin-right: 15
+
+    MarketButton
+      id: Rookie Legs
+      text: Rookie Legs
+      icon: /images/game/craft/Rookie Legs
+      anchors.top: parent.top
+      margin-top: 0
+      @onClick: RookieLegs()
+      MarketPrize
+        text: Usado por players de Lv. 01 ou maior.
+
+    MarketButton
+      id: Reinforced Legs
+      text: Reinforced Legs
+      icon: /images/game/craft/Reinforced Legs
+      @onClick: ReinforcedLegs()
+      MarketPrize
+        text: Usado por players de Lv. 01 ou maior.
+
+    MarketButton
+      id: Noobie Legs
+      text: Noobie Legs
+      icon: /images/game/craft/Noobie Legs
+      @onClick: NoobieLegs()
+      MarketPrize
+        text: Usado por players de Lv. 10 ou maior.
+
+    MarketButton
+      id: Leather Legs
+      text: Leather Legs
+      icon: /images/game/craft/Leather Legs
+      @onClick: LeatherLegs()
+      MarketPrize
+        text: Usado por players de Lv. 10 ou maior.
+
+    MarketButton
+      id: Noble Dragon Legs
+      text: Noble Dragon Legs
+      icon: /images/game/craft/Noble Dragon Legs
+      @onClick: NobleDragonLegs()
+      MarketPrize
+        text: Usado por players de Lv. 15 ou maior.
+
+    MarketButton
+      id: Moon Legs
+      text: Moon Legs
+      icon: /images/game/craft/Moon Legs
+      @onClick: MoonLegs()
+      MarketPrize
+        text: Usado por players de Lv. 15 ou maior.
+
+    MarketButton
+      id: Soldier Legs
+      text: Soldier Legs
+      icon: /images/game/craft/Soldier Legs
+      @onClick: SoldierLegs()
+      MarketPrize
+        text: Usado por players de Lv. 20 ou maior.
+
+    MarketButton
+      id: Weed Legs
+      text: Weed Legs
+      icon: /images/game/craft/Weed Legs
+      @onClick: WeedLegs()
+      MarketPrize
+        text: Usado por players de Lv. 20 ou maior.
+
+    MarketButton
+      id: Skull Legs
+      text: Skull Legs
+      icon: /images/game/craft/Skull Legs
+      @onClick: SkullLegs()
+      MarketPrize
+        text: Usado por players de Lv. 20 ou maior.
+
+    MarketButton
+      id: Tiger Legs
+      text: Tiger Legs
+      icon: /images/game/craft/Tiger Legs
+      @onClick: TigerLegs()
+      MarketPrize
+        text: Usado por players de Lv. 25 ou maior.
+
+    MarketButton
+      id: Plate Legs
+      text: Plate Legs
+      icon: /images/game/craft/Plate Legs
+      @onClick: PlateLegs()
+      MarketPrize
+        text: Usado por players de Lv. 25 ou maior.
+
+    MarketButton
+      id: Crown Legs
+      text: Crown Legs
+      icon: /images/game/craft/Crown Legs
+      @onClick: CrownLegs()
+      MarketPrize
+        text: Usado por players de Lv. 01 ou maior.
+
+    MarketButton
+      id: Brass Legs
+      text: Brass Legs
+      icon: /images/game/craft/Brass Legs
+      @onClick: BrassLegs()
+      MarketPrize
+        text: Usado por players de Lv. 25 ou maior.
+
+    MarketButton
+      id: Silver Legs
+      text: Silver Legs
+      icon: /images/game/craft/Silver Legs
+      @onClick: SilverLegs()
+      MarketPrize
+        text: Usado por players de Lv. 25 ou maior.
+
+    MarketButton
+      id: Nature Legs
+      text: Nature Legs
+      icon: /images/game/craft/Nature Legs
+      @onClick: NatureLegs()
+      MarketPrize
+        text: Usado por players de Lv. 25 ou maior.
+
+    MarketButton
+      id: Mystic Legs
+      text: Mystic Legs
+      icon: /images/game/craft/Mystic Legs
+      @onClick: MysticLegs()
+      MarketPrize
+        text: Usado por players de Lv. 30 ou maior.
+
+    MarketButton
+      id: Royal Legs
+      text: Royal Legs
+      icon: /images/game/craft/Royal Legs
+      @onClick: RoyalLegs()
+      MarketPrize
+        text: Usado por players de Lv. 35 ou maior.
+
+    MarketButton
+      id: Remains Legs
+      text: Remains Legs
+      icon: /images/game/craft/Remains Legs
+      @onClick: RemainsLegs()
+      MarketPrize
+        text: Usado por players de Lv. 35 ou maior.
+
+    MarketButton
+      id: Titan Legs
+      text: Titan Legs
+      icon: /images/game/craft/Titan Legs
+      @onClick: TitanLegs()
+      MarketPrize
+        text: Usado por players de Lv. 35 ou maior.
+
+    MarketButton
+      id: Glorious Legs
+      text: Glorious Legs
+      icon: /images/game/craft/Glorious Legs
+      @onClick: GloriousLegs()
+      MarketPrize
+        text: Usado por players de Lv. 35 ou maior.
+
+    MarketButton
+      id: Ancient Legs
+      text: Ancient Legs
+      icon: /images/game/craft/Ancient Legs
+      @onClick: AncientLegs()
+      MarketPrize
+        text: Usado por players de Lv. 50 ou maior.
+
+    MarketButton
+      id: Crystal Legs
+      text: Crystal Legs
+      icon: /images/game/craft/Crystal Legs
+      @onClick: CrystalLegs()
+      MarketPrize
+        text: Usado por players de Lv. 50 ou maior.
+
+    MarketButton
+      id: Lava Legs
+      text: Lava Legs
+      icon: /images/game/craft/Lava Legs
+      @onClick: LavaLegs()
+      MarketPrize
+        text: Usado por players de Lv. 50 ou maior.
+
+    MarketButton
+      id: Haze Legs
+      text: Haze Legs
+      icon: /images/game/craft/Haze Legs
+      @onClick: HazeLegs()
+      MarketPrize
+        text: Usado por players de Lv. 50 ou maior.
+
+    MarketButton
+      id: Royalty Legs
+      text: Royalty Legs
+      icon: /images/game/craft/Royalty Legs
+      @onClick: RoyaltyLegs()
+      MarketPrize
+        text: Usado por players de Lv. 75 ou maior.
+
+    MarketButton
+      id: Eyed Legs
+      text: Eyed Legs
+      icon: /images/game/craft/Eyed Legs
+      @onClick: EyedLegs()
+      MarketPrize
+        text: Usado por players de Lv. 75 ou maior.
+
+    MarketButton
+      id: Reaper Legs
+      text: Reaper Legs
+      icon: /images/game/craft/Reaper Legs
+      @onClick: ReaperLegs()
+      MarketPrize
+        text: Usado por players de Lv. 99 ou maior.
+
+    MarketButton
+      id: Templar Legs
+      text: Templar Legs
+      icon: /images/game/craft/Templar Legs
+      @onClick: TemplarLegs()
+      MarketPrize
+        text: Usado por players de Lv. 99 ou maior.

@@ -1,0 +1,62 @@
+MarketButton < ShopButton
+  text-offset: 30 0
+MarketButtonSale < ShopButtonSale
+  text-offset: 30 0
+MarketPrize < ShopPrize
+  margin-left: 30
+
+Panel
+  VerticalScrollBar
+    id: scrollBar
+    step: 50
+    pixels-scroll: true
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+
+  ScrollablePanel
+    vertical-scrollbar: scrollBar
+    anchors.fill: parent
+    margin-right: 15
+
+    MarketButton
+      id: Rank1
+      text: "Rank 1\nNovato"
+      icon-size: 20 20
+      anchors.top: parent.top
+      @onClick: Rank1()
+
+    MarketButton
+      id: Rank2
+      text: "Rank 2\nOficial"
+      icon: /images/game/other/lock
+      icon-size: 20 20
+      @onClick: Rank2()
+
+    MarketButton
+      id: Rank3
+      text: "Rank 3\nPioneiro"
+      icon: /images/game/other/lock
+      icon-size: 20 20
+      @onClick: Rank3()
+
+    MarketButton
+      id: Rank4
+      text: "Rank 4\nGeneral"
+      icon: /images/game/other/lock
+      icon-size: 20 20
+      @onClick: Rank4()
+
+    MarketButton
+      id: Rank5
+      text: "Rank 5\nRegente"
+      icon: /images/game/other/lock
+      icon-size: 20 20
+      @onClick: Rank5()
+
+    MarketButton
+      id: Rank6
+      text: "Rank 6\nMarechal"
+      icon: /images/game/other/lock
+      icon-size: 20 20
+      @onClick: Rank6()

@@ -1,0 +1,27 @@
+MainWindow
+  id: tutorialwindow
+  !text: ('    Recarregando sua Arma')
+  color: yellow
+  size: 380 90
+  image-source: /images/game/other/task_window
+  draggable: false
+  focusable: false
+  @onClick: hide()
+  
+  UIButton
+    id: textTutor
+    !text: ('Clique no cartucho de balas e logo em seguida clique sobre a arma para poder recarregá-la.')
+    text-align: left
+    text-wrap: true
+    size: 240 60
+    anchors.left: iconTutor.right
+    anchors.bottom: parent.bottom
+    margin-left: 10
+  
+  Button
+    id: iconTutor
+    icon-source: /images/game/other/tutor0
+    icon-size: 100 60
+    size: 100 60
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom

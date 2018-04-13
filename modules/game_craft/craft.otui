@@ -1,0 +1,401 @@
+ShopButton < UIButton
+  id: shopButton
+  text-align: left
+  text-offset: 55 -20
+  color: white
+  icon-align: left
+  icon-offset: 5 0
+  height: 40
+  background-color: #000000AA
+  border-width: 1
+  border-color: black
+  anchors.top: prev.bottom
+  anchors.right: parent.right
+  anchors.left: parent.left
+  margin-top: 3
+  @onClick: onClickInItem(tonumber(self:getChildById('shopPrize'):getText()), self)
+
+  $hover:
+    background-color: #666666AA
+    border-color: #666666
+
+  $pressed:
+    background-color: #333333AA
+    border-color: #333333
+
+  $disabled:
+    background-color: #330000AA
+    border-color: #330000
+    color: red
+
+ShopButtonSale < ShopButton
+  id: shopButtonSale
+  image-source: /images/game/shop/sale
+  image-rect: 370 3 45 42
+
+ShopPrize < UIWidget
+  id: shopPrize
+  text-align: left
+  text-offset: 23 4
+  font: verdana-11px-italic
+  image-rect: 0 0 19 18
+  color: #BAE5A5
+  anchors.left: parent.left
+  anchors.right: parent.right
+  anchors.bottom: parent.bottom
+  margin-left: 55
+  margin-bottom: 5
+  phantom: true
+
+CraftBar < ProgressBar
+  id: craftBar
+  phantom: true
+  background-color: white
+  size: 600 14
+
+ClanWindow < MainWindow
+  size: 163 93
+  @onEscape: self:destroy()
+
+  Label
+    text: Rank:
+    width: 38
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 2
+
+  SpinBox
+    id: spinBox
+    step: 1
+    width: 50
+    anchors.top: parent.top
+    anchors.left: prev.right
+    minimum: 1
+    maximum: 5
+    @onValueChange: |
+      if self:getValue() == 1 then
+        prize = 10
+      elseif self:getValue() == 2 then
+        prize = 18
+      elseif self:getValue() == 3 then
+        prize = 26
+      elseif self:getValue() == 4 then
+        prize = 34
+      elseif self:getValue() == 5 then
+        prize = 40
+      end
+      self:getParent():getChildById('prize'):setText(prize)
+
+  UIWidget
+    id: prize
+    text-align: left
+    text-offset: 23 4
+    font: verdana-11px-rounded
+    image-rect: 0 0 19 18
+    color: #9BD3F0
+    anchors.verticalCenter: spinBox.verticalCenter
+    anchors.left: spinBox.right
+    anchors.right: parent.right
+    margin-left: 3
+
+  Button
+    id: okButton
+    text: Ok
+    width: 64
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+
+  Button
+    !text: tr('Cancel')
+    width: 64
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    @onClick: self:getParent():destroy()
+
+MainWindow
+  id: shopWindow
+  !text: tr('Janela de Craft')
+  size: 650 376
+  padding: 10
+  @onEscape: hide()
+
+  UIButton
+    id: closeButton
+    anchors.top: parent.top
+    anchors.right: parent.right
+    size: 23 22
+    image-source: /images/game/shop/button
+    image-clip: 0 0 23 22
+    @onClick: hide()
+
+    $hover:
+      image-clip: 0 22 23 22
+
+    $pressed:
+      image-clip: 0 44 23 22
+
+  TabBarVertical
+    id: shopTabBar
+    size: 115 290
+    margin-top: 30
+    anchors.top: parent.top
+    anchors.left: parent.left
+
+  Panel
+    id: shopTabContent
+    size: 300 290
+    anchors.top: shopTabBar.top
+    anchors.left: shopTabBar.right
+    image-source: /images/game/other/task_window
+    margin-left: 10
+
+  UIWidget
+    id: infoMission
+    size: 190 200
+    anchors.top: shopTabBar.top
+    anchors.left: shopTabContent.right
+    image-source: /images/game/other/task_window
+    phantom: true
+    text-wrap: true
+    text-align: top-left
+    margin-left: 10
+
+  Button
+    id: craftButton
+    !text: tr('Criar')
+    size: 80 32
+    anchors.top: infoMission.bottom
+    anchors.right: parent.right
+    margin-top: 5
+    margin-right: 60
+
+  UIWidget
+    id: backinterfaceItem
+    size: 52 52
+    anchors.top: parent.top
+    anchors.right: parent.right
+    image-source: /images/ui/summon
+    margin-top: 50
+    margin-right: 80
+
+  UIWidget
+    id: interfaceItem
+    size: 32 32
+    anchors.top: parent.top
+    anchors.right: parent.right
+    image-source: /images/ui/item
+    margin-top: 60
+    margin-right: 90
+
+  UIWidget
+    id: backslot01
+    size: 42 50
+    anchors.top: parent.top
+    anchors.right: parent.right
+    image-source: /images/ui/summon
+    margin-top: 120
+    margin-right: 36
+
+  UIWidget
+    id: slot01
+    size: 32 32
+    anchors.top: parent.top
+    anchors.right: parent.right
+    image-source: /images/ui/item
+    margin-top: 123
+    margin-right: 41
+
+  UIButton
+    id: slotInfo01
+    !text: tr('0/0')
+    size: 42 14
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-top: 155
+    margin-right: 36
+
+  UIWidget
+    id: backslot02
+    size: 42 50
+    anchors.top: parent.top
+    anchors.right: backslot01.left
+    image-source: /images/ui/summon
+    margin-top: 120
+    margin-right: 5
+
+  UIWidget
+    id: slot02
+    size: 32 32
+    anchors.top: parent.top
+    anchors.right: slot01.left
+    image-source: /images/ui/item
+    margin-top: 123
+    margin-right: 15
+
+  UIButton
+    id: slotInfo02
+    !text: tr('0/0')
+    size: 42 14
+    anchors.top: parent.top
+    anchors.right: slotInfo01.left
+    margin-top: 155
+    margin-right: 5
+
+  UIWidget
+    id: backslot03
+    size: 42 50
+    anchors.top: parent.top
+    anchors.right: backslot02.left
+    image-source: /images/ui/summon
+    margin-top: 120
+    margin-right: 5
+
+  UIWidget
+    id: slot03
+    size: 32 32
+    anchors.top: parent.top
+    anchors.right: slot02.left
+    image-source: /images/ui/item
+    margin-top: 123
+    margin-right: 15
+
+  UIButton
+    id: slotInfo03
+    !text: tr('0/0')
+    size: 42 14
+    anchors.top: parent.top
+    anchors.right: slotInfo02.left
+    margin-top: 155
+    margin-right: 5
+
+  UIWidget
+    id: backslot04
+    size: 42 50
+    anchors.top: backslot01.bottom
+    anchors.right: parent.right
+    image-source: /images/ui/summon
+    margin-top: 5
+    margin-right: 36
+
+  UIWidget
+    id: slot04
+    size: 32 32
+    anchors.top: parent.top
+    anchors.right: parent.right
+    image-source: /images/ui/item
+    margin-top: 178
+    margin-right: 41
+
+  UIButton
+    id: slotInfo04
+    !text: tr('0/0')
+    size: 42 14
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-top: 210
+    margin-right: 36
+
+  UIWidget
+    id: backslot05
+    size: 42 50
+    anchors.top: backslot02.bottom
+    anchors.right: backslot04.left
+    image-source: /images/ui/summon
+    margin-top: 5
+    margin-right: 5
+
+  UIWidget
+    id: slot05
+    size: 32 32
+    anchors.top: slot02.bottom
+    anchors.right: slot04.left
+    image-source: /images/ui/item
+    margin-top: 24
+    margin-right: 15
+
+  UIButton
+    id: slotInfo05
+    !text: tr('0/0')
+    size: 42 14
+    anchors.top: parent.top
+    anchors.right: slotInfo04.left
+    margin-top: 210
+    margin-right: 5
+
+  UIWidget
+    id: backslot06
+    size: 42 50
+    anchors.top: backslot03.bottom
+    anchors.right: backslot05.left
+    image-source: /images/ui/summon
+    margin-top: 5
+    margin-right: 5
+
+  UIWidget
+    id: slot06
+    size: 32 32
+    anchors.top: slot03.bottom
+    anchors.right: slot05.left
+    image-source: /images/ui/item
+    margin-top: 24
+    margin-right: 15
+
+  UIButton
+    id: slotInfo06
+    !text: tr('0/0')
+    size: 42 14
+    anchors.top: parent.top
+    anchors.right: slotInfo05.left
+    margin-top: 210
+    margin-right: 5
+
+  UIWidget
+    id: slotComum
+    size: 32 32
+    anchors.top: craftButton.bottom
+    anchors.right: parent.right
+    image-source: /images/ui/item
+    margin-top: 20
+    margin-right: 15
+
+  UIWidget
+    id: slotMelhorado
+    size: 32 32
+    anchors.top: craftButton.bottom
+    anchors.right: slotComum.left
+    image-source: /images/ui/melhorado
+    margin-top: 20
+    margin-right: 5
+
+  UIWidget
+    id: slotPerfeito
+    size: 32 32
+    anchors.top: craftButton.bottom
+    anchors.right: slotMelhorado.left
+    image-source: /images/ui/perfeito
+    margin-top: 20
+    margin-right: 5
+
+  UIWidget
+    id: slotRaro
+    size: 32 32
+    anchors.top: craftButton.bottom
+    anchors.right: slotPerfeito.left
+    image-source: /images/ui/raro
+    margin-top: 20
+    margin-right: 5
+
+  UIWidget
+    id: slotLendario
+    size: 32 32
+    anchors.top: craftButton.bottom
+    anchors.right: slotRaro.left
+    image-source: /images/ui/lendario
+    margin-top: 20
+    margin-right: 5
+
+  CraftBar
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    margin-bottom: 5
+    margin-left: 20

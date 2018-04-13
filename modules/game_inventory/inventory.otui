@@ -1,0 +1,487 @@
+InventoryItem < Item
+
+SkillButton < UIButton
+  height: 21
+  margin-bottom: 2
+
+HeadSlot < InventoryItem
+  id: slot1
+  image-source: /images/game/slots/head
+  &position: {x=65535, y=1, z=0}
+
+BodySlot < InventoryItem
+  id: slot4
+  image-source: /images/game/slots/body
+  &position: {x=65535, y=4, z=0}
+
+LegSlot < InventoryItem
+  id: slot7
+  image-source: /images/game/slots/legs
+  &position: {x=65535, y=7, z=0}
+
+FeetSlot < InventoryItem
+  id: slot8
+  image-source: /images/game/slots/feet
+  &position: {x=65535, y=8, z=0}
+
+NeckSlot < InventoryItem
+  id: slot2
+  image-source: /images/game/slots/neck
+  &position: {x=65535, y=2, z=0}
+
+LeftSlot < InventoryItem
+  id: slot6
+  image-source: /images/game/slots/left-hand
+  &position: {x=65535, y=6, z=0}
+
+FingerSlot < InventoryItem
+  id: slot9
+  image-source: /images/game/slots/finger
+  &position: {x=65535, y=9, z=0}
+
+BackSlot < InventoryItem
+  id: slot3
+  image-source: /images/game/slots/back
+  &position: {x=65535, y=3, z=0}
+
+RightSlot < InventoryItem
+  id: slot5
+  image-source: /images/game/slots/right-hand
+  &position: {x=65535, y=5, z=0}
+
+AmmoSlot < InventoryItem
+  id: slot10
+  image-source: /images/game/slots/ammo
+  &position: {x=65535, y=10, z=0}
+
+PurseButton < Button
+  id: purseButton
+  size: 26 26
+  !tooltip: tr('Open purse')
+  icon-source: /images/game/slots/purse
+  icon-size: 24 24
+  icon-offset: 1 1
+  
+HelmetUmSlot < InventoryItem
+  id: hsum
+  image-source: /images/game/other/equipslot
+  image-size: 13 13
+  size: 13 13
+  
+HelmetDoisSlot < InventoryItem
+  id: hsdois
+  image-source: /images/game/other/equipslot
+  image-size: 13 13
+  size: 13 13
+  
+ArmorUmSlot < InventoryItem
+  id: asum
+  image-source: /images/game/other/equipslot
+  image-size: 13 13
+  size: 13 13
+  
+ArmorDoisSlot < InventoryItem
+  id: asdois
+  image-source: /images/game/other/equipslot
+  image-size: 13 13
+  size: 13 13
+  
+LegsUmSlot < InventoryItem
+  id: lsum
+  image-source: /images/game/other/equipslot
+  image-size: 13 13
+  size: 13 13
+  
+LegsDoisSlot < InventoryItem
+  id: lsdois
+  image-source: /images/game/other/equipslot
+  image-size: 13 13
+  size: 13 13
+  
+BootsUmSlot < InventoryItem
+  id: bsum
+  image-source: /images/game/other/equipslot
+  image-size: 13 13
+  size: 13 13
+  
+BootsDoisSlot < InventoryItem
+  id: bsdois
+  image-source: /images/game/other/equipslot
+  image-size: 13 13
+  size: 13 13
+  
+GunEnchanted < InventoryItem
+  id: enchanted
+  image-source: /images/game/other/slotgun
+  image-size: 13 13
+  size: 13 13
+  
+BugButton < UIButton
+  id: BugButton
+  size: 32 32
+  !tooltip: tr('Clique aqui para reportar algum bug.')
+  icon-source: /images/game/other/bug
+  icon-size: 32 32
+  icon-offset: 1 1
+  @onClick: modules.game_bugreport.show()
+  
+QuestButton < Button
+  id: QuestButton
+  size: 32 32
+  !tooltip: tr('Task')
+  icon-source: /images/game/other/Task
+  icon-size: 32 32
+  icon-offset: 1 1
+  @onClick: g_game.talk("!blacklist")
+  
+BlessButton < UIButton
+  id: blessButton
+  size: 28 28
+  !tooltip: tr('Blessing')
+  icon-source: /images/topbuttons/bless_on
+  icon-size: 28 28
+  icon-offset: 1 1
+  
+PVPButton < UIButton
+  id: pvpButton
+  size: 28 28
+  text-offset: 2 3
+  !tooltip: tr('PvP')
+  icon-source: /images/topbuttons/task
+  icon-size: 28 28
+  icon-offset: 1 1
+  @onClick: g_game.talk("!QuestLog PVPOnOff")
+  
+BussulaButton < UIButton
+  id: bussulaButton
+  size: 28 28
+  !tooltip: tr('Bussula')
+  icon-source: /images/topbuttons/bussula_on
+  icon-size: 28 28
+  icon-offset: 1 1
+  @onClick: g_game.talk("!QuestLog BussulaOnOff")
+  
+ShopButton < UIButton
+  id: shopButton
+  size: 28 28
+  !tooltip: tr('Shop')
+  icon-source: /images/topbuttons/shop
+  icon-size: 28 28
+  icon-offset: 1 1
+  @onClick: g_game.talk("!BuyShop Refresh")
+  
+NotherButton < UIWidget
+  id: NotherButton
+  phantom: true
+  focusable: false
+  size: 330 60
+  icon-size: 330 60
+  
+OtherButton < InventoryItem
+  id: OtherButton
+  size: 85 65
+  icon-source: /images/game/slots/Quest
+  icon-size: 85 65
+  
+SummonButton < InventoryItem
+  id: SummonButton
+  size: 34 34
+  icon-source: /images/ui/item
+  icon-size: 34 34
+  
+SummonLevel < InventoryItem
+  id: SummonLevel
+  !text: tr('Lv. -')
+  size: 40 14
+  icon-source: /images/ui/summon
+  icon-size: 40 14
+  
+SummonEXP < InventoryItem
+  id: SummonEXP
+  !text: tr('0')
+  size: 80 14
+  icon-source: /images/ui/summon
+  icon-size: 80 14
+  
+NotherUmButton < InventoryItem
+  id: slotum
+  icon-source: /images/game/icon/Vazio
+  icon-size: 32 32
+  size: 30 30
+  
+NotherDoisButton < InventoryItem
+  id: slotdois
+  icon-source: /images/game/icon/Vazio
+  icon-size: 32 32
+  size: 30 30
+  
+DamageButton < InventoryItem
+  id: damage
+  phantom: true
+  icon-size: 32 32
+  size: 70 12
+  
+ExpButton < InventoryItem
+  id: exp
+  phantom: true
+  icon-size: 32 32
+  size: 115 12
+  
+OtherOneButton < Button
+  id: OtherOneButton
+  icon-source: /images/game/slots/Quest
+  icon-size: 184 329
+  size: 20 20
+  icon-offset: 1 1
+
+MiniWindow
+  id: inventoryWindow
+  !text: tr('Inventory')
+  icon: /images/topbuttons/inventory
+  image-source: /images/game/other/fundo1
+  @onClose: toggle()
+  height: 400
+
+  MiniWindowContents
+    HealthBar
+      background-color: #07f737
+      margin-left: 90
+      margin-right: 5
+      margin-top: 5
+      anchors.top: NotherButton.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+
+    ManaBar
+      background-color: #ff9844
+      margin-left: 90
+      margin-right: 5
+      anchors.left: prev.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+
+    ExperienceBar
+      background-color: #ffffff
+      margin-left: 90
+      margin-right: 5
+      anchors.left: prev.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+
+    Panel
+      id: conditionPanel
+      layout:
+        type: horizontalBox
+      height: 22
+      margin-top: 13
+      padding: 2
+      anchors.top: prev.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      border-width: 1
+      border-color: #00000077
+      background-color: #ffffff11
+    SoulLabel
+    CapLabel
+
+    HeadSlot
+      anchors.top: parent.top
+      anchors.horizontalCenter: parent.horizontalCenter
+      margin-top: 3
+
+    BodySlot
+      anchors.top: prev.bottom
+      anchors.horizontalCenter: prev.horizontalCenter
+      margin-top: 3
+
+    LegSlot
+      anchors.top: prev.bottom
+      anchors.horizontalCenter: prev.horizontalCenter
+      margin-top: 3
+
+    FeetSlot
+      anchors.top: prev.bottom
+      anchors.horizontalCenter: prev.horizontalCenter
+      margin-top: 3
+
+    NeckSlot
+      anchors.top: slot1.top
+      anchors.right: slot1.left
+      margin-top: 10
+      margin-right: 5
+
+    LeftSlot
+      anchors.top: prev.bottom
+      anchors.horizontalCenter: prev.horizontalCenter
+      margin-top: 3
+
+    AmmoSlot
+      anchors.top: prev.bottom
+      anchors.horizontalCenter: prev.horizontalCenter
+      margin-top: 4
+
+    BackSlot
+      anchors.top: slot1.top
+      anchors.left: slot1.right
+      margin-top: 10
+      margin-left: 23
+
+    PurseButton
+      margin-top: 3
+      anchors.top: prev.bottom
+      anchors.horizontalCenter: prev.horizontalCenter
+
+    QuestButton
+      margin-top: 82
+      anchors.top: prev.bottom
+      anchors.horizontalCenter: prev.horizontalCenter
+
+    RightSlot
+      margin-right: 40
+      anchors.top: prev.top
+      anchors.horizontalCenter: prev.horizontalCenter
+
+    FingerSlot
+      margin-right: 40
+      anchors.top: prev.top
+      anchors.horizontalCenter: prev.horizontalCenter
+
+    ExpButton
+      margin-left: 70
+      margin-top: 238
+      anchors.top: parent.top
+      anchors.left: parent.left
+
+    DamageButton
+      margin-top: 210
+      margin-left: 38
+      anchors.top: parent.top
+      anchors.left: prev.left
+
+    NotherDoisButton
+      margin-right: 92
+      margin-top: 24
+      anchors.top: slot5.bottom
+      anchors.horizontalCenter: prev.horizontalCenter
+
+    NotherUmButton
+      margin-right: 35
+      margin-top: 24
+      anchors.top: slot5.bottom
+      anchors.horizontalCenter: prev.horizontalCenter
+
+    NotherButton
+      margin-top: 40
+      anchors.top: slot5.top
+      anchors.horizontalCenter: prev.horizontalCenter
+
+    OtherButton
+      margin-left: 28
+      margin-top: 1
+      anchors.top: NotherButton.bottom
+      anchors.horizontalCenter: prev.horizontalCenter
+
+    SummonButton
+      margin-right: 18
+      margin-top: 5
+      anchors.top: OtherButton.top
+      anchors.horizontalCenter: prev.horizontalCenter
+
+    SummonLevel
+      margin-top: 10
+      margin-left: 40
+      anchors.top: OtherButton.top
+      anchors.horizontalCenter: prev.horizontalCenter
+
+    SummonEXP
+      margin-right: 23
+      margin-top: 5
+      anchors.top: SummonButton.bottom
+      anchors.horizontalCenter: prev.horizontalCenter
+
+    BlessButton
+      margin-bottom: 65
+      margin-left: 98
+      anchors.bottom: QuestButton.top
+      anchors.horizontalCenter: prev.horizontalCenter
+
+    BussulaButton
+      margin-bottom: 65
+      margin-left: 29
+      anchors.bottom: QuestButton.top
+      anchors.left: BussulaButton.right
+      anchors.horizontalCenter: prev.horizontalCenter
+
+    PVPButton
+      margin-top: 5
+      margin-right: 30
+      anchors.top: blessButton.bottom
+      anchors.left: BussulaButton.right
+      anchors.horizontalCenter: prev.horizontalCenter
+
+    ShopButton
+      margin-top: 5
+      margin-left: 30
+      anchors.top: blessButton.bottom
+      anchors.left: pvpButton.right
+      anchors.horizontalCenter: prev.horizontalCenter
+
+    HelmetUmSlot
+      anchors.top: slot1.top
+      anchors.left: slot1.right
+      margin-top: 19
+      margin-left: 4
+
+    HelmetDoisSlot
+      anchors.bottom: hsum.top
+      anchors.left: slot1.right
+      margin-left: 4
+      margin-bottom: 3
+
+    ArmorUmSlot
+      anchors.top: slot4.top
+      anchors.left: slot4.right
+      margin-top: 19
+      margin-left: 4
+
+    ArmorDoisSlot
+      anchors.bottom: asum.top
+      anchors.left: slot4.right
+      margin-left: 4
+      margin-bottom: 3
+
+    LegsUmSlot
+      anchors.top: slot7.top
+      anchors.left: slot7.right
+      margin-top: 19
+      margin-left: 4
+
+    LegsDoisSlot
+      anchors.bottom: lsum.top
+      anchors.left: slot7.right
+      margin-left: 4
+      margin-bottom: 3
+
+    BootsUmSlot
+      anchors.top: slot8.top
+      anchors.left: slot8.right
+      margin-top: 19
+      margin-left: 4
+
+    BootsDoisSlot
+      anchors.bottom: bsum.top
+      anchors.left: slot8.right
+      margin-bottom: 3
+      margin-left: 4
+
+    GunEnchanted
+      anchors.top: parent.top
+      anchors.right: slot6.left
+      margin-right: 4
+      margin-top: 60
+
+    BugButton
+      margin-left: 10
+      margin-top: 155
+      anchors.top: parent.top
+      anchors.left: parent.left

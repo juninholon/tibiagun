@@ -1,0 +1,1000 @@
+== application started at Apr 12 2018 17:20:34
+OTClient 0.6.6 rev 0 (df422c0) built on Feb 17 2017 for arch x86
+ERROR: Unable to load module 'client': LUA ERROR:
+C++ call failed: unable to open file '/sounds/startup.ogg': O sistema não pode encontrar o caminho especificado.
+stack traceback:
+	[C]: ?
+	[C]: in function 'preload'
+	/client/client.lua:60: in function 'init'
+	/client/client.otmod:9:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:42: in main chunk
+FATAL ERROR: Unable to load 'client' module
+== application started at Apr 12 2018 17:21:07
+OTClient 0.6.6 rev 0 (df422c0) built on Feb 17 2017 for arch x86
+ERROR: Unable to load module 'client': LUA ERROR:
+C++ call failed: unable to open file '/sounds/startup.ogg': O sistema não pode encontrar o caminho especificado.
+stack traceback:
+	[C]: ?
+	[C]: in function 'preload'
+	/client/client.lua:60: in function 'init'
+	/client/client.otmod:9:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:42: in main chunk
+FATAL ERROR: Unable to load 'client' module
+== application started at Apr 12 2018 17:21:32
+OTClient 0.6.6 rev 0 (df422c0) built on Feb 17 2017 for arch x86
+ERROR: Unable to load module 'client': LUA ERROR:
+C++ call failed: unable to open file '/sounds/startup.ogg': O sistema não pode encontrar o caminho especificado.
+stack traceback:
+	[C]: ?
+	[C]: in function 'preload'
+	/client/client.lua:60: in function 'init'
+	/client/client.otmod:9:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:42: in main chunk
+FATAL ERROR: Unable to load 'client' module
+== application started at Apr 12 2018 17:22:27
+OTClient 0.6.6 rev 0 (df422c0) built on Feb 17 2017 for arch x86
+ERROR: Unable to load texture '/images/topbuttons/healthinfo': unable to open file '/images/topbuttons/healthinfo.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/game/slots/Quest': unable to open file '/images/game/slots/Quest.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/topbuttons/combatcontrols': unable to open file '/images/topbuttons/combatcontrols.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/audio': unable to open file '/images/audio.png': O sistema não pode encontrar o caminho especificado.
+ERROR: /game_sounds/sounds.lua:43: attempt to index global 'soundButton' (a nil value)
+ERROR: Unable to load texture '/game_task/''': unable to open file '/game_task/''.png': O sistema não pode encontrar o caminho especificado.
+Exiting application..
+WARNING: attempt to destroy widget 'widget1286' two times
+ERROR: Unable to unload module 'game_sounds': LUA ERROR:
+/game_sounds/sounds.lua:72: attempt to index global 'soundButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:72: in function 'terminate'
+	/game_sounds/sounds.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'Som': LUA ERROR:
+/game_sounds/sounds.lua:156: attempt to index a nil value
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:156: in function 'setLabel'
+	/game_sounds/sounds.lua:150: in function 'stopSound'
+	/game_sounds/sounds.lua:81: in function 'onGameEnd'
+	/game_sounds/sounds.lua:70: in function 'terminate'
+	/game_som/som.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shop': LUA ERROR:
+/game_shop/shop.lua:42: attempt to index global 'shopButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_shop/shop.lua:42: in function 'terminate'
+	/game_shop/shop.otmod:12:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_namechange': LUA ERROR:
+/game_sounds/sounds.lua:156: attempt to index a nil value
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:156: in function 'setLabel'
+	/game_sounds/sounds.lua:150: in function 'stopSound'
+	/game_sounds/sounds.lua:81: in function 'onGameEnd'
+	/game_sounds/sounds.lua:70: in function 'terminate'
+	/game_namechange/name.otmod:11:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_healthinfo': LUA ERROR:
+/game_healthinfo/healthinfo.lua:77: attempt to index global 'healthInfoButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_healthinfo/healthinfo.lua:77: in function 'terminate'
+	/game_healthinfo/healthinfo.otmod:9:[@onUnload]:1: in main chunk
+== application started at Apr 12 2018 17:22:48
+OTClient 0.6.6 rev 0 (df422c0) built on Feb 17 2017 for arch x86
+ERROR: Unable to load texture '/images/topbuttons/healthinfo': unable to open file '/images/topbuttons/healthinfo.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/game/slots/Quest': unable to open file '/images/game/slots/Quest.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/topbuttons/combatcontrols': unable to open file '/images/topbuttons/combatcontrols.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/audio': unable to open file '/images/audio.png': O sistema não pode encontrar o caminho especificado.
+ERROR: /game_sounds/sounds.lua:43: attempt to index global 'soundButton' (a nil value)
+ERROR: Unable to load texture '/game_task/''': unable to open file '/game_task/''.png': O sistema não pode encontrar o caminho especificado.
+ERROR: audio buffer underrun
+at:
+	[C++]: StreamSoundSource::update
+Exiting application..
+WARNING: attempt to destroy widget 'widget1286' two times
+ERROR: Unable to unload module 'game_sounds': LUA ERROR:
+/game_sounds/sounds.lua:72: attempt to index global 'soundButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:72: in function 'terminate'
+	/game_sounds/sounds.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'Som': LUA ERROR:
+/game_sounds/sounds.lua:156: attempt to index a nil value
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:156: in function 'setLabel'
+	/game_sounds/sounds.lua:150: in function 'stopSound'
+	/game_sounds/sounds.lua:81: in function 'onGameEnd'
+	/game_sounds/sounds.lua:70: in function 'terminate'
+	/game_som/som.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shop': LUA ERROR:
+/game_shop/shop.lua:42: attempt to index global 'shopButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_shop/shop.lua:42: in function 'terminate'
+	/game_shop/shop.otmod:12:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_namechange': LUA ERROR:
+/game_sounds/sounds.lua:156: attempt to index a nil value
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:156: in function 'setLabel'
+	/game_sounds/sounds.lua:150: in function 'stopSound'
+	/game_sounds/sounds.lua:81: in function 'onGameEnd'
+	/game_sounds/sounds.lua:70: in function 'terminate'
+	/game_namechange/name.otmod:11:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_healthinfo': LUA ERROR:
+/game_healthinfo/healthinfo.lua:77: attempt to index global 'healthInfoButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_healthinfo/healthinfo.lua:77: in function 'terminate'
+	/game_healthinfo/healthinfo.otmod:9:[@onUnload]:1: in main chunk
+== application started at Apr 12 2018 17:23:15
+OTClient 0.6.6 rev 0 (df422c0) built on Feb 17 2017 for arch x86
+ERROR: Unable to load texture '/images/topbuttons/healthinfo': unable to open file '/images/topbuttons/healthinfo.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/game/slots/Quest': unable to open file '/images/game/slots/Quest.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/topbuttons/combatcontrols': unable to open file '/images/topbuttons/combatcontrols.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/audio': unable to open file '/images/audio.png': O sistema não pode encontrar o caminho especificado.
+ERROR: /game_sounds/sounds.lua:43: attempt to index global 'soundButton' (a nil value)
+ERROR: Unable to load texture '/game_task/''': unable to open file '/game_task/''.png': O sistema não pode encontrar o caminho especificado.
+ERROR: audio buffer underrun
+at:
+	[C++]: StreamSoundSource::update
+Exiting application..
+WARNING: attempt to destroy widget 'widget1286' two times
+ERROR: Unable to unload module 'game_sounds': LUA ERROR:
+/game_sounds/sounds.lua:72: attempt to index global 'soundButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:72: in function 'terminate'
+	/game_sounds/sounds.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'Som': LUA ERROR:
+/game_sounds/sounds.lua:156: attempt to index a nil value
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:156: in function 'setLabel'
+	/game_sounds/sounds.lua:150: in function 'stopSound'
+	/game_sounds/sounds.lua:81: in function 'onGameEnd'
+	/game_sounds/sounds.lua:70: in function 'terminate'
+	/game_som/som.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shop': LUA ERROR:
+/game_shop/shop.lua:42: attempt to index global 'shopButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_shop/shop.lua:42: in function 'terminate'
+	/game_shop/shop.otmod:12:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_namechange': LUA ERROR:
+/game_sounds/sounds.lua:156: attempt to index a nil value
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:156: in function 'setLabel'
+	/game_sounds/sounds.lua:150: in function 'stopSound'
+	/game_sounds/sounds.lua:81: in function 'onGameEnd'
+	/game_sounds/sounds.lua:70: in function 'terminate'
+	/game_namechange/name.otmod:11:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_healthinfo': LUA ERROR:
+/game_healthinfo/healthinfo.lua:77: attempt to index global 'healthInfoButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_healthinfo/healthinfo.lua:77: in function 'terminate'
+	/game_healthinfo/healthinfo.otmod:9:[@onUnload]:1: in main chunk
+== application started at Apr 12 2018 17:31:12
+OTClient 0.6.6 rev 0 (df422c0) built on Feb 17 2017 for arch x86
+ERROR: Unable to find module 'client_styles' required by 'client'
+ERROR: Unable to find module 'client_locales' required by 'client'
+ERROR: Unable to find module 'client_topmenu' required by 'client'
+ERROR: Unable to find module 'client_background' required by 'client'
+ERROR: Unable to find module 'client_options' required by 'client'
+ERROR: Unable to find module 'client_entergame' required by 'client'
+ERROR: Unable to find module 'client_serverlist' required by 'client'
+ERROR: Unable to find module 'client_stats' required by 'client'
+ERROR: Failed to import UI styles from 'styles/countwindow.otui': base style 'MainWindow', is not defined
+ERROR: failed to load UI from 'gameinterface.otui': base style 'Panel', is not defined
+ERROR: Unable to load module 'game_interface': LUA ERROR:
+/game_interface/gameinterface.lua:31: attempt to index global 'gameRootPanel' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_interface/gameinterface.lua:31: in function 'init'
+	/game_interface/interface.otmod:28:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:46: in main chunk
+FATAL ERROR: Unable to load 'game_interface' module
+== application started at Apr 12 2018 17:31:35
+OTClient 0.6.6 rev 0 (df422c0) built on Feb 17 2017 for arch x86
+ERROR: Unable to find module 'client_styles' required by 'client'
+ERROR: Unable to find module 'client_locales' required by 'client'
+ERROR: Unable to find module 'client_topmenu' required by 'client'
+ERROR: Unable to find module 'client_background' required by 'client'
+ERROR: Unable to find module 'client_options' required by 'client'
+ERROR: Unable to find module 'client_entergame' required by 'client'
+ERROR: Unable to find module 'client_serverlist' required by 'client'
+ERROR: Unable to find module 'client_stats' required by 'client'
+ERROR: Failed to import UI styles from 'styles/countwindow.otui': base style 'MainWindow', is not defined
+ERROR: failed to load UI from 'gameinterface.otui': base style 'Panel', is not defined
+ERROR: Unable to load module 'game_interface': LUA ERROR:
+/game_interface/gameinterface.lua:31: attempt to index global 'gameRootPanel' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_interface/gameinterface.lua:31: in function 'init'
+	/game_interface/interface.otmod:28:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:46: in main chunk
+FATAL ERROR: Unable to load 'game_interface' module
+== application started at Apr 12 2018 17:32:02
+OTClient 0.6.6 rev 0 (df422c0) built on Feb 17 2017 for arch x86
+ERROR: Unable to find module 'client_styles' required by 'client'
+ERROR: Unable to find module 'client_locales' required by 'client'
+ERROR: Unable to find module 'client_topmenu' required by 'client'
+ERROR: Unable to find module 'client_background' required by 'client'
+ERROR: Unable to find module 'client_options' required by 'client'
+ERROR: Unable to find module 'client_entergame' required by 'client'
+ERROR: Unable to find module 'client_serverlist' required by 'client'
+ERROR: Unable to find module 'client_stats' required by 'client'
+ERROR: Failed to import UI styles from 'styles/countwindow.otui': base style 'MainWindow', is not defined
+ERROR: failed to load UI from 'gameinterface.otui': base style 'Panel', is not defined
+ERROR: Unable to load module 'game_interface': LUA ERROR:
+/game_interface/gameinterface.lua:31: attempt to index global 'gameRootPanel' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_interface/gameinterface.lua:31: in function 'init'
+	/game_interface/interface.otmod:28:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:46: in main chunk
+FATAL ERROR: Unable to load 'game_interface' module
+== application started at Apr 12 2018 17:32:38
+OTClient 0.6.6 rev 0 (df422c0) built on Feb 17 2017 for arch x86
+ERROR: Unable to find module 'client_styles' required by 'client'
+ERROR: Unable to find module 'client_locales' required by 'client'
+ERROR: Unable to find module 'client_topmenu' required by 'client'
+ERROR: Unable to find module 'client_background' required by 'client'
+ERROR: Unable to find module 'client_options' required by 'client'
+ERROR: Unable to find module 'client_entergame' required by 'client'
+ERROR: Unable to find module 'client_serverlist' required by 'client'
+ERROR: Unable to find module 'client_stats' required by 'client'
+ERROR: Failed to import UI styles from 'styles/countwindow.otui': base style 'MainWindow', is not defined
+ERROR: failed to load UI from 'gameinterface.otui': base style 'Panel', is not defined
+ERROR: Unable to load module 'game_interface': LUA ERROR:
+/game_interface/gameinterface.lua:31: attempt to index global 'gameRootPanel' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_interface/gameinterface.lua:31: in function 'init'
+	/game_interface/interface.otmod:28:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:46: in main chunk
+FATAL ERROR: Unable to load 'game_interface' module
+== application started at Apr 12 2018 17:32:47
+OTClient 0.6.6 rev 0 (df422c0) built on Feb 17 2017 for arch x86
+ERROR: Unable to load texture '/images/topbuttons/healthinfo': unable to open file '/images/topbuttons/healthinfo.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/game/slots/Quest': unable to open file '/images/game/slots/Quest.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/topbuttons/combatcontrols': unable to open file '/images/topbuttons/combatcontrols.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/audio': unable to open file '/images/audio.png': O sistema não pode encontrar o caminho especificado.
+ERROR: /game_sounds/sounds.lua:43: attempt to index global 'soundButton' (a nil value)
+ERROR: Unable to load texture '/game_task/''': unable to open file '/game_task/''.png': O sistema não pode encontrar o caminho especificado.
+Exiting application..
+WARNING: attempt to destroy widget 'widget1286' two times
+ERROR: Unable to unload module 'game_sounds': LUA ERROR:
+/game_sounds/sounds.lua:72: attempt to index global 'soundButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:72: in function 'terminate'
+	/game_sounds/sounds.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'Som': LUA ERROR:
+/game_sounds/sounds.lua:156: attempt to index a nil value
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:156: in function 'setLabel'
+	/game_sounds/sounds.lua:150: in function 'stopSound'
+	/game_sounds/sounds.lua:81: in function 'onGameEnd'
+	/game_sounds/sounds.lua:70: in function 'terminate'
+	/game_som/som.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shop': LUA ERROR:
+/game_shop/shop.lua:42: attempt to index global 'shopButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_shop/shop.lua:42: in function 'terminate'
+	/game_shop/shop.otmod:12:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_namechange': LUA ERROR:
+/game_sounds/sounds.lua:156: attempt to index a nil value
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:156: in function 'setLabel'
+	/game_sounds/sounds.lua:150: in function 'stopSound'
+	/game_sounds/sounds.lua:81: in function 'onGameEnd'
+	/game_sounds/sounds.lua:70: in function 'terminate'
+	/game_namechange/name.otmod:11:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_healthinfo': LUA ERROR:
+/game_healthinfo/healthinfo.lua:77: attempt to index global 'healthInfoButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_healthinfo/healthinfo.lua:77: in function 'terminate'
+	/game_healthinfo/healthinfo.otmod:9:[@onUnload]:1: in main chunk
+== application started at Apr 12 2018 17:39:15
+OTClient 0.6.6 rev 0 (df422c0) built on Feb 17 2017 for arch x86
+ERROR: Unable to load texture '/images/topbuttons/healthinfo': unable to open file '/images/topbuttons/healthinfo.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/game/slots/Quest': unable to open file '/images/game/slots/Quest.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/topbuttons/combatcontrols': unable to open file '/images/topbuttons/combatcontrols.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/audio': unable to open file '/images/audio.png': O sistema não pode encontrar o caminho especificado.
+ERROR: /game_sounds/sounds.lua:43: attempt to index global 'soundButton' (a nil value)
+ERROR: Unable to load texture '/game_task/''': unable to open file '/game_task/''.png': O sistema não pode encontrar o caminho especificado.
+Exiting application..
+WARNING: attempt to destroy widget 'widget1286' two times
+ERROR: Unable to unload module 'game_sounds': LUA ERROR:
+/game_sounds/sounds.lua:72: attempt to index global 'soundButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:72: in function 'terminate'
+	/game_sounds/sounds.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'Som': LUA ERROR:
+/game_sounds/sounds.lua:156: attempt to index a nil value
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:156: in function 'setLabel'
+	/game_sounds/sounds.lua:150: in function 'stopSound'
+	/game_sounds/sounds.lua:81: in function 'onGameEnd'
+	/game_sounds/sounds.lua:70: in function 'terminate'
+	/game_som/som.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shop': LUA ERROR:
+/game_shop/shop.lua:42: attempt to index global 'shopButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_shop/shop.lua:42: in function 'terminate'
+	/game_shop/shop.otmod:12:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_namechange': LUA ERROR:
+/game_sounds/sounds.lua:156: attempt to index a nil value
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:156: in function 'setLabel'
+	/game_sounds/sounds.lua:150: in function 'stopSound'
+	/game_sounds/sounds.lua:81: in function 'onGameEnd'
+	/game_sounds/sounds.lua:70: in function 'terminate'
+	/game_namechange/name.otmod:11:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_healthinfo': LUA ERROR:
+/game_healthinfo/healthinfo.lua:77: attempt to index global 'healthInfoButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_healthinfo/healthinfo.lua:77: in function 'terminate'
+	/game_healthinfo/healthinfo.otmod:9:[@onUnload]:1: in main chunk
+== application started at Apr 12 2018 17:39:54
+OTClient 0.6.6 rev 0 (df422c0) built on Feb 17 2017 for arch x86
+ERROR: Unable to find module 'client_styles' required by 'client'
+ERROR: Unable to find module 'client_locales' required by 'client'
+ERROR: Unable to find module 'client_topmenu' required by 'client'
+ERROR: Unable to find module 'client_background' required by 'client'
+ERROR: Unable to find module 'client_options' required by 'client'
+ERROR: Unable to find module 'client_entergame' required by 'client'
+ERROR: Unable to find module 'client_serverlist' required by 'client'
+ERROR: Unable to find module 'client_stats' required by 'client'
+ERROR: Failed to import UI styles from 'styles/countwindow.otui': base style 'MainWindow', is not defined
+ERROR: failed to load UI from 'gameinterface.otui': base style 'Panel', is not defined
+ERROR: Unable to load module 'game_interface': LUA ERROR:
+/game_interface/gameinterface.lua:31: attempt to index global 'gameRootPanel' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_interface/gameinterface.lua:31: in function 'init'
+	/game_interface/interface.otmod:28:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:46: in main chunk
+FATAL ERROR: Unable to load 'game_interface' module
+== application started at Apr 12 2018 17:40:03
+OTClient 0.6.6 rev 0 (df422c0) built on Feb 17 2017 for arch x86
+ERROR: Unable to find module 'client_styles' required by 'client'
+ERROR: Unable to find module 'client_locales' required by 'client'
+ERROR: Unable to find module 'client_topmenu' required by 'client'
+ERROR: Unable to find module 'client_background' required by 'client'
+ERROR: Unable to find module 'client_options' required by 'client'
+ERROR: Unable to find module 'client_entergame' required by 'client'
+ERROR: Unable to find module 'client_serverlist' required by 'client'
+ERROR: Unable to find module 'client_stats' required by 'client'
+ERROR: Failed to import UI styles from 'styles/countwindow.otui': base style 'MainWindow', is not defined
+ERROR: failed to load UI from 'gameinterface.otui': base style 'Panel', is not defined
+ERROR: Unable to load module 'game_interface': LUA ERROR:
+/game_interface/gameinterface.lua:31: attempt to index global 'gameRootPanel' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_interface/gameinterface.lua:31: in function 'init'
+	/game_interface/interface.otmod:28:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:46: in main chunk
+FATAL ERROR: Unable to load 'game_interface' module
+== application started at Apr 12 2018 17:40:28
+OTClient 0.6.6 rev 0 (df422c0) built on Feb 17 2017 for arch x86
+ERROR: Unable to find module 'client_styles' required by 'client'
+ERROR: Unable to find module 'client_locales' required by 'client'
+ERROR: Unable to find module 'client_topmenu' required by 'client'
+ERROR: Unable to find module 'client_background' required by 'client'
+ERROR: Unable to find module 'client_options' required by 'client'
+ERROR: Unable to find module 'client_entergame' required by 'client'
+ERROR: Unable to find module 'client_serverlist' required by 'client'
+ERROR: Unable to find module 'client_stats' required by 'client'
+ERROR: Failed to import UI styles from 'styles/countwindow.otui': base style 'MainWindow', is not defined
+ERROR: failed to load UI from 'gameinterface.otui': base style 'Panel', is not defined
+ERROR: Unable to load module 'game_interface': LUA ERROR:
+/game_interface/gameinterface.lua:31: attempt to index global 'gameRootPanel' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_interface/gameinterface.lua:31: in function 'init'
+	/game_interface/interface.otmod:28:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:46: in main chunk
+FATAL ERROR: Unable to load 'game_interface' module
+== application started at Apr 12 2018 17:40:36
+OTClient 0.6.6 rev 0 (df422c0) built on Feb 17 2017 for arch x86
+ERROR: Unable to find module 'client_styles' required by 'client'
+ERROR: Unable to find module 'client_locales' required by 'client'
+ERROR: Unable to find module 'client_topmenu' required by 'client'
+ERROR: Unable to load module 'client_background': dependency 'client_topmenu' was not found
+ERROR: Unable to find module 'client_options' required by 'client'
+ERROR: Unable to find module 'client_entergame' required by 'client'
+ERROR: Unable to find module 'client_serverlist' required by 'client'
+ERROR: Unable to find module 'client_stats' required by 'client'
+ERROR: Failed to import UI styles from 'styles/countwindow.otui': base style 'MainWindow', is not defined
+ERROR: failed to load UI from 'gameinterface.otui': base style 'Panel', is not defined
+ERROR: Unable to load module 'game_interface': LUA ERROR:
+/game_interface/gameinterface.lua:31: attempt to index global 'gameRootPanel' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_interface/gameinterface.lua:31: in function 'init'
+	/game_interface/interface.otmod:28:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:46: in main chunk
+FATAL ERROR: Unable to load 'game_interface' module
+== application started at Apr 12 2018 17:40:47
+OTClient 0.6.6 rev 0 (df422c0) built on Feb 17 2017 for arch x86
+ERROR: Unable to find module 'client_styles' required by 'client'
+ERROR: Unable to find module 'client_locales' required by 'client'
+ERROR: Unable to find module 'client_topmenu' required by 'client'
+ERROR: Unable to load module 'client_background': dependency 'client_topmenu' was not found
+ERROR: Unable to find module 'client_options' required by 'client'
+ERROR: Unable to find module 'client_entergame' required by 'client'
+ERROR: Unable to find module 'client_serverlist' required by 'client'
+ERROR: Unable to find module 'client_stats' required by 'client'
+ERROR: Failed to import UI styles from 'styles/countwindow.otui': base style 'MainWindow', is not defined
+ERROR: failed to load UI from 'gameinterface.otui': base style 'Panel', is not defined
+ERROR: Unable to load module 'game_interface': LUA ERROR:
+/game_interface/gameinterface.lua:31: attempt to index global 'gameRootPanel' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_interface/gameinterface.lua:31: in function 'init'
+	/game_interface/interface.otmod:28:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:46: in main chunk
+FATAL ERROR: Unable to load 'game_interface' module
+== application started at Apr 12 2018 17:40:54
+OTClient 0.6.6 rev 0 (df422c0) built on Feb 17 2017 for arch x86
+ERROR: Unable to find module 'client_styles' required by 'client'
+ERROR: Unable to find module 'client_locales' required by 'client'
+ERROR: Unable to find module 'client_topmenu' required by 'client'
+ERROR: Unable to load module 'client_background': dependency 'client_topmenu' was not found
+ERROR: Unable to find module 'client_options' required by 'client'
+ERROR: Unable to load module 'client_entergame': dependency 'client_topmenu' was not found
+ERROR: Unable to find module 'client_serverlist' required by 'client'
+ERROR: Unable to find module 'client_stats' required by 'client'
+ERROR: Failed to import UI styles from 'styles/countwindow.otui': base style 'MainWindow', is not defined
+ERROR: failed to load UI from 'gameinterface.otui': base style 'Panel', is not defined
+ERROR: Unable to load module 'game_interface': LUA ERROR:
+/game_interface/gameinterface.lua:31: attempt to index global 'gameRootPanel' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_interface/gameinterface.lua:31: in function 'init'
+	/game_interface/interface.otmod:28:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:46: in main chunk
+FATAL ERROR: Unable to load 'game_interface' module
+== application started at Apr 12 2018 17:41:14
+OTClient 0.6.6 rev 0 (df422c0) built on Feb 17 2017 for arch x86
+ERROR: Unable to find module 'client_styles' required by 'client'
+ERROR: Unable to find module 'client_locales' required by 'client'
+ERROR: Unable to find module 'client_topmenu' required by 'client'
+ERROR: Unable to load module 'client_background': dependency 'client_topmenu' was not found
+ERROR: Unable to find module 'client_options' required by 'client'
+ERROR: Unable to load module 'client_entergame': dependency 'client_topmenu' was not found
+ERROR: Unable to find module 'client_serverlist' required by 'client'
+ERROR: Unable to find module 'client_stats' required by 'client'
+ERROR: Failed to import UI styles from 'styles/countwindow.otui': base style 'MainWindow', is not defined
+ERROR: failed to load UI from 'gameinterface.otui': base style 'Panel', is not defined
+ERROR: Unable to load module 'game_interface': LUA ERROR:
+/game_interface/gameinterface.lua:31: attempt to index global 'gameRootPanel' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_interface/gameinterface.lua:31: in function 'init'
+	/game_interface/interface.otmod:28:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:46: in main chunk
+FATAL ERROR: Unable to load 'game_interface' module
+== application started at Apr 12 2018 17:41:28
+OTClient 0.6.6 rev 0 (df422c0) built on Feb 17 2017 for arch x86
+ERROR: Unable to find module 'client_styles' required by 'client'
+ERROR: Unable to find module 'client_locales' required by 'client'
+ERROR: Unable to find module 'client_topmenu' required by 'client'
+ERROR: Unable to load module 'client_background': dependency 'client_topmenu' was not found
+ERROR: Unable to find module 'client_options' required by 'client'
+ERROR: Unable to load module 'client_entergame': dependency 'client_topmenu' was not found
+ERROR: Unable to find module 'client_serverlist' required by 'client'
+ERROR: Unable to find module 'client_stats' required by 'client'
+ERROR: Failed to import UI styles from 'styles/countwindow.otui': base style 'MainWindow', is not defined
+ERROR: failed to load UI from 'gameinterface.otui': base style 'Panel', is not defined
+ERROR: Unable to load module 'game_interface': LUA ERROR:
+/game_interface/gameinterface.lua:31: attempt to index global 'gameRootPanel' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_interface/gameinterface.lua:31: in function 'init'
+	/game_interface/interface.otmod:28:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:46: in main chunk
+FATAL ERROR: Unable to load 'game_interface' module
+== application started at Apr 12 2018 17:41:45
+OTClient 0.6.6 rev 0 (df422c0) built on Feb 17 2017 for arch x86
+ERROR: Unable to find module 'client_styles' required by 'client'
+ERROR: Unable to find module 'client_locales' required by 'client'
+ERROR: Unable to find module 'client_topmenu' required by 'client'
+ERROR: Unable to load module 'client_background': dependency 'client_topmenu' was not found
+ERROR: Unable to find module 'client_options' required by 'client'
+ERROR: Unable to load module 'client_entergame': dependency 'client_topmenu' was not found
+ERROR: Unable to find module 'client_serverlist' required by 'client'
+ERROR: Unable to find module 'client_stats' required by 'client'
+ERROR: Failed to import UI styles from 'styles/countwindow.otui': base style 'MainWindow', is not defined
+ERROR: failed to load UI from 'gameinterface.otui': base style 'Panel', is not defined
+ERROR: Unable to load module 'game_interface': LUA ERROR:
+/game_interface/gameinterface.lua:31: attempt to index global 'gameRootPanel' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_interface/gameinterface.lua:31: in function 'init'
+	/game_interface/interface.otmod:28:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:46: in main chunk
+FATAL ERROR: Unable to load 'game_interface' module
+== application started at Apr 12 2018 17:41:52
+OTClient 0.6.6 rev 0 (df422c0) built on Feb 17 2017 for arch x86
+ERROR: Unable to find module 'client_styles' required by 'client'
+ERROR: Unable to find module 'client_locales' required by 'client'
+ERROR: Unable to find module 'client_topmenu' required by 'client'
+ERROR: Unable to load module 'client_background': dependency 'client_topmenu' was not found
+ERROR: Unable to find module 'client_options' required by 'client'
+ERROR: Unable to load module 'client_entergame': dependency 'client_topmenu' was not found
+ERROR: Unable to find module 'client_serverlist' required by 'client'
+ERROR: Unable to find module 'client_stats' required by 'client'
+ERROR: Failed to import UI styles from 'styles/countwindow.otui': base style 'MainWindow', is not defined
+ERROR: failed to load UI from 'gameinterface.otui': base style 'Panel', is not defined
+ERROR: Unable to load module 'game_interface': LUA ERROR:
+/game_interface/gameinterface.lua:31: attempt to index global 'gameRootPanel' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_interface/gameinterface.lua:31: in function 'init'
+	/game_interface/interface.otmod:28:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:46: in main chunk
+FATAL ERROR: Unable to load 'game_interface' module
+== application started at Apr 12 2018 17:42:07
+OTClient 0.6.6 rev 0 (df422c0) built on Feb 17 2017 for arch x86
+ERROR: Unable to load texture '/images/topbuttons/healthinfo': unable to open file '/images/topbuttons/healthinfo.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/game/slots/Quest': unable to open file '/images/game/slots/Quest.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/topbuttons/combatcontrols': unable to open file '/images/topbuttons/combatcontrols.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/audio': unable to open file '/images/audio.png': O sistema não pode encontrar o caminho especificado.
+ERROR: /game_sounds/sounds.lua:43: attempt to index global 'soundButton' (a nil value)
+ERROR: Unable to load texture '/game_task/''': unable to open file '/game_task/''.png': O sistema não pode encontrar o caminho especificado.
+Exiting application..
+WARNING: attempt to destroy widget 'widget1286' two times
+ERROR: Unable to unload module 'game_sounds': LUA ERROR:
+/game_sounds/sounds.lua:72: attempt to index global 'soundButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:72: in function 'terminate'
+	/game_sounds/sounds.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'Som': LUA ERROR:
+/game_sounds/sounds.lua:156: attempt to index a nil value
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:156: in function 'setLabel'
+	/game_sounds/sounds.lua:150: in function 'stopSound'
+	/game_sounds/sounds.lua:81: in function 'onGameEnd'
+	/game_sounds/sounds.lua:70: in function 'terminate'
+	/game_som/som.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shop': LUA ERROR:
+/game_shop/shop.lua:42: attempt to index global 'shopButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_shop/shop.lua:42: in function 'terminate'
+	/game_shop/shop.otmod:12:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_namechange': LUA ERROR:
+/game_sounds/sounds.lua:156: attempt to index a nil value
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:156: in function 'setLabel'
+	/game_sounds/sounds.lua:150: in function 'stopSound'
+	/game_sounds/sounds.lua:81: in function 'onGameEnd'
+	/game_sounds/sounds.lua:70: in function 'terminate'
+	/game_namechange/name.otmod:11:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_healthinfo': LUA ERROR:
+/game_healthinfo/healthinfo.lua:77: attempt to index global 'healthInfoButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_healthinfo/healthinfo.lua:77: in function 'terminate'
+	/game_healthinfo/healthinfo.otmod:9:[@onUnload]:1: in main chunk
+== application started at Apr 12 2018 17:42:21
+OTClient 0.6.6 rev 0 (df422c0) built on Feb 17 2017 for arch x86
+ERROR: Unable to load texture '/images/topbuttons/healthinfo': unable to open file '/images/topbuttons/healthinfo.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/game/slots/Quest': unable to open file '/images/game/slots/Quest.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/topbuttons/combatcontrols': unable to open file '/images/topbuttons/combatcontrols.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/audio': unable to open file '/images/audio.png': O sistema não pode encontrar o caminho especificado.
+ERROR: /game_sounds/sounds.lua:43: attempt to index global 'soundButton' (a nil value)
+ERROR: Unable to load texture '/game_task/''': unable to open file '/game_task/''.png': O sistema não pode encontrar o caminho especificado.
+Exiting application..
+WARNING: attempt to destroy widget 'widget1286' two times
+ERROR: Unable to unload module 'game_sounds': LUA ERROR:
+/game_sounds/sounds.lua:72: attempt to index global 'soundButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:72: in function 'terminate'
+	/game_sounds/sounds.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'Som': LUA ERROR:
+/game_sounds/sounds.lua:156: attempt to index a nil value
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:156: in function 'setLabel'
+	/game_sounds/sounds.lua:150: in function 'stopSound'
+	/game_sounds/sounds.lua:81: in function 'onGameEnd'
+	/game_sounds/sounds.lua:70: in function 'terminate'
+	/game_som/som.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shop': LUA ERROR:
+/game_shop/shop.lua:42: attempt to index global 'shopButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_shop/shop.lua:42: in function 'terminate'
+	/game_shop/shop.otmod:12:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_namechange': LUA ERROR:
+/game_sounds/sounds.lua:156: attempt to index a nil value
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:156: in function 'setLabel'
+	/game_sounds/sounds.lua:150: in function 'stopSound'
+	/game_sounds/sounds.lua:81: in function 'onGameEnd'
+	/game_sounds/sounds.lua:70: in function 'terminate'
+	/game_namechange/name.otmod:11:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_healthinfo': LUA ERROR:
+/game_healthinfo/healthinfo.lua:77: attempt to index global 'healthInfoButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_healthinfo/healthinfo.lua:77: in function 'terminate'
+	/game_healthinfo/healthinfo.otmod:9:[@onUnload]:1: in main chunk
+== application started at Apr 12 2018 17:42:30
+OTClient 0.6.6 rev 0 (df422c0) built on Feb 17 2017 for arch x86
+ERROR: Unable to find module 'client_background' required by 'client'
+ERROR: Unable to load texture '/images/topbuttons/healthinfo': unable to open file '/images/topbuttons/healthinfo.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/game/slots/Quest': unable to open file '/images/game/slots/Quest.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/topbuttons/combatcontrols': unable to open file '/images/topbuttons/combatcontrols.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/audio': unable to open file '/images/audio.png': O sistema não pode encontrar o caminho especificado.
+ERROR: /game_sounds/sounds.lua:43: attempt to index global 'soundButton' (a nil value)
+ERROR: Unable to load texture '/game_task/''': unable to open file '/game_task/''.png': O sistema não pode encontrar o caminho especificado.
+Exiting application..
+WARNING: attempt to destroy widget 'widget1284' two times
+ERROR: Unable to unload module 'game_sounds': LUA ERROR:
+/game_sounds/sounds.lua:72: attempt to index global 'soundButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:72: in function 'terminate'
+	/game_sounds/sounds.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'Som': LUA ERROR:
+/game_sounds/sounds.lua:156: attempt to index a nil value
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:156: in function 'setLabel'
+	/game_sounds/sounds.lua:150: in function 'stopSound'
+	/game_sounds/sounds.lua:81: in function 'onGameEnd'
+	/game_sounds/sounds.lua:70: in function 'terminate'
+	/game_som/som.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shop': LUA ERROR:
+/game_shop/shop.lua:42: attempt to index global 'shopButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_shop/shop.lua:42: in function 'terminate'
+	/game_shop/shop.otmod:12:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_namechange': LUA ERROR:
+/game_sounds/sounds.lua:156: attempt to index a nil value
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:156: in function 'setLabel'
+	/game_sounds/sounds.lua:150: in function 'stopSound'
+	/game_sounds/sounds.lua:81: in function 'onGameEnd'
+	/game_sounds/sounds.lua:70: in function 'terminate'
+	/game_namechange/name.otmod:11:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_healthinfo': LUA ERROR:
+/game_healthinfo/healthinfo.lua:77: attempt to index global 'healthInfoButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_healthinfo/healthinfo.lua:77: in function 'terminate'
+	/game_healthinfo/healthinfo.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_interface': LUA ERROR:
+/game_interface/gameinterface.lua:178: attempt to index field 'client_background' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_interface/gameinterface.lua:178: in function 'hide'
+	/game_interface/gameinterface.lua:106: in function 'terminate'
+	/game_interface/interface.otmod:29:[@onUnload]:1: in main chunk
+== application started at Apr 12 2018 17:42:43
+OTClient 0.6.6 rev 0 (df422c0) built on Feb 17 2017 for arch x86
+ERROR: Unable to load texture '/images/topbuttons/healthinfo': unable to open file '/images/topbuttons/healthinfo.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/game/slots/Quest': unable to open file '/images/game/slots/Quest.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/topbuttons/combatcontrols': unable to open file '/images/topbuttons/combatcontrols.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/audio': unable to open file '/images/audio.png': O sistema não pode encontrar o caminho especificado.
+ERROR: /game_sounds/sounds.lua:43: attempt to index global 'soundButton' (a nil value)
+ERROR: Unable to load texture '/game_task/''': unable to open file '/game_task/''.png': O sistema não pode encontrar o caminho especificado.
+Exiting application..
+WARNING: attempt to destroy widget 'widget1286' two times
+ERROR: Unable to unload module 'game_sounds': LUA ERROR:
+/game_sounds/sounds.lua:72: attempt to index global 'soundButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:72: in function 'terminate'
+	/game_sounds/sounds.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'Som': LUA ERROR:
+/game_sounds/sounds.lua:156: attempt to index a nil value
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:156: in function 'setLabel'
+	/game_sounds/sounds.lua:150: in function 'stopSound'
+	/game_sounds/sounds.lua:81: in function 'onGameEnd'
+	/game_sounds/sounds.lua:70: in function 'terminate'
+	/game_som/som.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shop': LUA ERROR:
+/game_shop/shop.lua:42: attempt to index global 'shopButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_shop/shop.lua:42: in function 'terminate'
+	/game_shop/shop.otmod:12:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_namechange': LUA ERROR:
+/game_sounds/sounds.lua:156: attempt to index a nil value
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:156: in function 'setLabel'
+	/game_sounds/sounds.lua:150: in function 'stopSound'
+	/game_sounds/sounds.lua:81: in function 'onGameEnd'
+	/game_sounds/sounds.lua:70: in function 'terminate'
+	/game_namechange/name.otmod:11:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_healthinfo': LUA ERROR:
+/game_healthinfo/healthinfo.lua:77: attempt to index global 'healthInfoButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_healthinfo/healthinfo.lua:77: in function 'terminate'
+	/game_healthinfo/healthinfo.otmod:9:[@onUnload]:1: in main chunk
+== application started at Apr 12 2018 17:43:00
+OTClient 0.6.6 rev 0 (df422c0) built on Feb 17 2017 for arch x86
+ERROR: Unable to find module 'client_entergame' required by 'client'
+ERROR: Unable to load module 'client_serverlist': dependency 'client_entergame' was not found
+ERROR: Unable to load texture '/images/topbuttons/healthinfo': unable to open file '/images/topbuttons/healthinfo.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/game/slots/Quest': unable to open file '/images/game/slots/Quest.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/topbuttons/combatcontrols': unable to open file '/images/topbuttons/combatcontrols.png': O sistema não pode encontrar o caminho especificado.
+ERROR: failed to load UI from 'ability.otui': 'EnterGameButton' is not a defined style
+ERROR: Unable to load module 'game_ability': LUA ERROR:
+/game_ability/ability.lua:9: attempt to index global 'kardWindow' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_ability/ability.lua:9: in function 'init'
+	/game_ability/ability.otmod:11:[@onLoad]:1: in main chunk
+	[C]: in function 'autoLoadModules'
+	/init.lua:49: in main chunk
+ERROR: failed to load UI from 'quest.otui': 'EnterGameButton' is not a defined style
+ERROR: Unable to load module 'game_quest': LUA ERROR:
+/game_quest/quest.lua:6: attempt to index global 'shopWindow' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_quest/quest.lua:6: in function 'init'
+	/game_quest/quest.otmod:11:[@onLoad]:1: in main chunk
+	[C]: in function 'autoLoadModules'
+	/init.lua:49: in main chunk
+ERROR: failed to load UI from 'shop.otui': 'EnterGameButton' is not a defined style
+ERROR: Unable to load module 'game_shop': LUA ERROR:
+/game_shop/shop.lua:16: attempt to index global 'shopWindow' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_shop/shop.lua:16: in function 'init'
+	/game_shop/shop.otmod:11:[@onLoad]:1: in main chunk
+	[C]: in function 'autoLoadModules'
+	/init.lua:49: in main chunk
+ERROR: Unable to load texture '/images/audio': unable to open file '/images/audio.png': O sistema não pode encontrar o caminho especificado.
+ERROR: /game_sounds/sounds.lua:43: attempt to index global 'soundButton' (a nil value)
+ERROR: Unable to load texture '/game_task/''': unable to open file '/game_task/''.png': O sistema não pode encontrar o caminho especificado.
+ERROR: failed to load UI from 'task.otui': 'EnterGameButton' is not a defined style
+ERROR: Unable to load module 'game_task': LUA ERROR:
+/game_task/task.lua:6: attempt to index global 'shopWindow' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_task/task.lua:6: in function 'init'
+	/game_task/task.otmod:11:[@onLoad]:1: in main chunk
+	[C]: in function 'autoLoadModules'
+	/init.lua:49: in main chunk
+ERROR: failed to load UI from 'voc.otui': 'EnterGameButton' is not a defined style
+ERROR: Unable to load module 'game_vocation': LUA ERROR:
+/game_vocation/voc.lua:6: attempt to index global 'kardWindow' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_vocation/voc.lua:6: in function 'init'
+	/game_vocation/voc.otmod:11:[@onLoad]:1: in main chunk
+	[C]: in function 'autoLoadModules'
+	/init.lua:49: in main chunk
+ERROR: Unable to load module 'Biohazard Online': LUA ERROR:
+/mods/IP.otmod:10:[@onLoad]:1: attempt to index global 'EnterGame' (a nil value)
+stack traceback:
+	[C]: ?
+	/mods/IP.otmod:10:[@onLoad]:1: in main chunk
+	[C]: in function 'autoLoadModules'
+	/init.lua:49: in main chunk
+ERROR: protected lua call failed: LUA ERROR:
+/client/client.lua:51: attempt to index global 'EnterGame' (a nil value)
+stack traceback:
+	[C]: ?
+	/client/client.lua:51: in function </client/client.lua:28>
+== application started at Apr 12 2018 17:43:19
+OTClient 0.6.6 rev 0 (df422c0) built on Feb 17 2017 for arch x86
+ERROR: Unable to load texture '/images/topbuttons/healthinfo': unable to open file '/images/topbuttons/healthinfo.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/game/slots/Quest': unable to open file '/images/game/slots/Quest.png': O sistema não pode encontrar o caminho especificado.
+Exiting application..
+ERROR: Unable to unload module 'game_sounds': LUA ERROR:
+/game_sounds/sounds.lua:72: attempt to index global 'soundButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:72: in function 'terminate'
+	/game_sounds/sounds.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'Som': LUA ERROR:
+/game_sounds/sounds.lua:156: attempt to index a nil value
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:156: in function 'setLabel'
+	/game_sounds/sounds.lua:150: in function 'stopSound'
+	/game_sounds/sounds.lua:81: in function 'onGameEnd'
+	/game_sounds/sounds.lua:70: in function 'terminate'
+	/game_som/som.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_namechange': LUA ERROR:
+/game_sounds/sounds.lua:156: attempt to index a nil value
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:156: in function 'setLabel'
+	/game_sounds/sounds.lua:150: in function 'stopSound'
+	/game_sounds/sounds.lua:81: in function 'onGameEnd'
+	/game_sounds/sounds.lua:70: in function 'terminate'
+	/game_namechange/name.otmod:11:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_healthinfo': LUA ERROR:
+/game_healthinfo/healthinfo.lua:77: attempt to index global 'healthInfoButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_healthinfo/healthinfo.lua:77: in function 'terminate'
+	/game_healthinfo/healthinfo.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to load texture '/images/topbuttons/combatcontrols': unable to open file '/images/topbuttons/combatcontrols.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/audio': unable to open file '/images/audio.png': O sistema não pode encontrar o caminho especificado.
+ERROR: /game_sounds/sounds.lua:43: attempt to index global 'soundButton' (a nil value)
+ERROR: Unable to load texture '/game_task/''': unable to open file '/game_task/''.png': O sistema não pode encontrar o caminho especificado.
+Exiting application..
+WARNING: attempt to destroy widget 'widget1286' two times
+ERROR: Unable to unload module 'game_sounds': LUA ERROR:
+/game_sounds/sounds.lua:72: attempt to index global 'soundButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:72: in function 'terminate'
+	/game_sounds/sounds.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'Som': LUA ERROR:
+/game_sounds/sounds.lua:156: attempt to index a nil value
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:156: in function 'setLabel'
+	/game_sounds/sounds.lua:150: in function 'stopSound'
+	/game_sounds/sounds.lua:81: in function 'onGameEnd'
+	/game_sounds/sounds.lua:70: in function 'terminate'
+	/game_som/som.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shop': LUA ERROR:
+/game_shop/shop.lua:42: attempt to index global 'shopButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_shop/shop.lua:42: in function 'terminate'
+	/game_shop/shop.otmod:12:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_namechange': LUA ERROR:
+/game_sounds/sounds.lua:156: attempt to index a nil value
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:156: in function 'setLabel'
+	/game_sounds/sounds.lua:150: in function 'stopSound'
+	/game_sounds/sounds.lua:81: in function 'onGameEnd'
+	/game_sounds/sounds.lua:70: in function 'terminate'
+	/game_namechange/name.otmod:11:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_healthinfo': LUA ERROR:
+/game_healthinfo/healthinfo.lua:77: attempt to index global 'healthInfoButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_healthinfo/healthinfo.lua:77: in function 'terminate'
+	/game_healthinfo/healthinfo.otmod:9:[@onUnload]:1: in main chunk
+== application started at Apr 12 2018 17:51:42
+OTClient 0.6.6 rev 0 (df422c0) built on Feb 17 2017 for arch x86
+FATAL ERROR: Unable to load 'client' module
+== application started at Apr 12 2018 17:51:55
+OTClient 0.6.6 rev 0 (df422c0) built on Feb 17 2017 for arch x86
+ERROR: Unable to load texture '/images/topbuttons/healthinfo': unable to open file '/images/topbuttons/healthinfo.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/game/slots/Quest': unable to open file '/images/game/slots/Quest.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/topbuttons/combatcontrols': unable to open file '/images/topbuttons/combatcontrols.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/audio': unable to open file '/images/audio.png': O sistema não pode encontrar o caminho especificado.
+ERROR: /game_sounds/sounds.lua:43: attempt to index global 'soundButton' (a nil value)
+ERROR: Unable to load texture '/game_task/''': unable to open file '/game_task/''.png': O sistema não pode encontrar o caminho especificado.
+ERROR: audio buffer underrun
+at:
+	[C++]: StreamSoundSource::update
+Exiting application..
+WARNING: attempt to destroy widget 'widget1286' two times
+ERROR: Unable to unload module 'game_sounds': LUA ERROR:
+/game_sounds/sounds.lua:72: attempt to index global 'soundButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:72: in function 'terminate'
+	/game_sounds/sounds.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'Som': LUA ERROR:
+/game_sounds/sounds.lua:156: attempt to index a nil value
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:156: in function 'setLabel'
+	/game_sounds/sounds.lua:150: in function 'stopSound'
+	/game_sounds/sounds.lua:81: in function 'onGameEnd'
+	/game_sounds/sounds.lua:70: in function 'terminate'
+	/game_som/som.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shop': LUA ERROR:
+/game_shop/shop.lua:42: attempt to index global 'shopButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_shop/shop.lua:42: in function 'terminate'
+	/game_shop/shop.otmod:12:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_namechange': LUA ERROR:
+/game_sounds/sounds.lua:156: attempt to index a nil value
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:156: in function 'setLabel'
+	/game_sounds/sounds.lua:150: in function 'stopSound'
+	/game_sounds/sounds.lua:81: in function 'onGameEnd'
+	/game_sounds/sounds.lua:70: in function 'terminate'
+	/game_namechange/name.otmod:11:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_healthinfo': LUA ERROR:
+/game_healthinfo/healthinfo.lua:77: attempt to index global 'healthInfoButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_healthinfo/healthinfo.lua:77: in function 'terminate'
+	/game_healthinfo/healthinfo.otmod:9:[@onUnload]:1: in main chunk
+== application started at Apr 12 2018 18:15:15
+OTClient 0.6.6 rev 0 (df422c0) built on Feb 17 2017 for arch x86
+ERROR: Unable to load texture '/images/topbuttons/healthinfo': unable to open file '/images/topbuttons/healthinfo.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/game/slots/Quest': unable to open file '/images/game/slots/Quest.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/topbuttons/combatcontrols': unable to open file '/images/topbuttons/combatcontrols.png': O sistema não pode encontrar o caminho especificado.
+ERROR: Unable to load texture '/images/audio': unable to open file '/images/audio.png': O sistema não pode encontrar o caminho especificado.
+ERROR: /game_sounds/sounds.lua:43: attempt to index global 'soundButton' (a nil value)
+ERROR: Unable to load texture '/game_task/''': unable to open file '/game_task/''.png': O sistema não pode encontrar o caminho especificado.
+Exiting application..
+WARNING: attempt to destroy widget 'widget1286' two times
+ERROR: Unable to unload module 'game_sounds': LUA ERROR:
+/game_sounds/sounds.lua:72: attempt to index global 'soundButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:72: in function 'terminate'
+	/game_sounds/sounds.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'Som': LUA ERROR:
+/game_sounds/sounds.lua:156: attempt to index a nil value
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:156: in function 'setLabel'
+	/game_sounds/sounds.lua:150: in function 'stopSound'
+	/game_sounds/sounds.lua:81: in function 'onGameEnd'
+	/game_sounds/sounds.lua:70: in function 'terminate'
+	/game_som/som.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shop': LUA ERROR:
+/game_shop/shop.lua:42: attempt to index global 'shopButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_shop/shop.lua:42: in function 'terminate'
+	/game_shop/shop.otmod:12:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_namechange': LUA ERROR:
+/game_sounds/sounds.lua:156: attempt to index a nil value
+stack traceback:
+	[C]: ?
+	/game_sounds/sounds.lua:156: in function 'setLabel'
+	/game_sounds/sounds.lua:150: in function 'stopSound'
+	/game_sounds/sounds.lua:81: in function 'onGameEnd'
+	/game_sounds/sounds.lua:70: in function 'terminate'
+	/game_namechange/name.otmod:11:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_healthinfo': LUA ERROR:
+/game_healthinfo/healthinfo.lua:77: attempt to index global 'healthInfoButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_healthinfo/healthinfo.lua:77: in function 'terminate'
+	/game_healthinfo/healthinfo.otmod:9:[@onUnload]:1: in main chunk

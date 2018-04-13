@@ -1,0 +1,62 @@
+ClansButton < UIButton
+  size: 160 298
+  color: alpha
+  icon-color: #888888
+  border-width: 1
+  border-color: black
+  anchors.top: parent.top
+  anchors.left: parent.left
+  @onClick: clanWindow(doCorrectString(self:getText()))
+
+  $!first:
+    anchors.left: prev.right
+    margin-left: 4
+
+  $hover:
+    icon-color: #ffffff
+
+  $pressed:
+    icon-color: #cccccc
+
+Panel
+  HorizontalScrollBar
+    id: scrollBar
+    step: 86
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+
+  ScrollablePanel
+    horizontal-scrollbar: scrollBar
+    anchors.fill: parent
+    margin-bottom: 15
+
+    ClansButton
+      id: Blessing
+      icon: img/Blessing
+      @onClick: Blessing()
+      icon-size: 160 275
+
+    ClansButton
+      id: Skull
+      icon: img/Skull
+      @onClick: Skull()
+      icon-size: 160 275
+
+    ClansButton
+      id: Stamina
+      icon: img/Stamina
+      @onClick: Stamina()
+      icon-size: 160 275
+
+    ClansButton
+      id: NameChange
+      icon: img/NameChange
+      @onClick: NameChange()
+      icon-size: 160 275
+
+    ClansButton
+      id: SexChange
+      icon: img/SexChange
+      @onClick: SexChange()
+      icon-size: 160 275

@@ -1,0 +1,392 @@
+MarketButton < ShopButton
+  text-offset: 30 0
+MarketButtonSale < ShopButtonSale
+  text-offset: 30 0
+MarketPrize < ShopPrize
+  margin-left: 30
+
+Panel
+  VerticalScrollBar
+    id: scrollBar
+    step: 50
+    pixels-scroll: true
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+
+  ScrollablePanel
+    vertical-scrollbar: scrollBar
+    anchors.fill: parent
+    margin-right: 15
+
+    MarketButton
+      id: Deveres Imperiais
+      text: [001] Deveres Imperiais
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      anchors.top: parent.top
+      @onClick: DeveresImperiais()
+
+    MarketButton
+      id: Servir e Obedecer
+      text: [001] Servir e Obedecer
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: ServirObedecer()
+
+    MarketButton
+      id: O Caca Troll
+      text: [002] O Caça Troll
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: OCacaTroll()
+
+    MarketButton
+      id: Alerta de Pragas
+      text: [002] Alerta de Pragas
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: AlertaPragas()
+
+    MarketButton
+      id: Enfermidade
+      text: [002] Enfermidade
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: Enfermidade()
+
+    MarketButton
+      id: O Domador de Feras
+      text: [003] O Domador de Feras
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: DomadorFeras()
+
+    MarketButton
+      id: Traidor
+      text: [003] O Traidor
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: Traidor()
+
+    MarketButton
+      id: Bencao Divina
+      text: [004] Benção Divina
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: BencaoDivina()
+
+    MarketButton
+      id: Honrando os Mortos
+      text: [004] Honrando os Mortos
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: HonrandoMortos()
+
+    MarketButton
+      id: Missao Oficial
+      text: [005] Missão Oficial
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: MissaoOficial()
+
+    MarketButton
+      id: Lista Negra
+      text: [005] Lista Negra
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: ListaNegra()
+
+    MarketButton
+      id: Promessa
+      text: [006] A Promessa
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: Promessa()
+
+    MarketButton
+      id: Raridade
+      text: [007] Raridade
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: Raridade()
+
+    MarketButton
+      id: Curandeiro
+      text: [008] O Curandeiro
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: Curandeiro()
+
+    MarketButton
+      id: Slot
+      text: [008] Slot
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: Slot()
+
+    MarketButton
+      id: Aprimoramento
+      text: [009] Aprimoramento
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: Aprimoramento()
+
+    MarketButton
+      id: AcordoRisco
+      text: [010] Acordo de Risco
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: AcordoRisco()
+
+    MarketButton
+      id: Sincronizacao
+      text: [010] Sincronização
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: Sincronizacao()
+
+    MarketButton
+      id: DepositoPeles
+      text: [011] Depósito de Peles
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: DepositoPeles()
+
+    MarketButton
+      id: ArteCraft
+      text: [012] A Arte do Craft
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: ArteCraft()
+
+    MarketButton
+      id: Lagrimas
+      text: [013] Lagrimas
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: Lagrimas()
+
+    MarketButton
+      id: ReceitaCraft
+      text: [014] Receita de Craft
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: ReceitaCraft()
+
+    MarketButton
+      id: Minerador
+      text: [014] Minerador
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: Minerador()
+
+    MarketButton
+      id: EntregaEspecial
+      text: [015] Entrega Especial
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: EntregaEspecial()
+
+    MarketButton
+      id: LadraoTumulo
+      text: [015] Ladrão de Tumulo
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: LadraoTumulo()
+
+    MarketButton
+      id: AguaSuja
+      text: [015] Água Suja
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: AguaSuja()
+
+    MarketButton
+      id: Superticao
+      text: [015] Supertição
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: Superticao()
+
+    MarketButton
+      id: EstradaLadroes
+      text: [016] Estrada de Ladrões
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: EstradaLadroes()
+
+    MarketButton
+      id: AreiasFerro
+      text: [017] Areias de Ferro
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: AreiasFerro()
+
+    MarketButton
+      id: Desequilibrio
+      text: [018] Desequilibrio
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: Desequilibrio()
+
+    MarketButton
+      id: EscoltaImperial
+      text: [018] Escolta Imperial
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: EscoltaImperial()
+
+    MarketButton
+      id: FelizAniversario
+      text: [019] Feliz Aniversário!
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: FelizAniversario()
+
+    MarketButton
+      id: MinaExplosiva
+      text: [020] Mina Explosiva
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: MinaExplosiva()
+
+    MarketButton
+      id: Falsificadores
+      text: [020] Falsificadores
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: Falsificadores()
+
+    MarketButton
+      id: CacaFantasma
+      text: [021] O Caça-Fantasma
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: CacaFantasma()
+
+    MarketButton
+      id: Dangerous
+      text: [025] Dangerous
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: Dangerous()
+
+    MarketButton
+      id: QuestVocacional
+      text: [030] Quest Vocacional
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: QuestVocacional()
+
+    MarketButton
+      id: Habilidades
+      text: [030] Habilidades
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: Habilidades()
+
+    MarketButton
+      id: DesertQuest
+      text: [030] Desert Quest
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: DesertQuest()
+
+    MarketButton
+      id: Greenhorn
+      text: [030] Arena: Greenhorn
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: Greenhorn()
+
+    MarketButton
+      id: ParadoxTower
+      text: [035] The Paradox Tower Quest
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: ParadoxTower()
+
+    MarketButton
+      id: Carteiro
+      text: [040] Carteiro por um dia
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: Carteiro()
+
+    MarketButton
+      id: Scrapper
+      text: [050] Arena: Scrapper
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: Scrapper()
+
+    MarketButton
+      id: BansheeQuest
+      text: [050] Banshee Quest
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: BansheeQuest()
+
+    MarketButton
+      id: RuinasSombrias
+      text: [050] Dangerous: Ruinas Sombrias
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: RuinasSombrias()
+
+    MarketButton
+      id: Nation
+      text: [055] Nation
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: Nation()
+
+    MarketButton
+      id: Warlord
+      text: [080] Arena: Warlord
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: Warlord()
+
+    MarketButton
+      id: PitsInferno
+      text: [080] The Pits of Inferno Quest
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: PitsInferno()
+
+    MarketButton
+      id: Darkness
+      text: [099] Darkness Quest
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: Darkness()
+
+    MarketButton
+      id: Annihilator
+      text: [100] The Annihilator Quest
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: Annihilator()
+
+    MarketButton
+      id: TemploObscuro
+      text: [100] Dangerous: Templo Obscuro
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: TemploObscuro()
+
+    MarketButton
+      id: DemonQuest
+      text: [105] Demon Quest
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: DemonQuest()
+
+    MarketButton
+      id: Inquisition
+      text: [110] The Inquisition Quest
+      icon: /images/game/quest/aberto
+      icon-size: 20 20
+      @onClick: Inquisition()

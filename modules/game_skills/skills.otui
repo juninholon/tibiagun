@@ -1,0 +1,260 @@
+SkillFirstWidget < UIWidget
+
+SkillButton < UIButton
+  height: 21
+  margin-bottom: 2
+  &onClick: onSkillButtonClick
+
+SkillNameLabel < GameLabel
+  font: verdana-11px-monochrome
+  anchors.left: parent.left
+  anchors.top: parent.top
+  anchors.bottom: parent.bottom
+
+SkillValueLabel < GameLabel
+  id: value
+  font: verdana-11px-monochrome
+  text-align: topright
+  anchors.right: parent.right
+  anchors.top: parent.top
+  anchors.bottom: parent.bottom
+  anchors.left: prev.left
+
+SkillPercentPanel < ProgressBar
+  id: percent
+  background-color: green
+  height: 5
+  image-source: /modules/game_skills/img/skillprogress
+  image-border-left: 2
+  image-border-right: 3
+  margin-top: 15
+  anchors.left: parent.left
+  anchors.right: parent.right
+  anchors.top: parent.top
+  phantom: false
+
+MiniWindow
+  id: skillWindow
+  !text: tr('Skills')
+  height: 150
+  icon: /images/topbuttons/skills
+  @onClose: toggle()
+  &save: true
+
+  MiniWindowContents
+    padding-left: 5
+    padding-right: 5
+    layout: verticalBox
+
+    SkillButton
+      margin-top: 5
+      id: experience
+      height: 15
+      SkillNameLabel
+        !text: tr('Experience')
+      SkillValueLabel
+      UIButton
+        id: nation
+        opacity: 0.5
+        width: 177
+        height: 176
+        image-source: img/None
+        anchors.top: parent.top
+        anchors.left: parent.left
+        margin-top: 8
+
+    SkillButton
+      id: level
+      SkillNameLabel
+        !text: tr('Level')
+      SkillValueLabel
+      SkillPercentPanel
+        background-color: red
+
+    SkillButton
+      id: baseTitulo
+      !text: tr('Pontos de Atributo: 0')
+      margin-top: 8
+      height: 13
+
+    SkillButton
+      id: Bases
+      size: 143 90
+      margin-top: 2
+      UIButton
+        id: acampUm
+        size: 48 48
+        icon-source: img/Vitalidade
+        icon-size: 38 38
+        anchors.top: parent.top
+        anchors.right: parent.right
+        margin-right: 8
+        @onClick: Vitalidade()
+      UIButton
+        id: acampDois
+        size: 48 48
+        icon-source: img/Espiritualidade
+        icon-size: 38 38
+        anchors.top: parent.top
+        anchors.right: parent.right
+        margin-right: 55
+        @onClick: Espiritualidade()
+      UIButton
+        id: acampTres
+        size: 48 48
+        icon-source: img/Capacidade
+        icon-size: 38 38
+        anchors.top: parent.top
+        anchors.right: parent.right
+        margin-right: 103
+        @onClick: Capacidade()
+      UIButton
+        id: acampQuatro
+        size: 48 48
+        icon-source: img/Potencia
+        icon-size: 38 38
+        anchors.bottom: parent.bottom
+        anchors.right: parent.right
+        margin-right: 8
+        @onClick: Potencia()
+      UIButton
+        id: acampCinco
+        size: 48 48
+        !tooltip: tr('Experiência\nPontos necessários: 01\n\nDescrição:\nA quantidade de pontos que você\nadicionar aqui será convertido em EXP EXTRA\nao desferir dano a um monstro.')
+        icon-source: img/Experiencia
+        icon-size: 38 38
+        anchors.bottom: parent.bottom
+        anchors.right: parent.right
+        margin-right: 55
+        @onClick: Experiencia()
+      UIButton
+        id: acampSeis
+        size: 48 48
+        icon-source: img/Destreza
+        icon-size: 38 38
+        anchors.bottom: parent.bottom
+        anchors.right: parent.right
+        margin-right: 103
+        @onClick: Destreza()
+
+    SkillButton
+      id: Vitalidade
+      !tooltip: tr('Pontos gastos em Vitalidade.')
+      height: 15
+      SkillNameLabel
+        !text: tr('Vitalidade')
+        color: yellow
+      SkillValueLabel
+
+    SkillButton
+      id: Espiritualidade
+      !tooltip: tr('Pontos gastos em Espiritualidade.')
+      height: 15
+      SkillNameLabel
+        !text: tr('Espiritualidade')
+        color: yellow
+      SkillValueLabel
+
+    SkillButton
+      id: capacity
+      !tooltip: tr('Sua Capacidade total.')
+      height: 15
+      SkillNameLabel
+        !text: tr('Capacity')
+        color: yellow
+      SkillValueLabel
+
+    SkillButton
+      id: Experiencia
+      !tooltip: tr('Pontos gastos em Experiência.')
+      height: 15
+      SkillNameLabel
+        !text: tr('Experience')
+        color: yellow
+      SkillValueLabel
+
+    SkillButton
+      id: honra
+      !tooltip: tr('Você obtem pontos de honra\nparticipando da Knightmare War.\nVocê pode trocar 100 pontos de honra\npor 1 VIP Coins com o Oficial Bruce.')
+      height: 15
+      SkillNameLabel
+        !text: tr('Pontos de Honra')
+        color: yellow
+      SkillValueLabel
+
+    SkillButton
+      id: speed
+      height: 15
+      SkillNameLabel
+        !text: tr('Speed')
+      SkillValueLabel
+
+    SkillButton
+      id: regenerationTime
+      SkillNameLabel
+        !text: tr('Regeneration Time')
+      SkillValueLabel
+
+    SkillButton
+      id: stamina
+      SkillNameLabel
+        !text: tr('Stamina')
+      SkillValueLabel
+      SkillPercentPanel
+
+    SkillButton
+      id: offlineTraining
+      SkillNameLabel
+        !text: tr('Offline Training')
+      SkillValueLabel
+      SkillPercentPanel
+
+    SkillButton
+      id: skillId0
+      SkillNameLabel
+        !text: tr('Potência')
+      SkillValueLabel
+      SkillPercentPanel
+        background-color: red
+
+    SkillButton
+      id: skillId1
+      SkillNameLabel
+        !text: tr('Pistola')
+      SkillValueLabel
+      SkillPercentPanel
+
+    SkillButton
+      id: skillId2
+      SkillNameLabel
+        !text: tr('Metralhadora')
+      SkillValueLabel
+      SkillPercentPanel
+
+    SkillButton
+      id: skillId3
+      SkillNameLabel
+        !text: tr('Espingarda')
+      SkillValueLabel
+      SkillPercentPanel
+
+    SkillButton
+      id: skillId4
+      SkillNameLabel
+        !text: tr('Rifle')
+      SkillValueLabel
+      SkillPercentPanel
+
+    SkillButton
+      id: skillId5
+      SkillNameLabel
+        !text: tr('Destreza')
+      SkillValueLabel
+      SkillPercentPanel
+
+    SkillButton
+      id: skillId6
+      SkillNameLabel
+        !text: tr('Fishing')
+      SkillValueLabel
+      SkillPercentPanel

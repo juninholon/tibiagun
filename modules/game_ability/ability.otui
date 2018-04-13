@@ -1,0 +1,463 @@
+MainWindow
+  id: kardWindow
+  !text: ('Árvore de Habilidades')
+  size: 320 510
+  padding: 10
+  @onEscape: toggle()
+  
+  EnterGameButton
+    id: fechar
+    !text: ('Fechar')
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    size: 25 25
+    @onClick: toggle()
+
+  UIButton
+    id: infoVoc
+    size: 300 50
+    !text: ('Você obtém pontos de habilidade ao avançar de nível. Deixe o mouse em cima da habilidade para ver informações sobre ela.')
+    text-align: center
+    text-wrap: true
+    image-source: /images/game/other/task_window
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 15
+
+  UIButton
+    id: points
+    size: 200 25
+    !text: ('Pontos de Habilidade: 0')
+    text-align: center
+    text-wrap: true
+    anchors.bottom: parent.bottom
+    anchors.right: fechar.left
+    margin-right: 50
+
+  UIButton
+    id: skill1
+    size: 38 38
+    image-source: img/0
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 15
+    margin-top: 90
+
+  UIButton
+    id: umPARAdois
+    image-source: img/v
+    image-size: 41 3
+    anchors.top: parent.top
+    anchors.left: skill1.right
+    margin-top: 105
+
+  UIButton
+    id: umPARAcinco
+    image-source: img/s
+    image-size: 3 41
+    anchors.top: skill1.bottom
+    anchors.left: parent.left
+    margin-left: 33
+
+  UIButton
+    id: skill2
+    size: 38 38
+    image-source: img/0
+    anchors.top: parent.top
+    anchors.left: skill1.right
+    margin-left: 40
+    margin-top: 90
+
+  UIButton
+    id: doisPARAtres
+    image-source: img/v
+    image-size: 41 3
+    anchors.top: parent.top
+    anchors.left: skill2.right
+    margin-top: 105
+
+  UIButton
+    id: doisPARAseis
+    image-source: img/s
+    image-size: 3 41
+    anchors.top: skill2.bottom
+    anchors.left: skill5.right
+    margin-left: 57
+
+  UIButton
+    id: skill3
+    size: 38 38
+    image-source: img/0
+    anchors.top: parent.top
+    anchors.left: skill2.right
+    margin-left: 40
+    margin-top: 90
+
+  UIButton
+    id: tresPARAquatro
+    image-source: img/v
+    image-size: 41 3
+    anchors.top: parent.top
+    anchors.left: skill3.right
+    margin-top: 105
+
+  UIButton
+    id: tresPARAsete
+    image-source: img/s
+    image-size: 3 41
+    anchors.top: skill3.bottom
+    anchors.left: skill6.right
+    margin-left: 57
+
+  UIButton
+    id: skill4
+    size: 38 38
+    image-source: img/0
+    anchors.top: parent.top
+    anchors.left: skill3.right
+    margin-left: 40
+    margin-top: 90
+
+  UIButton
+    id: quatroPARAoito
+    image-source: img/s
+    image-size: 3 41
+    anchors.top: skill4.bottom
+    anchors.left: skill7.right
+    margin-left: 57
+
+  UIButton
+    id: skill5
+    size: 38 38
+    image-source: img/0
+    anchors.top: skill1.bottom
+    anchors.left: parent.left
+    margin-left: 15
+    margin-top: 40
+
+  UIButton
+    id: cincoPARAseis
+    image-source: img/v
+    image-size: 41 3
+    anchors.top: parent.top
+    anchors.left: skill5.right
+    margin-top: 185
+
+  UIButton
+    id: cincoPARAnove
+    image-source: img/s
+    image-size: 3 41
+    anchors.top: skill5.bottom
+    anchors.left: parent.left
+    margin-left: 33
+
+  UIButton
+    id: skill6
+    size: 38 38
+    image-source: img/0
+    anchors.top: skill2.bottom
+    anchors.left: skill5.right
+    margin-left: 40
+    margin-top: 40
+
+  UIButton
+    id: seisPARAsete
+    image-source: img/v
+    image-size: 41 3
+    anchors.top: parent.top
+    anchors.left: skill6.right
+    margin-top: 185
+
+  UIButton
+    id: seisPARAdez
+    image-source: img/s
+    image-size: 3 41
+    anchors.top: skill6.bottom
+    anchors.left: skill5.right
+    margin-left: 57
+
+  UIButton
+    id: skill7
+    size: 38 38
+    image-source: img/0
+    anchors.top: skill3.bottom
+    anchors.left: skill6.right
+    margin-left: 40
+    margin-top: 40
+
+  UIButton
+    id: setePARAoito
+    image-source: img/v
+    image-size: 41 3
+    anchors.top: parent.top
+    anchors.left: skill7.right
+    margin-top: 185
+
+  UIButton
+    id: setePARAonze
+    image-source: img/s
+    image-size: 3 41
+    anchors.top: skill7.bottom
+    anchors.left: skill6.right
+    margin-left: 57
+
+  UIButton
+    id: skill8
+    size: 38 38
+    image-source: img/0
+    anchors.top: skill4.bottom
+    anchors.left: skill7.right
+    margin-left: 40
+    margin-top: 40
+
+  UIButton
+    id: oitoPARAdoze
+    image-source: img/s
+    image-size: 3 41
+    anchors.top: skill8.bottom
+    anchors.left: skill7.right
+    margin-left: 57
+
+  UIButton
+    id: skill9
+    size: 38 38
+    image-source: img/0
+    anchors.top: skill5.bottom
+    anchors.left: parent.left
+    margin-left: 15
+    margin-top: 40
+
+  UIButton
+    id: novePARAdez
+    image-source: img/v
+    image-size: 41 3
+    anchors.top: parent.top
+    anchors.left: skill9.right
+    margin-top: 260
+
+  UIButton
+    id: novePARAtreze
+    image-source: img/s
+    image-size: 3 41
+    anchors.top: skill9.bottom
+    anchors.left: parent.left
+    margin-left: 33
+
+  UIButton
+    id: skill10
+    size: 38 38
+    image-source: img/0
+    anchors.top: skill6.bottom
+    anchors.left: skill9.right
+    margin-left: 40
+    margin-top: 40
+
+  UIButton
+    id: dezPARAonze
+    image-source: img/v
+    image-size: 41 3
+    anchors.top: parent.top
+    anchors.left: skill10.right
+    margin-top: 260
+
+  UIButton
+    id: dezPARAquatorze
+    image-source: img/s
+    image-size: 3 41
+    anchors.top: skill10.bottom
+    anchors.left: skill9.right
+    margin-left: 57
+
+  UIButton
+    id: skill11
+    size: 38 38
+    image-source: img/0
+    anchors.top: skill7.bottom
+    anchors.left: skill10.right
+    margin-left: 40
+    margin-top: 40
+
+  UIButton
+    id: onzePARAdoze
+    image-source: img/v
+    image-size: 41 3
+    anchors.top: parent.top
+    anchors.left: skill11.right
+    margin-top: 260
+
+  UIButton
+    id: onzePARAquinze
+    image-source: img/s
+    image-size: 3 41
+    anchors.top: skill11.bottom
+    anchors.left: skill10.right
+    margin-left: 57
+
+  UIButton
+    id: skill12
+    size: 38 38
+    image-source: img/0
+    anchors.top: skill8.bottom
+    anchors.left: skill11.right
+    margin-left: 40
+    margin-top: 40
+
+  UIButton
+    id: dozePARAdezesseis
+    image-source: img/s
+    image-size: 3 41
+    anchors.top: skill12.bottom
+    anchors.left: skill11.right
+    margin-left: 57
+
+  UIButton
+    id: skill13
+    size: 38 38
+    image-source: img/0
+    anchors.top: skill9.bottom
+    anchors.left: parent.left
+    margin-left: 15
+    margin-top: 40
+
+  UIButton
+    id: trezePARAquatorze
+    image-source: img/v
+    image-size: 41 3
+    anchors.top: parent.top
+    anchors.left: skill13.right
+    margin-top: 340
+
+  UIButton
+    id: trezePARAdezessete
+    image-source: img/s
+    image-size: 3 41
+    anchors.top: skill13.bottom
+    anchors.left: parent.left
+    margin-left: 33
+
+  UIButton
+    id: skill14
+    size: 38 38
+    image-source: img/0
+    anchors.top: skill10.bottom
+    anchors.left: skill13.right
+    margin-left: 40
+    margin-top: 40
+
+  UIButton
+    id: quatorzePARAquinze
+    image-source: img/v
+    image-size: 41 3
+    anchors.top: parent.top
+    anchors.left: skill14.right
+    margin-top: 340
+
+  UIButton
+    id: quatorzePARAdezoito
+    image-source: img/s
+    image-size: 3 41
+    anchors.top: skill14.bottom
+    anchors.left: skill13.right
+    margin-left: 57
+
+  UIButton
+    id: skill15
+    size: 38 38
+    image-source: img/0
+    anchors.top: skill11.bottom
+    anchors.left: skill14.right
+    margin-left: 40
+    margin-top: 40
+
+  UIButton
+    id: quinzePARAdezesseis
+    image-source: img/v
+    image-size: 41 3
+    anchors.top: parent.top
+    anchors.left: skill15.right
+    margin-top: 340
+
+  UIButton
+    id: quinzePARAdezenove
+    image-source: img/s
+    image-size: 3 41
+    anchors.top: skill15.bottom
+    anchors.left: skill14.right
+    margin-left: 57
+
+  UIButton
+    id: skill16
+    size: 38 38
+    image-source: img/0
+    anchors.top: skill12.bottom
+    anchors.left: skill15.right
+    margin-left: 40
+    margin-top: 40
+
+  UIButton
+    id: dezesseisPARAvinte
+    image-source: img/s
+    image-size: 3 41
+    anchors.top: skill16.bottom
+    anchors.left: skill15.right
+    margin-left: 57
+
+  UIButton
+    id: skill17
+    size: 38 38
+    image-source: img/0
+    anchors.top: skill13.bottom
+    anchors.left: parent.left
+    margin-left: 15
+    margin-top: 40
+
+  UIButton
+    id: dezessetePARAdezoito
+    image-source: img/v
+    image-size: 41 3
+    anchors.top: parent.top
+    anchors.left: skill17.right
+    margin-top: 415
+
+  UIButton
+    id: skill18
+    size: 38 38
+    image-source: img/0
+    anchors.top: skill13.bottom
+    anchors.left: skill17.right
+    margin-left: 40
+    margin-top: 40
+
+  UIButton
+    id: dezoitoPARAdezenove
+    image-source: img/v
+    image-size: 41 3
+    anchors.top: parent.top
+    anchors.left: skill18.right
+    margin-top: 415
+
+  UIButton
+    id: skill19
+    size: 38 38
+    image-source: img/0
+    anchors.top: skill14.bottom
+    anchors.left: skill18.right
+    margin-left: 40
+    margin-top: 40
+
+  UIButton
+    id: dezenovePARAvinte
+    image-source: img/v
+    image-size: 41 3
+    anchors.top: parent.top
+    anchors.left: skill19.right
+    margin-top: 415
+
+  UIButton
+    id: skill20
+    size: 38 38
+    image-source: img/0
+    anchors.top: skill15.bottom
+    anchors.left: skill19.right
+    margin-left: 40
+    margin-top: 40

@@ -1,0 +1,12 @@
+Module
+  name: game_vocation
+  description: Selecione uma Vocation
+  author: Frenesy
+  website: havokx.com.br
+  sandboxed: true
+  scripts: [ voc ]
+
+  autoload: true
+  autoload-priority: 1000
+  @onLoad: init()
+  @onUnload: terminate()

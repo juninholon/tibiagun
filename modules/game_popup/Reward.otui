@@ -1,0 +1,70 @@
+MainWindow
+  !text: tr('Recompensa por Participação')
+  size: 230 150
+  @onEscape: self:destroy()
+  
+  EnterGameButton
+    !text: ('Fechar')
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom
+    @onClick: self:getParent():destroy()
+
+  UIWidget
+    id: rec01
+    size: 52 50
+    anchors.top: parent.top
+    anchors.left: parent.left
+    image-source: /images/ui/summon
+    margin-right: 5
+
+  UIWidget
+    id: slotrec01
+    size: 32 32
+    anchors.top: parent.top
+    anchors.left: parent.left
+    image-source: /images/ui/item
+    margin-top: 8
+    margin-left: 10
+
+  UIWidget
+    id: rec02
+    size: 52 50
+    anchors.top: parent.top
+    anchors.left: rec01.right
+    image-source: /images/ui/summon
+    margin-left: 20
+
+  UIWidget
+    id: slotrec02
+    size: 32 32
+    anchors.top: parent.top
+    anchors.left: slotrec01.right
+    image-source: /images/ui/item
+    margin-top: 8
+    margin-left: 40
+
+  UIWidget
+    id: rec03
+    size: 52 50
+    anchors.top: parent.top
+    anchors.left: rec02.right
+    image-source: /images/ui/summon
+    margin-left: 20
+
+  UIWidget
+    id: slotrec03
+    size: 32 32
+    anchors.top: parent.top
+    anchors.left: slotrec02.right
+    image-source: /images/ui/item
+    margin-top: 8
+    margin-left: 40
+
+  Label
+    id: textRec
+    !text: tr('Pontos de Honra:\n[ 01 ]')
+    size: 120 42
+    text-align: center
+    anchors.top: rec03.bottom
+    anchors.right: parent.right
+    margin-top: 10

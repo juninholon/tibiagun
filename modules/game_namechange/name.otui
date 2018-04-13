@@ -1,0 +1,55 @@
+NameReportWindow < MainWindow
+  !text: tr('Mudança de Nome')
+  size: 280 175
+
+  Label
+    id: oldLabel
+    !text: tr('Digite o nome atual de seu personagem.')
+    text-wrap: true
+    text-auto-resize: true
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+  
+  MultilineTextEdit
+    id: oldTextEdit
+    text-wrap: true
+    size: 250 24
+    anchors.top: oldLabel.bottom
+    margin-top: 4
+    margin-bottom: 8
+
+  Label
+    id: newLabel
+    !text: tr('Digite o novo nome.')
+    text-wrap: true
+    text-auto-resize: true
+    anchors.top: oldTextEdit.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 5
+  
+  MultilineTextEdit
+    id: newTextEdit
+    text-wrap: true
+    size: 250 24
+    anchors.top: newLabel.bottom
+    margin-top: 4
+    margin-bottom: 8
+
+  Button
+    id: sendButton
+    !text: tr('Send')
+    anchors.bottom: cancelButton.bottom
+    anchors.right: cancelButton.left
+    margin-right: 10
+    width: 80
+    &onClick: doNameChange
+
+  Button
+    id: cancelButton
+    !text: tr('Cancel')
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    width: 80
+    @onClick: self:getParent():hide()

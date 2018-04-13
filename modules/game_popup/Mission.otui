@@ -1,0 +1,29 @@
+MainWindow
+  id: tutorialwindow
+  !text: ('    MISSÃO DESBLOQUEADA')
+  color: yellow
+  size: 310 70
+  image-source: /images/game/other/task_window
+  image-offset: 0 0
+  draggable: false
+  focusable: false
+  @onClick: hide()
+  
+  UIButton
+    id: textTutor
+    !text: ('\nUma nova missão está disponível. Verifique seu Quest Log para iniciá-la.')
+    text-align: left
+    text-wrap: true
+    size: 230 50
+    anchors.left: iconTutor.right
+    anchors.bottom: parent.bottom
+    margin-left: 10
+  
+  UIButton
+    id: iconTutor
+    icon-source: /images/game/other/mission
+    icon-size: 33 34
+    phanton: true
+    size: 33 34
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom

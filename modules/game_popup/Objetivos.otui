@@ -1,0 +1,96 @@
+MainWindow
+  id: tutorialwindow
+  !text: ('Objetivos deste Local')
+  color: red
+  size: 380 90
+  image-source: /images/game/other/task_window
+  draggable: false
+  focusable: false
+  @onClick: hide()
+  
+  UIButton
+    id: contBau
+    !text: ('0/0')
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom
+    margin-bottom: 23
+  
+  UIButton
+    id: separadorBau
+    phanton: true
+    image-source: img/s
+    image-size: 2 40
+    margin-bottom: 8
+    margin-left: 20
+    anchors.left: contBau.right
+    anchors.bottom: parent.bottom
+  
+  UIButton
+    id: textBau
+    !text: ('Tesouros Encontrados.')
+    text-align: left
+    size: 130 20
+    anchors.left: separadorBau.right
+    anchors.bottom: parent.bottom
+    margin-left: 10
+    margin-bottom: 20
+  
+  UIButton
+    id: contBoss
+    !text: ('0/0')
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-bottom: 23
+  
+  UIButton
+    id: separadorBoss
+    phanton: true
+    image-source: img/s
+    image-size: 2 40
+    margin-bottom: 8
+    margin-right: 10
+    anchors.right: contBoss.left
+    anchors.bottom: parent.bottom
+  
+  UIButton
+    id: textBoss
+    !text: ('Boss Eliminado.')
+    text-align: right
+    size: 120 20
+    anchors.right: separadorBoss.left
+    anchors.bottom: parent.bottom
+    margin-right: 10
+    margin-bottom: 20
+  
+  UIButton
+    id: contMonster
+    !text: ('0/0')
+    size: 48 20
+    anchors.right: textPassage.left
+    anchors.top: contBau.bottom
+    margin-right: 150
+    margin-top: 5
+  
+  UIButton
+    id: textMonster
+    !text: ('Monstros Eliminados.')
+    text-align: left
+    size: 125 20
+    anchors.left: separadorBau.right
+    anchors.bottom: parent.bottom
+    margin-left: 10
+  
+  UIButton
+    id: contPassage
+    !text: ('0/0')
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+  
+  UIButton
+    id: textPassage
+    !text: ('Passagens Secretas.')
+    text-align: right
+    size: 120 20
+    anchors.right: separadorBoss.left
+    anchors.bottom: parent.bottom
+    margin-right: 10

@@ -1,0 +1,254 @@
+MarketButton < ShopButton
+  text-offset: 50 -20
+MarketButtonSale < ShopButtonSale
+  text-offset: 50 -20
+MarketPrize < ShopPrize
+  margin-left: 30
+
+Panel
+  VerticalScrollBar
+    id: scrollBar
+    step: 50
+    pixels-scroll: true
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+
+  ScrollablePanel
+    vertical-scrollbar: scrollBar
+    anchors.fill: parent
+    margin-right: 15
+
+    MarketButton
+      id: Rookie Helmet
+      text: Rookie Helmet
+      icon: /images/game/craft/Rookie Helmet
+      anchors.top: parent.top
+      margin-top: 0
+      @onClick: RookieHelmet()
+      MarketPrize
+        text: Usado por players de Lv. 01 ou maior.
+
+    MarketButton
+      id: Reinforced Helmet
+      text: Reinforced Helmet
+      icon: /images/game/craft/Reinforced Helmet
+      @onClick: ReinforcedHelmet()
+      MarketPrize
+        text: Usado por players de Lv. 01 ou maior.
+
+    MarketButton
+      id: Noobie Helmet
+      text: Noobie Helmet
+      icon: /images/game/craft/Noobie Helmet
+      @onClick: NoobieHelmet()
+      MarketPrize
+        text: Usado por players de Lv. 10 ou maior.
+
+    MarketButton
+      id: Leather Helmet
+      text: Leather Helmet
+      icon: /images/game/craft/Leather Helmet
+      @onClick: LeatherHelmet()
+      MarketPrize
+        text: Usado por players de Lv. 10 ou maior.
+
+    MarketButton
+      id: Noble Dragon Hat
+      text: Noble Dragon Hat
+      icon: /images/game/craft/Noble Dragon Hat
+      @onClick: NobleDragonHat()
+      MarketPrize
+        text: Usado por players de Lv. 15 ou maior.
+
+    MarketButton
+      id: Moon Hat
+      text: Moon Hat
+      icon: /images/game/craft/Moon Hat
+      @onClick: MoonHat()
+      MarketPrize
+        text: Usado por players de Lv. 15 ou maior.
+
+    MarketButton
+      id: Noble Helmet
+      text: Noble Helmet
+      icon: /images/game/craft/Noble Helmet
+      @onClick: NobleHelmet()
+      MarketPrize
+        text: Usado por players de Lv. 25 ou maior.
+
+    MarketButton
+      id: Soldier Helmet
+      text: Soldier Helmet
+      icon: /images/game/craft/Soldier Helmet
+      @onClick: SoldierHelmet()
+      MarketPrize
+        text: Usado por players de Lv. 20 ou maior.
+
+    MarketButton
+      id: Weed Helmet
+      text: Weed Helmet
+      icon: /images/game/craft/Weed Helmet
+      @onClick: WeedHelmet()
+      MarketPrize
+        text: Usado por players de Lv. 20 ou maior.
+
+    MarketButton
+      id: Skull Hat
+      text: Skull Hat
+      icon: /images/game/craft/Skull Hat
+      @onClick: SkullHat()
+      MarketPrize
+        text: Usado por players de Lv. 20 ou maior.
+
+    MarketButton
+      id: Tiger Helmet
+      text: Tiger Helmet
+      icon: /images/game/craft/Tiger Helmet
+      @onClick: TigerHelmet()
+      MarketPrize
+        text: Usado por players de Lv. 25 ou maior.
+
+    MarketButton
+      id: Plate Helmet
+      text: Plate Helmet
+      icon: /images/game/craft/Plate Helmet
+      @onClick: PlateHelmet()
+      MarketPrize
+        text: Usado por players de Lv. 25 ou maior.
+
+    MarketButton
+      id: Crown Helmet
+      text: Crown Helmet
+      icon: /images/game/craft/Crown Helmet
+      @onClick: CrownHelmet()
+      MarketPrize
+        text: Usado por players de Lv. 25 ou maior.
+
+    MarketButton
+      id: Brass Helmet
+      text: Brass Helmet
+      icon: /images/game/craft/Brass Helmet
+      @onClick: BrassHelmet()
+      MarketPrize
+        text: Usado por players de Lv. 25 ou maior.
+
+    MarketButton
+      id: Silver Helmet
+      text: Silver Helmet
+      icon: /images/game/craft/Silver Helmet
+      @onClick: SilverHelmet()
+      MarketPrize
+        text: Usado por players de Lv. 25 ou maior.
+
+    MarketButton
+      id: Nature Helmet
+      text: Nature Helmet
+      icon: /images/game/craft/Nature Helmet
+      @onClick: NatureHelmet()
+      MarketPrize
+        text: Usado por players de Lv. 25 ou maior.
+
+    MarketButton
+      id: Mystic Helmet
+      text: Mystic Helmet
+      icon: /images/game/craft/Mystic Helmet
+      @onClick: MysticHelmet()
+      MarketPrize
+        text: Usado por players de Lv. 30 ou maior.
+
+    MarketButton
+      id: Royal Helmet
+      text: Royal Helmet
+      icon: /images/game/craft/Royal Helmet
+      @onClick: RoyalHelmet()
+      MarketPrize
+        text: Usado por players de Lv. 35 ou maior.
+
+    MarketButton
+      id: Remains Helmet
+      text: Remains Helmet
+      icon: /images/game/craft/Remains Helmet
+      @onClick: RemainsHelmet()
+      MarketPrize
+        text: Usado por players de Lv. 35 ou maior.
+
+    MarketButton
+      id: Titan Helmet
+      text: Titan Helmet
+      icon: /images/game/craft/Titan Helmet
+      @onClick: TitanHelmet()
+      MarketPrize
+        text: Usado por players de Lv. 35 ou maior.
+
+    MarketButton
+      id: Glorious Helmet
+      text: Glorious Helmet
+      icon: /images/game/craft/Glorious Helmet
+      @onClick: GloriousHelmet()
+      MarketPrize
+        text: Usado por players de Lv. 35 ou maior.
+
+    MarketButton
+      id: Ancient Helmet
+      text: Ancient Helmet
+      icon: /images/game/craft/Ancient Helmet
+      @onClick: AncientHelmet()
+      MarketPrize
+        text: Usado por players de Lv. 50 ou maior.
+
+    MarketButton
+      id: Crystal Helmet
+      text: Crystal Helmet
+      icon: /images/game/craft/Crystal Helmet
+      @onClick: CrystalHelmet()
+      MarketPrize
+        text: Usado por players de Lv. 50 ou maior.
+
+    MarketButton
+      id: Lava Helmet
+      text: Lava Helmet
+      icon: /images/game/craft/Lava Helmet
+      @onClick: LavaHelmet()
+      MarketPrize
+        text: Usado por players de Lv. 50 ou maior.
+
+    MarketButton
+      id: Haze Helmet
+      text: Haze Helmet
+      icon: /images/game/craft/Haze Helmet
+      @onClick: HazeHelmet()
+      MarketPrize
+        text: Usado por players de Lv. 50 ou maior.
+
+    MarketButton
+      id: Royalty Helmet
+      text: Royalty Helmet
+      icon: /images/game/craft/Royalty Helmet
+      @onClick: RoyaltyHelmet()
+      MarketPrize
+        text: Usado por players de Lv. 75 ou maior.
+
+    MarketButton
+      id: Eyed Helmet
+      text: Eyed Helmet
+      icon: /images/game/craft/Eyed Helmet
+      @onClick: EyedHelmet()
+      MarketPrize
+        text: Usado por players de Lv. 75 ou maior.
+
+    MarketButton
+      id: Reaper Helmet
+      text: Reaper Helmet
+      icon: /images/game/craft/Reaper Helmet
+      @onClick: ReaperHelmet()
+      MarketPrize
+        text: Usado por players de Lv. 99 ou maior.
+
+    MarketButton
+      id: Templar Helmet
+      text: Templar Helmet
+      icon: /images/game/craft/Templar Helmet
+      @onClick: TemplarHelmet()
+      MarketPrize
+        text: Usado por players de Lv. 99 ou maior.

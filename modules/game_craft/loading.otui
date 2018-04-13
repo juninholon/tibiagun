@@ -1,0 +1,5 @@
+MainWindow
+  id: loading
+  image-source: /images/game/craft/00
+  height: 160
+  width: 160

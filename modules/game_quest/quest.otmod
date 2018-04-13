@@ -1,0 +1,12 @@
+Module
+  name: game_quest
+  description: Novo Quest Log
+  author: Frenesy
+  website: havokx.com.br
+  sandboxed: true
+  scripts: [ quest ]
+
+  autoload: true
+  autoload-priority: 1000
+  @onLoad: init()
+  @onUnload: terminate()

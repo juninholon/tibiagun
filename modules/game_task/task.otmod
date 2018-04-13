@@ -1,0 +1,12 @@
+Module
+  name: game_task
+  description: Sistema de Task
+  author: Frenesy
+  website: havokx.com.br
+  sandboxed: true
+  scripts: [ task ]
+
+  autoload: true
+  autoload-priority: 1000
+  @onLoad: init()
+  @onUnload: terminate()

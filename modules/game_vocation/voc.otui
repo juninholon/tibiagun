@@ -1,0 +1,244 @@
+MainWindow
+  id: kardWindow
+  !text: ('Selecione sua Vocação')
+  size: 500 400
+  padding: 10
+  @onEscape: hide()
+  
+  EnterGameButton
+    id: fechar
+    !text: ('Fechar')
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom
+    size: 25 25
+    @onClick: hide()
+  
+  EnterGameButton
+    id: Escolher
+    !text: ('Escolher')
+    anchors.left: fechar.right
+    anchors.bottom: parent.bottom
+    size: 25 25
+    margin-left: 80
+    @onClick: hide()
+
+  UIButton
+    id: infoVoc
+    size: 190 100
+    text-align: left
+    text-offset: 5 -13
+    text-wrap: true
+    image-source: /images/game/other/task_window
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 10
+    margin-top: 30
+
+  UIButton
+    id: flagVoc
+    size: 180 320
+    image-source: /images/game/other/Especialista
+    opacity: 0.5
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 215
+    margin-top: 30
+
+  UIButton
+    id: vocInterface
+    size: 160 110
+    image-source: img/00
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 245
+    margin-top: 60
+
+  Button
+    id: Tanker
+    !text: ('Tanker')
+    size: 100 45
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 410
+    margin-top: 90
+    @onClick: Tanker()
+
+  Button
+    id: Especialista
+    !text: ('Especialista')
+    size: 100 45
+    anchors.top: Tanker.bottom
+    anchors.right: parent.right
+    margin-right: 410
+    margin-top: 20
+    @onClick: Especialista()
+
+  Button
+    id: Curandeiro
+    !text: ('Curandeiro')
+    size: 100 45
+    anchors.top: Especialista.bottom
+    anchors.right: parent.right
+    margin-right: 410
+    margin-top: 20
+    @onClick: Curandeiro()
+
+  UIButton
+    id: infoSkills
+    size: 190 225
+    image-source: /images/game/other/task_window
+    anchors.top: infoVoc.bottom
+    anchors.right: parent.right
+    margin-right: 10
+    margin-top: 25
+
+  Button
+    id: specialSkill
+    !text: ('Habilidades')
+    image-source: img/00
+    size: 100 25
+    anchors.top: infoVoc.bottom
+    anchors.right: parent.right
+    margin-right: 53
+    margin-top: 15
+
+  UIButton
+    id: skillUm
+    image-source: img/0
+    size: 38 38
+    anchors.top: specialSkill.bottom
+    anchors.right: parent.right
+    margin-right: 158
+
+  UIButton
+    id: infoUm
+    text-align: center
+    text-wrap: true
+    size: 139 38
+    anchors.top: specialSkill.bottom
+    anchors.left: skillUm.right
+    margin-left: 5
+
+  UIButton
+    id: skillDois
+    image-source: img/0
+    size: 38 38
+    anchors.top: skillUm.bottom
+    anchors.right: parent.right
+    margin-top: 5
+    margin-right: 158
+
+  UIButton
+    id: infoDois
+    text-align: center
+    text-wrap: true
+    size: 139 38
+    anchors.top: infoUm.bottom
+    anchors.left: skillDois.right
+    margin-left: 5
+    margin-top: 5
+
+  UIButton
+    id: skillTres
+    image-source: img/0
+    size: 38 38
+    anchors.top: skillDois.bottom
+    anchors.right: parent.right
+    margin-top: 5
+    margin-right: 158
+
+  UIButton
+    id: infoTres
+    size: 139 38
+    text-align: center
+    text-wrap: true
+    anchors.top: infoDois.bottom
+    anchors.left: skillTres.right
+    margin-left: 5
+    margin-top: 5
+
+  UIButton
+    id: skillQuatro
+    image-source: img/0
+    size: 38 38
+    anchors.top: skillTres.bottom
+    anchors.right: parent.right
+    margin-top: 5
+    margin-right: 158
+
+  UIButton
+    id: infoQuatro
+    text-align: center
+    text-wrap: true
+    size: 139 38
+    anchors.top: infoTres.bottom
+    anchors.left: skillQuatro.right
+    margin-left: 5
+    margin-top: 5
+
+  UIButton
+    id: skillCinco
+    image-source: img/0
+    size: 38 38
+    anchors.top: skillQuatro.bottom
+    anchors.right: parent.right
+    margin-top: 5
+    margin-right: 158
+
+  UIButton
+    id: infoCinco
+    text-align: center
+    text-wrap: true
+    size: 139 38
+    anchors.top: infoQuatro.bottom
+    anchors.left: skillCinco.right
+    margin-left: 5
+    margin-top: 5
+
+  UIButton
+    id: hp
+    icon-source: img/hp
+    !tooltip: tr('Quantidade de HP que você irá receber sempre que subir de nível.')
+    !text: ('0')
+    text-align: right
+    size: 60 20
+    anchors.top: vocInterface.bottom
+    anchors.left: Especialista.right
+    margin-top: 20
+    margin-left: 40
+
+  UIButton
+    id: mp
+    icon-source: img/mp
+    !tooltip: tr('Quantidade de MP que você irá receber sempre que subir de nível.')
+    !text: ('0')
+    text-align: right
+    size: 60 20
+    anchors.top: vocInterface.bottom
+    anchors.left: hp.right
+    margin-top: 20
+    margin-left: 5
+
+  UIButton
+    id: cap
+    icon-source: img/cap
+    !tooltip: tr('Quantidade de Capacidade que você irá receber sempre que subir de nível.')
+    !text: ('0')
+    text-align: right
+    size: 60 20
+    anchors.top: hp.bottom
+    anchors.left: Especialista.right
+    margin-top: 10
+    margin-left: 40
+
+  UIButton
+    id: reg
+    icon-source: img/reg
+    !tooltip: tr('Regeneração que esta vocação possui a cada 2 segundo.')
+    !text: ('0')
+    text-align: right
+    size: 60 20
+    anchors.top: mp.bottom
+    anchors.left: cap.right
+    margin-top: 10
+    margin-left: 5

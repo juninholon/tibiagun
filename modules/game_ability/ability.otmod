@@ -1,0 +1,12 @@
+Module
+  name: game_ability
+  description: Arvore de Habilidades
+  author: Frenesy
+  website: havokx.com.br
+  sandboxed: true
+  scripts: [ ability ]
+
+  autoload: true
+  autoload-priority: 1000
+  @onLoad: init()
+  @onUnload: terminate()

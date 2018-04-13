@@ -1,0 +1,975 @@
+ShopButton < UIButton
+  id: shopButton
+  text-align: left
+  text-offset: 5 0
+  font: verdana-11px-italic
+  color: white
+  icon-align: left
+  icon-offset: 5 8
+  height: 40
+  background-color: #000000AA
+  border-width: 1
+  border-color: black
+  anchors.top: prev.bottom
+  anchors.right: parent.right
+  anchors.left: parent.left
+  margin-top: 3
+  @onClick: onClickInItem(tonumber(self:getChildById('shopPrize'):getText()), self)
+
+  $hover:
+    background-color: #666666AA
+    border-color: #666666
+
+  $pressed:
+    background-color: #333333AA
+    border-color: #333333
+
+  $disabled:
+    background-color: #330000AA
+    border-color: #330000
+    color: red
+
+ShopButtonSale < ShopButton
+  id: shopButtonSale
+  image-source: /images/game/shop/sale
+  image-rect: 370 3 45 42
+
+ShopPrize < UIWidget
+  id: shopPrize
+  text-align: left
+  text-offset: 23 4
+  image-rect: 0 0 19 18
+  color: #BAE5A5
+  anchors.left: parent.left
+  anchors.right: parent.right
+  anchors.bottom: parent.bottom
+  margin-left: 55
+  margin-bottom: 5
+  phantom: true
+
+ClanWindow < MainWindow
+  size: 163 93
+  @onEscape: self:destroy()
+
+  Label
+    text: Rank:
+    width: 10
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 2
+
+  SpinBox
+    id: spinBox
+    step: 1
+    width: 50
+    anchors.top: parent.top
+    anchors.left: prev.right
+    minimum: 1
+    maximum: 5
+    @onValueChange: |
+      if self:getValue() == 1 then
+        prize = 10
+      elseif self:getValue() == 2 then
+        prize = 18
+      elseif self:getValue() == 3 then
+        prize = 26
+      elseif self:getValue() == 4 then
+        prize = 34
+      elseif self:getValue() == 5 then
+        prize = 40
+      end
+      self:getParent():getChildById('prize'):setText(prize)
+
+  UIWidget
+    id: prize
+    text-align: left
+    text-offset: 23 4
+    font: verdana-11px-rounded
+    image-rect: 0 0 19 18
+    color: #9BD3F0
+    anchors.verticalCenter: spinBox.verticalCenter
+    anchors.left: spinBox.right
+    anchors.right: parent.right
+    margin-left: 3
+
+  Button
+    id: okButton
+    text: Ok
+    width: 64
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+
+  Button
+    !text: tr('Cancel')
+    width: 64
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    @onClick: self:getParent():destroy()
+
+MainWindow
+  id: shopWindow
+  !text: tr('Lista Negra')
+  size: 750 500
+  padding: 10
+  @onEscape: hide()
+
+  Panel
+    id: shopTabContent
+    size: 150 258
+    anchors.top: parent.top
+    anchors.left: parent.left
+    image-source: ''
+    margin-top: 70
+    margin-left: 10
+
+  TabBarVertical
+    id: shopTabBar
+    margin-top: 15
+    margin-left: 15
+    anchors.top: parent.top
+    anchors.left: shopTabContent.right
+
+  UIButton
+    id: rankText
+    !text: tr('Escolha um Rank')
+    size: 130 20
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 40
+    margin-left: 15
+
+  UIButton
+    id: rankUpgradeText
+    !text: tr('Pontos para avançar\nde Rank')
+    size: 150 40
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    margin-bottom: 100
+    margin-left: 15
+
+  UIButton
+    id: rankUpgradePoints
+    !text: tr('0/0')
+    size: 100 20
+    !tooltip: tr('Você ganha 1 ponto para cada Lagrima obtida ao completar uma Task.')
+    anchors.top: rankUpgradeText.bottom
+    anchors.left: parent.left
+    margin-top: 1
+    margin-left: 40
+
+  Button
+    id: rankButton
+    !text: tr('Upgrade Rank')
+    icon-source: /images/game/other/upgrade
+    icon-align: left
+    icon-offset: 7 4
+    icon-size: 15 15
+    size: 150 25
+    anchors.top: rankUpgradePoints.bottom
+    anchors.left: parent.left
+    margin-top: 5
+    margin-left: 10
+    @onClick: g_game.talk("!Rank UPGRADERank")
+
+  UIButton
+    id: backgroundTask
+    size: 428 420
+    image-source: /images/game/other/task_window
+    anchors.top: parent.top
+    anchors.left: shopTabContent.right
+    margin-top: 45
+    margin-left: 10
+
+  UIButton
+    id: backgroundShop
+    size: 120 300
+    image-source: /images/game/other/task_window
+    anchors.top: parent.top
+    anchors.left: backgroundTask.right
+    margin-top: 45
+    margin-left: 10
+
+  UIButton
+    id: flag1
+    size: 100 135
+    image-source: /images/game/other/flagTask
+    anchors.top: parent.top
+    anchors.left: shopTabContent.right
+    margin-top: 50
+    margin-left: 15
+
+  UIWidget
+    id: monsterFlag1
+    size: 64 64
+    image-source: ''
+    anchors.top: parent.top
+    anchors.left: shopTabContent.right
+    margin-top: 80
+    margin-left: 33
+
+  UIButton
+    id: monsterText1
+    !text: tr('==')
+    size: 100 20
+    anchors.top: parent.top
+    anchors.left: shopTabContent.right
+    margin-top: 55
+    margin-left: 15
+
+  Button
+    id: startButton1
+    !text: tr('Iniciar')
+    icon-source: /images/game/other/start
+    icon-align: left
+    icon-offset: 7 4
+    icon-size: 15 15
+    size: 100 25
+    anchors.top: parent.top
+    anchors.left: flag1.right
+    margin-top: 50
+    margin-left: 5
+
+  UIButton
+    id: kill1
+    !tooltip: tr('Objetivo:\nQuantidade de monstros que você deve eliminar.')
+    icon-source: /images/game/other/kill
+    image-source: /images/ui/Summon
+    icon-align: left
+    icon-offset: 7 4
+    icon-size: 20 20
+    size: 99 25
+    anchors.top: startButton1.bottom
+    anchors.left: flag1.right
+    margin-top: 2
+    margin-left: 6
+
+  UIButton
+    id: coin1
+    !tooltip: tr('Recompensa:\nDinheiro que você irá receber ao finalizar a task.')
+    icon-source: /images/game/other/coin
+    image-source: /images/ui/Summon
+    icon-align: left
+    icon-offset: 7 4
+    icon-size: 20 20
+    color: yellow
+    size: 99 25
+    anchors.top: kill1.bottom
+    anchors.left: flag1.right
+    margin-top: 2
+    margin-left: 6
+
+  UIButton
+    id: tearBlue1
+    !tooltip: tr('Lagrimas:\nQuantidade de lagrimas que você irá receber.\nUse essas lagrimas para comprar itens na loja ao lado.')
+    icon-source: /images/game/other/1
+    image-source: /images/ui/Summon
+    icon-align: left
+    icon-offset: 10 4
+    icon-size: 14 20
+    color: #3088d8
+    size: 99 25
+    anchors.top: coin1.bottom
+    anchors.left: flag1.right
+    margin-top: 2
+    margin-left: 6
+
+  UIButton
+    id: flag2
+    size: 100 135
+    image-source: /images/game/other/flagTask
+    anchors.top: parent.top
+    anchors.left: startButton1.right
+    margin-top: 50
+    margin-left: 10
+
+  UIWidget
+    id: monsterFlag2
+    size: 64 64
+    image-source: ''
+    anchors.top: parent.top
+    anchors.left: startButton1.right
+    margin-top: 80
+    margin-left: 28
+
+  UIButton
+    id: monsterText2
+    !text: tr('==')
+    size: 100 20
+    anchors.top: parent.top
+    anchors.left: startButton1.right
+    margin-top: 55
+    margin-left: 10
+
+  Button
+    id: startButton2
+    !text: tr('Iniciar')
+    icon-source: /images/game/other/start
+    icon-align: left
+    icon-offset: 7 4
+    icon-size: 15 15
+    size: 100 25
+    anchors.top: parent.top
+    anchors.left: flag2.right
+    margin-top: 50
+    margin-left: 5
+
+  UIButton
+    id: kill2
+    !tooltip: tr('Objetivo:\nQuantidade de monstros que você deve eliminar.')
+    icon-source: /images/game/other/kill
+    image-source: /images/ui/Summon
+    icon-align: left
+    icon-offset: 7 4
+    icon-size: 20 20
+    size: 99 25
+    anchors.top: startButton2.bottom
+    anchors.left: flag2.right
+    margin-top: 2
+    margin-left: 6
+
+  UIButton
+    id: coin2
+    !tooltip: tr('Recompensa:\nDinheiro que você irá receber ao finalizar a task.')
+    icon-source: /images/game/other/coin
+    image-source: /images/ui/Summon
+    icon-align: left
+    icon-offset: 7 4
+    icon-size: 20 20
+    color: yellow
+    size: 99 25
+    anchors.top: kill2.bottom
+    anchors.left: flag2.right
+    margin-top: 2
+    margin-left: 6
+
+  UIButton
+    id: tearBlue2
+    !tooltip: tr('Lagrimas:\nQuantidade de lagrimas que você irá receber.\nUse essas lagrimas para comprar itens na loja ao lado.')
+    icon-source: /images/game/other/1
+    image-source: /images/ui/Summon
+    icon-align: left
+    icon-offset: 10 4
+    icon-size: 14 20
+    color: #3088d8
+    size: 99 25
+    anchors.top: coin2.bottom
+    anchors.left: flag2.right
+    margin-top: 2
+    margin-left: 6
+
+  UIButton
+    id: flag3
+    size: 100 135
+    image-source: /images/game/other/flagTask
+    anchors.top: parent.top
+    anchors.left: shopTabContent.right
+    margin-top: 190
+    margin-left: 15
+
+  UIButton
+    id: monsterText3
+    !text: tr('==')
+    size: 100 20
+    anchors.top: parent.top
+    anchors.left: shopTabContent.right
+    margin-top: 195
+    margin-left: 15
+
+  UIWidget
+    id: monsterFlag3
+    size: 64 64
+    image-source: ''
+    anchors.top: parent.top
+    anchors.left: shopTabContent.right
+    margin-top: 220
+    margin-left: 33
+
+  Button
+    id: startButton3
+    !text: tr('Iniciar')
+    icon-source: /images/game/other/start
+    icon-align: left
+    icon-offset: 7 4
+    icon-size: 15 15
+    size: 100 25
+    anchors.top: parent.top
+    anchors.left: flag3.right
+    margin-top: 190
+    margin-left: 5
+
+  UIButton
+    id: kill3
+    !tooltip: tr('Objetivo:\nQuantidade de monstros que você deve eliminar.')
+    icon-source: /images/game/other/kill
+    image-source: /images/ui/Summon
+    icon-align: left
+    icon-offset: 7 4
+    icon-size: 20 20
+    size: 99 25
+    anchors.top: startButton3.bottom
+    anchors.left: flag3.right
+    margin-top: 2
+    margin-left: 6
+
+  UIButton
+    id: coin3
+    !tooltip: tr('Recompensa:\nDinheiro que você irá receber ao finalizar a task.')
+    icon-source: /images/game/other/coin
+    image-source: /images/ui/Summon
+    icon-align: left
+    icon-offset: 7 4
+    icon-size: 20 20
+    color: yellow
+    size: 99 25
+    anchors.top: kill3.bottom
+    anchors.left: flag3.right
+    margin-top: 2
+    margin-left: 6
+
+  UIButton
+    id: tearBlue3
+    !tooltip: tr('Lagrimas:\nQuantidade de lagrimas que você irá receber.\nUse essas lagrimas para comprar itens na loja ao lado.')
+    icon-source: /images/game/other/1
+    image-source: /images/ui/Summon
+    icon-align: left
+    icon-offset: 10 4
+    icon-size: 14 20
+    color: #3088d8
+    size: 99 25
+    anchors.top: coin3.bottom
+    anchors.left: flag3.right
+    margin-top: 2
+    margin-left: 6
+
+  UIButton
+    id: flag4
+    size: 100 135
+    image-source: /images/game/other/flagTask
+    anchors.top: flag2.bottom
+    anchors.left: startButton3.right
+    margin-top: 5
+    margin-left: 10
+
+  UIButton
+    id: monsterText4
+    !text: tr('==')
+    size: 100 20
+    anchors.top: flag2.bottom
+    anchors.left: startButton3.right
+    margin-top: 10
+    margin-left: 10
+
+  UIWidget
+    id: monsterFlag4
+    size: 64 64
+    image-source: ''
+    anchors.top: flag2.bottom
+    anchors.left: startButton3.right
+    margin-top: 35
+    margin-left: 29
+
+  Button
+    id: startButton4
+    !text: tr('Iniciar')
+    icon-source: /images/game/other/start
+    icon-align: left
+    icon-offset: 7 4
+    icon-size: 15 15
+    size: 100 25
+    anchors.top: parent.top
+    anchors.left: flag4.right
+    margin-top: 190
+    margin-left: 5
+
+  UIButton
+    id: kill4
+    !tooltip: tr('Objetivo:\nQuantidade de monstros que você deve eliminar.')
+    icon-source: /images/game/other/kill
+    image-source: /images/ui/Summon
+    icon-align: left
+    icon-offset: 7 4
+    icon-size: 20 20
+    size: 99 25
+    anchors.top: startButton4.bottom
+    anchors.left: flag4.right
+    margin-top: 2
+    margin-left: 6
+
+  UIButton
+    id: coin4
+    !tooltip: tr('Recompensa:\nDinheiro que você irá receber ao finalizar a task.')
+    icon-source: /images/game/other/coin
+    image-source: /images/ui/Summon
+    icon-align: left
+    icon-offset: 7 4
+    icon-size: 20 20
+    color: yellow
+    size: 99 25
+    anchors.top: kill4.bottom
+    anchors.left: flag4.right
+    margin-top: 2
+    margin-left: 6
+
+  UIButton
+    id: tearBlue4
+    !tooltip: tr('Lagrimas:\nQuantidade de lagrimas que você irá receber.\nUse essas lagrimas para comprar itens na loja ao lado.')
+    icon-source: /images/game/other/1
+    image-source: /images/ui/Summon
+    icon-align: left
+    icon-offset: 10 4
+    icon-size: 14 20
+    color: #3088d8
+    size: 99 25
+    anchors.top: coin4.bottom
+    anchors.left: flag4.right
+    margin-top: 2
+    margin-left: 6
+
+  UIButton
+    id: flag5
+    size: 100 135
+    image-source: /images/game/other/flagTask
+    anchors.top: flag3.bottom
+    anchors.left: shopTabContent.right
+    margin-top: 5
+    margin-left: 15
+
+  UIButton
+    id: monsterText5
+    !text: tr('==')
+    size: 100 20
+    anchors.top: flag3.bottom
+    anchors.left: shopTabContent.right
+    margin-top: 10
+    margin-left: 15
+
+  UIWidget
+    id: monsterFlag5
+    size: 64 64
+    image-source: ''
+    anchors.top: flag3.bottom
+    anchors.left: shopTabContent.right
+    margin-top: 35
+    margin-left: 33
+
+  Button
+    id: startButton5
+    !text: tr('Iniciar')
+    icon-source: /images/game/other/start
+    icon-align: left
+    icon-offset: 7 4
+    icon-size: 15 15
+    size: 100 25
+    anchors.top: flag3.bottom
+    anchors.left: flag5.right
+    margin-top: 5
+    margin-left: 5
+
+  UIButton
+    id: kill5
+    !tooltip: tr('Objetivo:\nQuantidade de monstros que você deve eliminar.')
+    icon-source: /images/game/other/kill
+    image-source: /images/ui/Summon
+    icon-align: left
+    icon-offset: 7 4
+    icon-size: 20 20
+    size: 99 25
+    anchors.top: startButton5.bottom
+    anchors.left: flag5.right
+    margin-top: 2
+    margin-left: 6
+
+  UIButton
+    id: coin5
+    !tooltip: tr('Recompensa:\nDinheiro que você irá receber ao finalizar a task.')
+    icon-source: /images/game/other/coin
+    image-source: /images/ui/Summon
+    icon-align: left
+    icon-offset: 7 4
+    icon-size: 20 20
+    color: yellow
+    size: 99 25
+    anchors.top: kill5.bottom
+    anchors.left: flag5.right
+    margin-top: 2
+    margin-left: 6
+
+  UIButton
+    id: tearBlue5
+    !tooltip: tr('Lagrimas:\nQuantidade de lagrimas que você irá receber.\nUse essas lagrimas para comprar itens na loja ao lado.')
+    icon-source: /images/game/other/1
+    image-source: /images/ui/Summon
+    icon-align: left
+    icon-offset: 10 4
+    icon-size: 14 20
+    color: #3088d8
+    size: 99 25
+    anchors.top: coin5.bottom
+    anchors.left: flag5.right
+    margin-top: 2
+    margin-left: 6
+
+  UIButton
+    id: flag6
+    size: 100 135
+    image-source: /images/game/other/flagTask
+    anchors.top: flag4.bottom
+    anchors.left: flag5.right
+    margin-top: 5
+    margin-left: 115
+
+  UIButton
+    id: monsterText6
+    !text: tr('==')
+    size: 100 20
+    anchors.top: flag4.bottom
+    anchors.left: flag5.right
+    margin-top: 10
+    margin-left: 115
+
+  UIWidget
+    id: monsterFlag6
+    size: 64 64
+    image-source: ''
+    anchors.top: flag4.bottom
+    anchors.left: flag5.right
+    margin-top: 35
+    margin-left: 133
+
+  Button
+    id: startButton6
+    !text: tr('Iniciar')
+    icon-source: /images/game/other/start
+    icon-align: left
+    icon-offset: 7 4
+    icon-size: 15 15
+    size: 100 25
+    anchors.top: flag4.bottom
+    anchors.left: flag6.right
+    margin-top: 5
+    margin-left: 5
+
+  UIButton
+    id: kill6
+    !tooltip: tr('Objetivo:\nQuantidade de monstros que você deve eliminar.')
+    icon-source: /images/game/other/kill
+    image-source: /images/ui/Summon
+    icon-align: left
+    icon-offset: 7 4
+    icon-size: 20 20
+    size: 99 25
+    anchors.top: startButton6.bottom
+    anchors.left: flag6.right
+    margin-top: 2
+    margin-left: 6
+
+  UIButton
+    id: coin6
+    !tooltip: tr('Recompensa:\nDinheiro que você irá receber ao finalizar a task.')
+    icon-source: /images/game/other/coin
+    image-source: /images/ui/Summon
+    icon-align: left
+    icon-offset: 7 4
+    icon-size: 20 20
+    color: yellow
+    size: 99 25
+    anchors.top: kill6.bottom
+    anchors.left: flag6.right
+    margin-top: 2
+    margin-left: 6
+
+  UIButton
+    id: tearBlue6
+    !tooltip: tr('Lagrimas:\nQuantidade de lagrimas que você irá receber.\nUse essas lagrimas para comprar itens na loja ao lado.')
+    icon-source: /images/game/other/1
+    image-source: /images/ui/Summon
+    icon-align: left
+    icon-offset: 10 4
+    icon-size: 14 20
+    color: #3088d8
+    size: 99 25
+    anchors.top: coin6.bottom
+    anchors.left: flag6.right
+    margin-top: 2
+    margin-left: 6
+
+  UIWidget
+    id: shop1
+    size: 50 50
+    image-source: /images/ui/Summon
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-top: 50
+    margin-right: 70
+
+  UIWidget
+    id: interfaceShop1
+    size: 32 32
+    image-source: /images/ui/item
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-top: 58
+    margin-right: 79
+
+  UIButton
+    id: tearShop1
+    text-offset: 10 1
+    !tooltip: tr('Valor deste item.')
+    icon-source: /images/game/other/1
+    image-source: /images/ui/Summon
+    icon-align: left
+    icon-offset: 6 3
+    icon-size: 14 20
+    color: #3088d8
+    size: 60 25
+    anchors.top: parent.top
+    anchors.left: shop1.right
+    margin-top: 50
+    margin-left: 3
+
+  Button
+    id: shopButton1
+    !text: tr('Comprar')
+    icon-align: left
+    icon-offset: 7 4
+    icon-size: 15 15
+    size: 60 25
+    anchors.top: tearShop1.bottom
+    anchors.left: shop1.right
+    margin-top: 2
+    margin-left: 3
+
+  UIWidget
+    id: shop2
+    size: 50 50
+    image-source: /images/ui/Summon
+    anchors.top: shop1.bottom
+    anchors.right: parent.right
+    margin-top: 10
+    margin-right: 70
+
+  UIWidget
+    id: interfaceShop2
+    size: 32 32
+    image-source: /images/ui/item
+    anchors.top: shop1.bottom
+    anchors.right: parent.right
+    margin-top: 18
+    margin-right: 79
+
+  UIButton
+    id: tearShop2
+    text-offset: 10 1
+    !tooltip: tr('Valor deste item.')
+    icon-source: /images/game/other/1
+    image-source: /images/ui/Summon
+    icon-align: left
+    icon-offset: 6 3
+    icon-size: 14 20
+    color: #3088d8
+    size: 60 25
+    anchors.top: shopButton1.bottom
+    anchors.left: shop2.right
+    margin-top: 10
+    margin-left: 3
+
+  Button
+    id: shopButton2
+    !text: tr('Comprar')
+    icon-align: left
+    icon-offset: 7 4
+    icon-size: 15 15
+    size: 60 25
+    anchors.top: tearShop2.bottom
+    anchors.left: shop2.right
+    margin-top: 2
+    margin-left: 3
+
+  UIWidget
+    id: shop3
+    size: 50 50
+    image-source: /images/ui/Summon
+    anchors.top: shop2.bottom
+    anchors.right: parent.right
+    margin-top: 10
+    margin-right: 70
+
+  UIWidget
+    id: interfaceShop3
+    size: 32 32
+    image-source: /images/ui/item
+    anchors.top: shop2.bottom
+    anchors.right: parent.right
+    margin-top: 18
+    margin-right: 79
+
+  UIButton
+    id: tearShop3
+    text-offset: 10 1
+    !tooltip: tr('Valor deste item.')
+    icon-source: /images/game/other/1
+    image-source: /images/ui/Summon
+    icon-align: left
+    icon-offset: 6 3
+    icon-size: 14 20
+    color: #3088d8
+    size: 60 25
+    anchors.top: shopButton2.bottom
+    anchors.left: shop3.right
+    margin-top: 10
+    margin-left: 3
+
+  Button
+    id: shopButton3
+    !text: tr('Comprar')
+    icon-align: left
+    icon-offset: 7 4
+    icon-size: 15 15
+    size: 60 25
+    anchors.top: tearShop3.bottom
+    anchors.left: shop3.right
+    margin-top: 2
+    margin-left: 3
+
+  UIWidget
+    id: shop4
+    size: 50 50
+    image-source: /images/ui/Summon
+    anchors.top: shop3.bottom
+    anchors.right: parent.right
+    margin-top: 10
+    margin-right: 70
+
+  UIWidget
+    id: interfaceShop4
+    size: 32 32
+    image-source: /images/ui/item
+    anchors.top: shop3.bottom
+    anchors.right: parent.right
+    margin-top: 18
+    margin-right: 79
+
+  UIButton
+    id: tearShop4
+    text-offset: 10 1
+    !tooltip: tr('Valor deste item.')
+    icon-source: /images/game/other/1
+    image-source: /images/ui/Summon
+    icon-align: left
+    icon-offset: 6 3
+    icon-size: 14 20
+    color: #3088d8
+    size: 60 25
+    anchors.top: shopButton3.bottom
+    anchors.left: shop4.right
+    margin-top: 10
+    margin-left: 3
+
+  Button
+    id: shopButton4
+    !text: tr('Comprar')
+    icon-align: left
+    icon-offset: 7 4
+    icon-size: 15 15
+    size: 60 25
+    anchors.top: tearShop4.bottom
+    anchors.left: shop4.right
+    margin-top: 2
+    margin-left: 3
+
+  UIWidget
+    id: shop5
+    size: 50 50
+    image-source: /images/ui/Summon
+    anchors.top: shop4.bottom
+    anchors.right: parent.right
+    margin-top: 10
+    margin-right: 70
+
+  UIWidget
+    id: interfaceShop5
+    size: 32 32
+    image-source: /images/ui/item
+    anchors.top: shop4.bottom
+    anchors.right: parent.right
+    margin-top: 18
+    margin-right: 79
+
+  UIButton
+    id: tearShop5
+    text-offset: 10 1
+    !tooltip: tr('Valor deste item.')
+    icon-source: /images/game/other/1
+    image-source: /images/ui/Summon
+    icon-align: left
+    icon-offset: 6 3
+    icon-size: 14 20
+    color: #3088d8
+    size: 60 25
+    anchors.top: shopButton4.bottom
+    anchors.left: shop5.right
+    margin-top: 10
+    margin-left: 3
+
+  Button
+    id: shopButton5
+    !text: tr('Comprar')
+    icon-align: left
+    icon-offset: 7 4
+    icon-size: 15 15
+    size: 60 25
+    anchors.top: tearShop5.bottom
+    anchors.left: shop5.right
+    margin-top: 2
+    margin-left: 3
+
+  UIButton
+    id: tearBlueValue
+    !text: tr('0')
+    !tooltip: tr('Quantidade de Lagrimas Azuis que você possui.')
+    icon-source: /images/game/other/1
+    icon-align: left
+    color: #3088d8
+    icon-offset: 6 3
+    icon-size: 14 20
+    size: 100 25
+    anchors.top: backgroundShop.bottom
+    anchors.left: backgroundTask.right
+    margin-top: 15
+    margin-left: 35
+
+  UIButton
+    id: tearYellowValue
+    !text: tr('0')
+    !tooltip: tr('Quantidade de Lagrimas Amarelas que você possui.')
+    icon-source: /images/game/other/2
+    icon-align: left
+    color: yellow
+    icon-offset: 6 3
+    icon-size: 14 20
+    size: 100 25
+    anchors.top: tearBlueValue.bottom
+    anchors.left: backgroundTask.right
+    margin-top: 10
+    margin-left: 35
+
+  UIButton
+    id: tearRedValue
+    !text: tr('0')
+    !tooltip: tr('Quantidade de Lagrimas Vermelhas que você possui.')
+    icon-source: /images/game/other/3
+    icon-align: left
+    color: red
+    icon-offset: 6 3
+    icon-size: 14 20
+    size: 100 25
+    anchors.top: tearYellowValue.bottom
+    anchors.left: backgroundTask.right
+    margin-top: 10
+    margin-left: 35
+  
+  EnterGameButton
+    !text: ('Fechar')
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom
+    @onClick: hide()

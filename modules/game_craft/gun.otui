@@ -1,0 +1,430 @@
+MarketButton < ShopButton
+  text-offset: 50 -20
+MarketButtonSale < ShopButtonSale
+  text-offset: 50 -20
+MarketPrize < ShopPrize
+  margin-left: 30
+
+Panel
+  VerticalScrollBar
+    id: scrollBar
+    step: 50
+    pixels-scroll: true
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+
+  ScrollablePanel
+    vertical-scrollbar: scrollBar
+    anchors.fill: parent
+    margin-right: 15
+
+    MarketButton
+      id: Pistola Colt
+      text: Pistola Colt
+      icon: /images/game/craft/Pistola Colt
+      anchors.top: parent.top
+      margin-top: 0
+      @onClick: PistolaColt()
+      MarketPrize
+        text: Usado por players de Lv. 01 ou maior.
+
+    MarketButton
+      id: Bazuca Teleguiado
+      text: Bazuca Teleguiado
+      icon: /images/game/craft/Bazuca Teleguiado
+      @onClick: BazucaTeleguiado()
+      MarketPrize
+        text: Usado por players de Lv. 90 ou maior.
+
+    MarketButton
+      id: Espingarda Factor
+      text: Espingarda Factor
+      icon: /images/game/craft/Espingarda Factor
+      @onClick: EspingardaFactor()
+      MarketPrize
+        text: Usado por players de Lv. 75 ou maior.
+
+    MarketButton
+      id: Espingarda Mossberg
+      text: Espingarda Mossberg
+      icon: /images/game/craft/Espingarda Mossberg
+      @onClick: EspingardaMossberg()
+      MarketPrize
+        text: Usado por players de Lv. 20 ou maior.
+
+    MarketButton
+      id: Espingarda Silver
+      text: Espingarda Silver
+      icon: /images/game/craft/Espingarda Silver
+      @onClick: EspingardaSilver()
+      MarketPrize
+        text: Usado por players de Lv. 35 ou maior.
+
+    MarketButton
+      id: Espingarda
+      text: Espingarda
+      icon: /images/game/craft/Espingarda
+      @onClick: Espingarda()
+      MarketPrize
+        text: Usado por players de Lv. 01 ou maior.
+
+    MarketButton
+      id: Fuzil Beretta
+      text: Fuzil Beretta
+      icon: /images/game/craft/Fuzil Beretta
+      @onClick: FuzilBeretta()
+      MarketPrize
+        text: Usado por players de Lv. 65 ou maior.
+
+    MarketButton
+      id: Fuzil Colt
+      text: Fuzil Colt
+      icon: /images/game/craft/Fuzil Colt
+      @onClick: FuzilColt()
+      MarketPrize
+        text: Usado por players de Lv. 35 ou maior.
+
+    MarketButton
+      id: Fuzil Falcon
+      text: Fuzil Falcon
+      icon: /images/game/craft/Fuzil Falcon
+      @onClick: FuzilFalcon()
+      MarketPrize
+        text: Usado por players de Lv. 60 ou maior.
+
+    MarketButton
+      id: Lanca Misseis
+      text: Lança Misseis
+      icon: /images/game/craft/Lanca Misseis
+      @onClick: LancaMisseis()
+      MarketPrize
+        text: Usado por players de Lv. 110 ou maior.
+
+    MarketButton
+      id: Metralhadora Colt M4A1
+      text: Metralhadora Colt M4A1
+      icon: /images/game/craft/Metralhadora Colt M4A1
+      @onClick: MetralhadoraColtM4A1()
+      MarketPrize
+        text: Usado por players de Lv. 25 ou maior.
+
+    MarketButton
+      id: Metralhadora Crosman
+      text: Metralhadora Crosman
+      icon: /images/game/craft/Metralhadora Crosman
+      @onClick: MetralhadoraCrosman()
+      MarketPrize
+        text: Usado por players de Lv. 20 ou maior.
+
+    MarketButton
+      id: Metralhadora Evolution
+      text: Metralhadora Evolution
+      icon: /images/game/craft/Metralhadora Evolution
+      @onClick: MetralhadoraEvolution()
+      MarketPrize
+        text: Usado por players de Lv. 80 ou maior.
+
+    MarketButton
+      id: Metralhadora Factor
+      text: Metralhadora Factor
+      icon: /images/game/craft/Metralhadora Factor
+      @onClick: MetralhadoraFactor()
+      MarketPrize
+        text: Usado por players de Lv. 90 ou maior.
+
+    MarketButton
+      id: Metralhadora FN Scar
+      text: Metralhadora FN Scar
+      icon: /images/game/craft/Metralhadora FN Scar
+      @onClick: MetralhadoraFNScar()
+      MarketPrize
+        text: Usado por players de Lv. 55 ou maior.
+
+    MarketButton
+      id: Metralhadora Havok Titan C
+      text: Metralhadora Havok Titan C
+      icon: /images/game/craft/Metralhadora Havok Titan C
+      @onClick: MetralhadoraHavokTitanC()
+      MarketPrize
+        text: Usado por players de Lv. 95 ou maior.
+
+    MarketButton
+      id: Metralhadora Havok Titan F
+      text: Metralhadora Havok Titan F
+      icon: /images/game/craft/Metralhadora Havok Titan F
+      @onClick: MetralhadoraHavokTitanF()
+      MarketPrize
+        text: Usado por players de Lv. 95 ou maior.
+
+    MarketButton
+      id: Metralhadora HK MP5 K
+      text: Metralhadora HK MP5 K
+      icon: /images/game/craft/Metralhadora HK MP5 K
+      @onClick: MetraHKMP5K()
+      MarketPrize
+        text: Usado por players de Lv. 45 ou maior.
+
+    MarketButton
+      id: Metralhadora HK MP5
+      text: Metralhadora HK MP5
+      icon: /images/game/craft/Metralhadora HK MP5
+      @onClick: MetralhadoraHKMP5()
+      MarketPrize
+        text: Usado por players de Lv. 30 ou maior.
+
+    MarketButton
+      id: Metralhadora Magnum
+      text: Metralhadora Magnum
+      icon: /images/game/craft/Metralhadora Magnum
+      @onClick: MetralhadoraMagnum()
+      MarketPrize
+        text: Usado por players de Lv. 70 ou maior.
+
+    MarketButton
+      id: Metralhadora Negev NG7
+      text: Metralhadora Negev NG7
+      icon: /images/game/craft/Metralhadora Negev NG7
+      @onClick: MetralhadoraNegevNG7()
+      MarketPrize
+        text: Usado por players de Lv. 50 ou maior.
+
+    MarketButton
+      id: Metralhadora Remington
+      text: Metralhadora Remington
+      icon: /images/game/craft/Metralhadora Remington
+      @onClick: MetralhadoraRemington()
+      MarketPrize
+        text: Usado por players de Lv. 85 ou maior.
+
+    MarketButton
+      id: Metralhadora Rugger
+      text: Metralhadora Rugger
+      icon: /images/game/craft/Metralhadora Rugger
+      @onClick: MetralhadoraRugger()
+      MarketPrize
+        text: Usado por players de Lv. 75 ou maior.
+
+    MarketButton
+      id: Mini Uzi
+      text: Mini Uzi
+      icon: /images/game/craft/Mini Uzi
+      @onClick: MiniUzi()
+      MarketPrize
+        text: Usado por players de Lv. 01 ou maior.
+
+    MarketButton
+      id: Pistola Beretta
+      text: Pistola Beretta
+      icon: /images/game/craft/Pistola Beretta
+      @onClick: PistolaBeretta()
+      MarketPrize
+        text: Usado por players de Lv. 70 ou maior.
+
+    MarketButton
+      id: Bazuca de Precisao
+      text: Bazuca de Precisao
+      icon: /images/game/craft/Bazuca de Precisao
+      @onClick: BazucadePrecisao()
+      MarketPrize
+        text: Usado por players de Lv. 70 ou maior.
+
+    MarketButton
+      id: Pistola Desert Eagle G
+      text: Pistola Desert Eagle G
+      icon: /images/game/craft/Pistola Desert Eagle G
+      @onClick: PistolaDesertEagleG()
+      MarketPrize
+        text: Usado por players de Lv. 45 ou maior.
+
+    MarketButton
+      id: Pistola Desert Eagle
+      text: Pistola Desert Eagle
+      icon: /images/game/craft/Pistola Desert Eagle
+      @onClick: PistolaDesertEagle()
+      MarketPrize
+        text: Usado por players de Lv. 20 ou maior.
+
+    MarketButton
+      id: Pistola Factor 5000
+      text: Pistola Factor 5000
+      icon: /images/game/craft/Pistola Factor 5000
+      @onClick: PistolaFactor5000()
+      MarketPrize
+        text: Usado por players de Lv. 80 ou maior.
+
+    MarketButton
+      id: Pistola Falcon F
+      text: Pistola Falcon F
+      icon: /images/game/craft/Pistola Falcon F
+      @onClick: PistolaFalconF()
+      MarketPrize
+        text: Usado por players de Lv. 65 ou maior.
+
+    MarketButton
+      id: Pistola Falcon P
+      text: Pistola Falcon P
+      icon: /images/game/craft/Pistola Falcon P
+      @onClick: PistolaFalconP()
+      MarketPrize
+        text: Usado por players de Lv. 60 ou maior.
+
+    MarketButton
+      id: Pistola Flintlock
+      text: Pistola Flintlock
+      icon: /images/game/craft/Pistola Flintlock
+      @onClick: PistolaFlintlock()
+      MarketPrize
+        text: Usado por players de Lv. 55 ou maior.
+
+    MarketButton
+      id: Pistola Gerard
+      text: Pistola Gerard
+      icon: /images/game/craft/Pistola Gerard
+      @onClick: PistolaGerard()
+      MarketPrize
+        text: Usado por players de Lv. 35 ou maior.
+
+    MarketButton
+      id: Pistola Magnum X
+      text: Pistola Magnum X
+      icon: /images/game/craft/Pistola Magnum X
+      @onClick: PistolaMagnumX()
+      MarketPrize
+        text: Usado por players de Lv. 75 ou maior.
+
+    MarketButton
+      id: Pistola N7
+      text: Pistola N7
+      icon: /images/game/craft/Pistola N7
+      @onClick: PistolaN7()
+      MarketPrize
+        text: Usado por players de Lv. 50 ou maior.
+
+    MarketButton
+      id: Pistola Silver
+      text: Pistola Silver
+      icon: /images/game/craft/Pistola Silver
+      @onClick: PistolaSilver()
+      MarketPrize
+        text: Usado por players de Lv. 30 ou maior.
+
+    MarketButton
+      id: Pistola Tauros PT92
+      text: Pistola Tauros PT92
+      icon: /images/game/craft/Pistola Tauros PT92
+      @onClick: PistolaTaurosPT92()
+      MarketPrize
+        text: Usado por players de Lv. 01 ou maior.
+
+    MarketButton
+      id: Revolver Taurus
+      text: Revolver Taurus
+      icon: /images/game/craft/Revolver Taurus
+      @onClick: RevolverTaurus()
+      MarketPrize
+        text: Usado por players de Lv. 25 ou maior.
+
+    MarketButton
+      id: Rifle BullPub
+      text: Rifle BullPub
+      icon: /images/game/craft/Rifle BullPub
+      @onClick: RifleBullPub()
+      MarketPrize
+        text: Usado por players de Lv. 50 ou maior.
+
+    MarketButton
+      id: Rifle Cheytac
+      text: Rifle Cheytac
+      icon: /images/game/craft/Rifle Cheytac
+      @onClick: RifleCheytac()
+      MarketPrize
+        text: Usado por players de Lv. 45 ou maior.
+
+    MarketButton
+      id: Rifle de Precisao
+      text: Rifle de Precisao
+      icon: /images/game/craft/Rifle de Precisao
+      @onClick: RifleDePrecisao()
+      MarketPrize
+        text: Usado por players de Lv. 20 ou maior.
+
+    MarketButton
+      id: Rifle Dragunov
+      text: Rifle Dragunov
+      icon: /images/game/craft/Rifle Dragunov
+      @onClick: RifleDragunov()
+      MarketPrize
+        text: Usado por players de Lv. 70 ou maior.
+
+    MarketButton
+      id: Rifle Famas
+      text: Rifle Famas
+      icon: /images/game/craft/Rifle Famas
+      @onClick: RifleFamas()
+      MarketPrize
+        text: Usado por players de Lv. 55 ou maior.
+
+    MarketButton
+      id: Rifle G3
+      text: Rifle G3
+      icon: /images/game/craft/Rifle G3
+      @onClick: RifleG3()
+      MarketPrize
+        text: Usado por players de Lv. 60 ou maior.
+
+    MarketButton
+      id: Rifle Hawkeye
+      text: Rifle Hawkeye
+      icon: /images/game/craft/Rifle Hawkeye
+      @onClick: RifleHawkeye()
+      MarketPrize
+        text: Usado por players de Lv. 25 ou maior.
+
+    MarketButton
+      id: Rifle McMillan
+      text: Rifle McMillan
+      icon: /images/game/craft/Rifle McMillan
+      @onClick: RifleMcMillan()
+      MarketPrize
+        text: Usado por players de Lv. 40 ou maior.
+
+    MarketButton
+      id: Rifle Remington
+      text: Rifle Remington
+      icon: /images/game/craft/Rifle Remington
+      @onClick: RifleRemington()
+      MarketPrize
+        text: Usado por players de Lv. 30 ou maior.
+
+    MarketButton
+      id: Rifle Saffari
+      text: Rifle Saffari
+      icon: /images/game/craft/Rifle Saffari
+      @onClick: RifleSaffari()
+      MarketPrize
+        text: Usado por players de Lv. 35 ou maior.
+
+    MarketButton
+      id: Rifle Vector
+      text: Rifle Vector
+      icon: /images/game/craft/Rifle Vector
+      @onClick: RifleVector()
+      MarketPrize
+        text: Usado por players de Lv. 65 ou maior.
+
+    MarketButton
+      id: RPG7
+      text: RPG-7
+      icon: /images/game/craft/RPG-7
+      @onClick: RPG7()
+      MarketPrize
+        text: Usado por players de Lv. 30 ou maior.
+
+    MarketButton
+      id: SubMetralhadora MP5
+      text: Sub-Metralhadora MP5
+      icon: /images/game/craft/Sub-Metralhadora MP5
+      @onClick: SubMetralhadoraMP5()
+      MarketPrize
+        text: Usado por players de Lv. 01 ou maior.

@@ -1,0 +1,254 @@
+MarketButton < ShopButton
+  text-offset: 50 -20
+MarketButtonSale < ShopButtonSale
+  text-offset: 50 -20
+MarketPrize < ShopPrize
+  margin-left: 30
+
+Panel
+  VerticalScrollBar
+    id: scrollBar
+    step: 50
+    pixels-scroll: true
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+
+  ScrollablePanel
+    vertical-scrollbar: scrollBar
+    anchors.fill: parent
+    margin-right: 15
+
+    MarketButton
+      id: Rookie Armor
+      text: Rookie Armor
+      icon: /images/game/craft/Rookie Armor
+      anchors.top: parent.top
+      margin-top: 0
+      @onClick: RookieArmor()
+      MarketPrize
+        text: Usado por players de Lv. 01 ou maior.
+
+    MarketButton
+      id: Reinforced Armor
+      text: Reinforced Armor
+      icon: /images/game/craft/Reinforced Armor
+      @onClick: ReinforcedArmor()
+      MarketPrize
+        text: Usado por players de Lv. 01 ou maior.
+
+    MarketButton
+      id: Noobie Armor
+      text: Noobie Armor
+      icon: /images/game/craft/Noobie Armor
+      @onClick: NoobieArmor()
+      MarketPrize
+        text: Usado por players de Lv. 10 ou maior.
+
+    MarketButton
+      id: Leather Armor
+      text: Leather Armor
+      icon: /images/game/craft/Leather Armor
+      @onClick: LeatherArmor()
+      MarketPrize
+        text: Usado por players de Lv. 10 ou maior.
+
+    MarketButton
+      id: Noble Dragon Cape
+      text: Noble Dragon Cape
+      icon: /images/game/craft/Noble Dragon Cape
+      @onClick: NobleDragonCape()
+      MarketPrize
+        text: Usado por players de Lv. 15 ou maior.
+
+    MarketButton
+      id: Moon Cape
+      text: Moon Cape
+      icon: /images/game/craft/Moon Cape
+      @onClick: MoonCape()
+      MarketPrize
+        text: Usado por players de Lv. 15 ou maior.
+
+    MarketButton
+      id: Noble Armor
+      text: Noble Armor
+      icon: /images/game/craft/Noble Armor
+      @onClick: NobleArmor()
+      MarketPrize
+        text: Usado por players de Lv. 25 ou maior.
+
+    MarketButton
+      id: Soldier Armor
+      text: Soldier Armor
+      icon: /images/game/craft/Soldier Armor
+      @onClick: SoldierArmor()
+      MarketPrize
+        text: Usado por players de Lv. 20 ou maior.
+
+    MarketButton
+      id: Weed Cape
+      text: Weed Cape
+      icon: /images/game/craft/Weed Cape
+      @onClick: WeedCape()
+      MarketPrize
+        text: Usado por players de Lv. 20 ou maior.
+
+    MarketButton
+      id: Skull Cape
+      text: Skull Cape
+      icon: /images/game/craft/Skull Cape
+      @onClick: SkullCape()
+      MarketPrize
+        text: Usado por players de Lv. 20 ou maior.
+
+    MarketButton
+      id: Tiger Armor
+      text: Tiger Armor
+      icon: /images/game/craft/Tiger Armor
+      @onClick: TigerArmor()
+      MarketPrize
+        text: Usado por players de Lv. 25 ou maior.
+
+    MarketButton
+      id: Plate Armor
+      text: Plate Armor
+      icon: /images/game/craft/Plate Armor
+      @onClick: PlateArmor()
+      MarketPrize
+        text: Usado por players de Lv. 25 ou maior.
+
+    MarketButton
+      id: Crown Armor
+      text: Crown Armor
+      icon: /images/game/craft/Crown Armor
+      @onClick: CrownArmor()
+      MarketPrize
+        text: Usado por players de Lv. 25 ou maior.
+
+    MarketButton
+      id: Brass Armor
+      text: Brass Armor
+      icon: /images/game/craft/Brass Armor
+      @onClick: BrassArmor()
+      MarketPrize
+        text: Usado por players de Lv. 25 ou maior.
+
+    MarketButton
+      id: Silver Armor
+      text: Silver Armor
+      icon: /images/game/craft/Silver Armor
+      @onClick: SilverArmor()
+      MarketPrize
+        text: Usado por players de Lv. 25 ou maior.
+
+    MarketButton
+      id: Nature Armor
+      text: Nature Armor
+      icon: /images/game/craft/Nature Armor
+      @onClick: NatureArmor()
+      MarketPrize
+        text: Usado por players de Lv. 25 ou maior.
+
+    MarketButton
+      id: Mystic Armor
+      text: Mystic Armor
+      icon: /images/game/craft/Mystic Armor
+      @onClick: MysticArmor()
+      MarketPrize
+        text: Usado por players de Lv. 30 ou maior.
+
+    MarketButton
+      id: Royal Armor
+      text: Royal Armor
+      icon: /images/game/craft/Royal Armor
+      @onClick: RoyalArmor()
+      MarketPrize
+        text: Usado por players de Lv. 35 ou maior.
+
+    MarketButton
+      id: Remains Armor
+      text: Remains Armor
+      icon: /images/game/craft/Remains Armor
+      @onClick: RemainsArmor()
+      MarketPrize
+        text: Usado por players de Lv. 35 ou maior.
+
+    MarketButton
+      id: Titan Armor
+      text: Titan Armor
+      icon: /images/game/craft/Titan Armor
+      @onClick: TitanArmor()
+      MarketPrize
+        text: Usado por players de Lv. 35 ou maior.
+
+    MarketButton
+      id: Glorious Armor
+      text: Glorious Armor
+      icon: /images/game/craft/Glorious Armor
+      @onClick: GloriousArmor()
+      MarketPrize
+        text: Usado por players de Lv. 35 ou maior.
+
+    MarketButton
+      id: Ancient Armor
+      text: Ancient Armor
+      icon: /images/game/craft/Ancient Armor
+      @onClick: AncientArmor()
+      MarketPrize
+        text: Usado por players de Lv. 50 ou maior.
+
+    MarketButton
+      id: Crystal Armor
+      text: Crystal Armor
+      icon: /images/game/craft/Crystal Armor
+      @onClick: CrystalArmor()
+      MarketPrize
+        text: Usado por players de Lv. 50 ou maior.
+
+    MarketButton
+      id: Lava Armor
+      text: Lava Armor
+      icon: /images/game/craft/Lava Armor
+      @onClick: LavaArmor()
+      MarketPrize
+        text: Usado por players de Lv. 50 ou maior.
+
+    MarketButton
+      id: Haze Armor
+      text: Haze Armor
+      icon: /images/game/craft/Haze Armor
+      @onClick: HazeArmor()
+      MarketPrize
+        text: Usado por players de Lv. 50 ou maior.
+
+    MarketButton
+      id: Royalty Armor
+      text: Royalty Armor
+      icon: /images/game/craft/Royalty Armor
+      @onClick: RoyaltyArmor()
+      MarketPrize
+        text: Usado por players de Lv. 75 ou maior.
+
+    MarketButton
+      id: Eyed Armor
+      text: Eyed Armor
+      icon: /images/game/craft/Eyed Armor
+      @onClick: EyedArmor()
+      MarketPrize
+        text: Usado por players de Lv. 75 ou maior.
+
+    MarketButton
+      id: Reaper Armor
+      text: Reaper Armor
+      icon: /images/game/craft/Reaper Armor
+      @onClick: ReaperArmor()
+      MarketPrize
+        text: Usado por players de Lv. 99 ou maior.
+
+    MarketButton
+      id: Templar Armor
+      text: Templar Armor
+      icon: /images/game/craft/Templar Armor
+      @onClick: TemplarArmor()
+      MarketPrize
+        text: Usado por players de Lv. 99 ou maior.
